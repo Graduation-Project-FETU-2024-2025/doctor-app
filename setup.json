@@ -1,0 +1,52 @@
+{
+    "directors": [
+        "lib/core",
+        "lib/core/helpers",
+        "lib/core/database",
+        "lib/core/database/cache",
+        "lib/core/database/api",
+        "lib/core/routers",
+        "lib/core/services",
+        "lib/core/themes",
+        "lib/core/utils",
+        "lib/core/widgets"
+    ],
+
+    "dependencies": [
+        "animated_notch_bottom_bar",
+        "cached_network_image",
+        "cupertino_icons",
+        "dartz",
+        "device_preview",
+        "dio",
+        "flutter",
+        "flutter_bloc",
+        "flutter_localizations",
+        "flutter_native_splash",
+        "flutter_screenutil",
+        "flutter_secure_storage",
+        "flutter_svg",
+        "fluttertoast",
+        "gap",
+        "geolocator",
+        "get_it",
+        "google_fonts",
+        "image_picker",
+        "intl",
+        "json_annotation",
+        "jwt_decode",
+        "percent_indicator",
+        "pretty_dio_logger",
+        "shared_preferences",
+        "shimmer",
+        "skeletonizer"
+    ],
+
+    "dev_dependencies": [
+        "build_runner",
+        "flutter_launcher_icons",
+        "flutter_lints",
+        "flutter_test",
+        "json_serializable"
+    ]
+}
