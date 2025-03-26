@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:doctor_app/core/routers/routing.dart';
+import 'package:doctor_app/features/onboarding/presentation/view/onboarding_view.dart';
 import 'package:doctor_app/features/splash/presentation/view/splash_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +13,7 @@ class AppRouter {
       case Routing.splash:
         return _buildRoute(SplashView());
       case Routing.onboarding:
-        return _buildRoute(Scaffold());
+        return _buildRoute(OnboardingView());
       case Routing.signIn:
         return _buildRoute(Scaffold());
       case Routing.otp:
