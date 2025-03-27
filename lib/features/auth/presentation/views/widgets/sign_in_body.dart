@@ -5,7 +5,7 @@ import 'package:doctor_app/core/widgets/custom_text_form_field.dart';
 import 'package:doctor_app/features/auth/presentation/view_model/sign_in_cubit/sign_in_cubit.dart';
 import 'package:doctor_app/features/auth/presentation/views/widgets/sign_in_bloc_consumer_button.dart';
 import 'package:doctor_app/generated/l10n.dart';
-import 'package:doctor_app/utils/app_icons.dart';
+import 'package:doctor_app/core/utils/app_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';

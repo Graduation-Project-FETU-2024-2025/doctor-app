@@ -8,5 +8,8 @@
         "enterOtpWeSent":"أدخل الرمز الذي أرسلناه إلى",
         "continueOtp":"استمر",
         "haventReceivedOtp":"لم تتلقى رمز التعيين؟",
-        "resend":"إعادة إرسال"
+        "resend":"إعادة إرسال",
+        "password": "كلمة المرور",
+        "name": "الاسم",
+        "phone": "الهاتف"
 }

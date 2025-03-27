@@ -8,5 +8,8 @@
     "enterOtpWeSent": "Enter the code we sent at",
     "continueOtp": "Continue",
     "haventReceivedOtp": "Haven't received the OTP?",
-    "resend": "Resend"
+    "resend": "Resend",
+    "password": "Password",
+    "name": "Name",
+    "phone": "Phone"
 }

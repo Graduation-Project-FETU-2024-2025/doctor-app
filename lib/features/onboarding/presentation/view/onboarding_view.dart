@@ -8,7 +8,7 @@ import 'package:doctor_app/core/utils/app_colors.dart';
 import 'package:doctor_app/core/utils/app_styles.dart';
 import 'package:doctor_app/core/widgets/custom_button.dart';
 import 'package:doctor_app/generated/l10n.dart';
-import 'package:doctor_app/utils/app_images.dart';
+import 'package:doctor_app/core/utils/app_images.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';

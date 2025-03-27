@@ -3,7 +3,7 @@ import 'package:doctor_app/core/utils/app_styles.dart';
 import 'package:doctor_app/features/auth/presentation/views/widgets/otp_digits_section.dart';
 import 'package:doctor_app/features/auth/presentation/views/widgets/otp_sing_in_bloc_consumer_button.dart';
 import 'package:doctor_app/generated/l10n.dart';
-import 'package:doctor_app/utils/app_images.dart';
+import 'package:doctor_app/core/utils/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
