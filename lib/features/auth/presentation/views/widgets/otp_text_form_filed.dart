@@ -1,5 +1,6 @@
 import 'package:doctor_app/features/auth/presentation/view_model/otp_cubit/otp_cubit.dart';
 import 'package:flutter/material.dart';
+
 class OtpTextFromFiled extends StatelessWidget {
   const OtpTextFromFiled({
     super.key,
@@ -27,8 +28,6 @@ class OtpTextFromFiled extends StatelessWidget {
       textAlign: TextAlign.center,
       maxLength: 1,
       decoration: const InputDecoration(
-        fillColor: Color(0xffF6F8FA),
-        filled: true,
         counterText: '',
       ),
       keyboardType: TextInputType.number,

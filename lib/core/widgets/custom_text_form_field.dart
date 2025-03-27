@@ -1,4 +1,3 @@
-import 'package:doctor_app/core/utils/app_colors.dart';
 import 'package:doctor_app/core/utils/app_icons.dart';
 import 'package:doctor_app/core/utils/app_styles.dart';
 import 'package:doctor_app/generated/l10n.dart';
@@ -83,9 +82,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
       validator: (val) {
         return validator(value: val!, hintText: widget.hintText!);
       },
-      style: AppStyles.medium18(context).copyWith(
-        color: AppColors.primaryColor,
-      ),
+      style: AppStyles.medium18(context),
       decoration: InputDecoration(
         hintText: widget.hintText,
         labelText: widget.labelText,

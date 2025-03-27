@@ -39,6 +39,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "phone": MessageLookupByLibrary.simpleMessage("الهاتف"),
         "resend": MessageLookupByLibrary.simpleMessage("إعادة إرسال"),
-        "welcomeBack": MessageLookupByLibrary.simpleMessage("مرحبا بك مجددا")
+        "welcomeBack": MessageLookupByLibrary.simpleMessage("!مرحبا بك مجددا")
       };
 }

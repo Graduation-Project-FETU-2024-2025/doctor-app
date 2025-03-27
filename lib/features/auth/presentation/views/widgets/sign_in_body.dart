@@ -1,4 +1,3 @@
-
 import 'package:doctor_app/core/utils/app_colors.dart';
 import 'package:doctor_app/core/utils/app_styles.dart';
 import 'package:doctor_app/core/widgets/custom_text_form_field.dart';
@@ -10,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
+
 class SignInBody extends StatelessWidget {
   const SignInBody({
     super.key,
@@ -25,17 +25,13 @@ class SignInBody extends StatelessWidget {
           Gap(50.h),
           Text(
             S.of(context).welcomeBack,
-            style: AppStyles.medium30(context).copyWith(
-                  color: AppColors.primaryColor
-                ),
+            style: AppStyles.medium30(context)
+                .copyWith(color: AppColors.primaryColor),
           ),
           Gap(10.h),
           Text(
             S.of(context).loginToYourAccount,
-            style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                  color: AppColors.black.withOpacity(0.3),
-                  fontWeight: FontWeight.w500,
-                ),
+            style: AppStyles.medium16(context),
           ),
           Gap(30.h),
           Form(

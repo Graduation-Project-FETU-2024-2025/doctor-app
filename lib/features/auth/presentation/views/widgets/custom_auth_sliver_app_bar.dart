@@ -4,6 +4,7 @@ import 'package:doctor_app/core/utils/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 class CustomAuthSliverAppBar extends StatelessWidget {
   const CustomAuthSliverAppBar({
     super.key,
@@ -40,7 +41,9 @@ class CustomAuthSliverAppBar extends StatelessWidget {
           width: double.infinity,
           height: 20,
           decoration: BoxDecoration(
-            color: AppColors.white,
+            color:Theme.of(context).brightness == Brightness.dark
+                ? Color(0xff2B2B2B)
+                : AppColors.white,
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(50.r),
               topRight: Radius.circular(50.r),

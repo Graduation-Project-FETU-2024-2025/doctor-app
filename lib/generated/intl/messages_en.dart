@@ -38,6 +38,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone"),
         "resend": MessageLookupByLibrary.simpleMessage("Resend"),
-        "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome back")
+        "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome back!")
       };
 }

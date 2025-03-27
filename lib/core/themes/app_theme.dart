@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 abstract class Themes {
-  // static const Color _lightPrimaryColor = AppColors.primaryColor;
   static const Color _lightScaffoldColor = AppColors.white;
   static const Color _lightAppBarColor = AppColors.primaryColor;
   static const Color _lightElevatedButtonColor = AppColors.primaryColor;
@@ -37,32 +36,15 @@ abstract class Themes {
         ),
         inputDecorationTheme: InputDecorationTheme(
           filled: true,
-          fillColor: Color(0xff4169E1).withOpacity(0.2),
+          fillColor: Color(0xffD9E1F9),
           contentPadding:
-              const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10),
-            borderSide:
-                BorderSide(color: Color(0xff4169E1).withOpacity(0.2), width: 0),
-          ),
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10),
-            borderSide:
-                BorderSide(color: Color(0xff4169E1).withOpacity(0.2), width: 0),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10),
-            borderSide: const BorderSide(color: Colors.grey, width: 1),
-          ),
-          errorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10),
-            borderSide: const BorderSide(color: Colors.red, width: 0),
-          ),
-          focusedErrorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10),
-            borderSide:
-                BorderSide(color: Color(0xffFA0909).withOpacity(0.3), width: 2),
-          ),
+              const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+          border: _borderDecoration(color: Color(0xffD9E1F9)),
+          enabledBorder: _borderDecoration(color: Color(0xffD9E1F9)),
+          focusedBorder: _borderDecoration(color: Colors.black, width: 1),
+
+          errorBorder: _borderDecoration(color: Colors.red),
+          focusedErrorBorder: _borderDecoration(color: Colors.red, width: 2),
           hintStyle: const TextStyle(color: Color(0xff4169E1), fontSize: 18),
           labelStyle: const TextStyle(color: Color(0xff4169E1)),
           suffixIconColor: Colors.green, // Icon color
@@ -87,50 +69,34 @@ abstract class Themes {
             backgroundColor: _darkElevatedButtonColor,
             foregroundColor: Colors.white,
             textStyle: const TextStyle(
-              color: Colors.white, // Text color for light theme
+              color: Colors.white,
               fontSize: 25,
             ),
           ),
         ),
+        inputDecorationTheme: InputDecorationTheme(
+          filled: true,
+          fillColor: Color(0xff203470),
+          contentPadding:
+              const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+          border: _borderDecoration(color: Color(0xff203470)),
+          enabledBorder: _borderDecoration(color: Color(0xff203470)),
+          focusedBorder: _borderDecoration(color: Colors.white, width: 1),
+          errorBorder: _borderDecoration(color: Colors.red),
+          focusedErrorBorder: _borderDecoration(color: Colors.red),
+          hintStyle: const TextStyle(
+              color: Colors.white, fontSize: 18, fontWeight: FontWeight.w500),
+          labelStyle: const TextStyle(color: Colors.white),
+          suffixIconColor: Colors.green,
+          prefixIconColor: Colors.white,
+          errorStyle: const TextStyle(color: Colors.red),
+        ),
+      );
 
-        //   inputDecorationTheme: InputDecorationTheme(
-        //   filled: true,
-        //   fillColor: Colors.transparent, // Dark background color
-        //   contentPadding:
-        //       const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-        //   border: OutlineInputBorder(
-        //     borderRadius: BorderRadius.circular(10),
-        //     borderSide: BorderSide(
-        //         color: const Color(0xff4169E1).withOpacity(0.2), width: 0),
-        //   ),
-        //   enabledBorder: OutlineInputBorder(
-        //     borderRadius: BorderRadius.circular(10),
-        //     borderSide: BorderSide(
-        //         color: const Color(0xff4169E1).withOpacity(0.2), width: 0),
-        //   ),
-        //   focusedBorder: OutlineInputBorder(
-        //     borderRadius: BorderRadius.circular(10),
-        //     borderSide: const BorderSide(color: Colors.grey, width: 1),
-        //   ),
-        //   errorBorder: OutlineInputBorder(
-        //     borderRadius: BorderRadius.circular(10),
-        //     borderSide: const BorderSide(color: Colors.red, width: 0),
-        //   ),
-        //   focusedErrorBorder: OutlineInputBorder(
-        //     borderRadius: BorderRadius.circular(10),
-        //     borderSide: BorderSide(
-        //         color: const Color(0xffFA0909).withOpacity(0.3), width: 2),
-        //   ),
-        //   hintStyle: const TextStyle(
-        //     color: Color(
-        //         0xff9BB4F6), // Lighter blue for better visibility in dark mode
-        //   ),
-        //   labelStyle: const TextStyle(
-        //     color: Color(0xff4169E1), // Blue for labels
-        //   ),
-        //   suffixIconColor: const Color(0xff6EE7B7), // Greenish tint for icons
-        //   prefixIconColor: const Color(0xff4169E1),
-        //   errorStyle: const TextStyle(color: Colors.red),
-        // )
+  static OutlineInputBorder _borderDecoration(
+          {required Color color, double radius = 10, double width = 0}) =>
+      OutlineInputBorder(
+        borderRadius: BorderRadius.circular(radius),
+        borderSide: BorderSide(color: color, width: width),
       );
 }
