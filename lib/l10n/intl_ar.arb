@@ -1,3 +1,12 @@
 {
-        "onboarding":"جميع الخدمات لصحتك"
+        "onboarding":"جميع الخدمات لصحتك",
+        "welcomeBack":"مرحبا بك مجددا",
+        "loginToYourAccount":"تسجيل الدخول إلى حسابك",
+        "emailAddress":" البريد الإلكتروني",
+        "login":"تسجيل الدخول",
+        "enterOtp":"إدخال رمز التعيين",
+        "enterOtpWeSent":"أدخل الرمز الذي أرسلناه إلى",
+        "continueOtp":"استمر",
+        "haventReceivedOtp":"لم تتلقى رمز التعيين؟",
+        "resend":"إعادة إرسال"
 }

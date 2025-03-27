@@ -1,3 +1,12 @@
 {
-    "onboarding":"All Services for your health"
+    "onboarding": "All Services for your health",
+    "welcomeBack": "Welcome back",
+    "loginToYourAccount": "Login to your account",
+    "emailAddress": "Email address",
+    "login": "Login",
+    "enterOtp": "Enter OTP",
+    "enterOtpWeSent": "Enter the code we sent at",
+    "continueOtp": "Continue",
+    "haventReceivedOtp": "Haven't received the OTP?",
+    "resend": "Resend"
 }
