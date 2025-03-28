@@ -116,14 +116,14 @@ flutter_launcher_icons:
 
 # flutter_assets:
 #   assets_path: assets/svgs/
-#   output_path: lib/utils/
+#   output_path: lib/core/utils/
 #   filename: app_icons.dart
 #   field_prefix: null
 #   classname: AppIcons
 
 flutter_assets:
   assets_path: assets/images/
-  output_path: lib/utils/
+  output_path: lib/core/utils/
   filename: app_images.dart
   field_prefix: null
   classname: AppImages

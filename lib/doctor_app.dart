@@ -17,28 +17,29 @@ class DoctorApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-        designSize: const Size(393, 852),
-        builder: (_, child) {
-          return BlocBuilder<ChangeLanguageCubit, ChangeLanguageState>(
-            builder: (context, state) {
-              return MaterialApp(
-                debugShowCheckedModeBanner: false,
-                localizationsDelegates: [
-                  S.delegate,
-                  GlobalMaterialLocalizations.delegate,
-                  GlobalWidgetsLocalizations.delegate,
-                  GlobalCupertinoLocalizations.delegate,
-                ],
-                supportedLocales: S.delegate.supportedLocales,
-                locale: Locale(getIt<CacheHelper>().getCurrentLanguage()),
-                theme: Themes.lightTheme,
-                darkTheme: Themes.darkTheme,
-                themeMode: ThemeMode.light,
-                onGenerateRoute: AppRouter.generateRoute,
-                initialRoute: Routing.onboarding,
-              );
-            },
-          );
-        });
+      designSize: const Size(393, 852),
+      builder: (_, child) {
+        return BlocBuilder<ChangeLanguageCubit, ChangeLanguageState>(
+          builder: (context, state) {
+            return MaterialApp(
+              debugShowCheckedModeBanner: false,
+              localizationsDelegates: [
+                S.delegate,
+                GlobalMaterialLocalizations.delegate,
+                GlobalWidgetsLocalizations.delegate,
+                GlobalCupertinoLocalizations.delegate,
+              ],
+              supportedLocales: S.delegate.supportedLocales,
+              locale: Locale(getIt<CacheHelper>().getCurrentLanguage()),
+              theme: Themes.lightTheme,
+              darkTheme: Themes.darkTheme,
+              themeMode: ThemeMode.dark,
+              onGenerateRoute: AppRouter.generateRoute,
+              initialRoute: Routing.splash,
+            );
+          },
+        );
+      },
+    );
   }
 }

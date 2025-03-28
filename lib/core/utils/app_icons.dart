@@ -11,8 +11,8 @@ class AppIcons {
   static const String svgsAuthIcon = "assets/svgs/auth_icon.svg";
 
   /// Assets for svgsEmailCheckedIcon
-  /// assets/svgs/email_checked_icon.svg
-  static const String svgsEmailCheckedIcon = "assets/svgs/email_checked_icon.svg";
+  /// assets/svgs/correct-success-tick-svgrepo-com.svg
+  static const String svgsEmailCheckedIcon = "assets/svgs/correct-success-tick-svgrepo-com.svg";
 
   /// Assets for svgsEmailIcon
   /// assets/svgs/email_icon.svg

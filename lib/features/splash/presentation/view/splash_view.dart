@@ -1,7 +1,7 @@
 import 'package:doctor_app/core/helpers/extentions.dart';
 import 'package:doctor_app/core/routers/routing.dart';
 import 'package:doctor_app/core/utils/app_colors.dart';
-import 'package:doctor_app/utils/app_icons.dart';
+import 'package:doctor_app/core/utils/app_icons.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_svg/flutter_svg.dart';

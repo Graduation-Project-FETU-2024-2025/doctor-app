@@ -59,6 +59,126 @@ class S {
       args: [],
     );
   }
+
+  /// `Welcome back!`
+  String get welcomeBack {
+    return Intl.message(
+      'Welcome back!',
+      name: 'welcomeBack',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login to your account`
+  String get loginToYourAccount {
+    return Intl.message(
+      'Login to your account',
+      name: 'loginToYourAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email address`
+  String get emailAddress {
+    return Intl.message(
+      'Email address',
+      name: 'emailAddress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login`
+  String get login {
+    return Intl.message(
+      'Login',
+      name: 'login',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter OTP`
+  String get enterOtp {
+    return Intl.message(
+      'Enter OTP',
+      name: 'enterOtp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter the code we sent at`
+  String get enterOtpWeSent {
+    return Intl.message(
+      'Enter the code we sent at',
+      name: 'enterOtpWeSent',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continue`
+  String get continueOtp {
+    return Intl.message(
+      'Continue',
+      name: 'continueOtp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Haven't received the OTP?`
+  String get haventReceivedOtp {
+    return Intl.message(
+      'Haven\'t received the OTP?',
+      name: 'haventReceivedOtp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Resend`
+  String get resend {
+    return Intl.message(
+      'Resend',
+      name: 'resend',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get password {
+    return Intl.message(
+      'Password',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Name`
+  String get name {
+    return Intl.message(
+      'Name',
+      name: 'name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone`
+  String get phone {
+    return Intl.message(
+      'Phone',
+      name: 'phone',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
