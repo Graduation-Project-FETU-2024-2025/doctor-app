@@ -33,7 +33,7 @@ class DoctorApp extends StatelessWidget {
               locale: Locale(getIt<CacheHelper>().getCurrentLanguage()),
               theme: Themes.lightTheme,
               darkTheme: Themes.darkTheme,
-              themeMode: ThemeMode.dark,
+              themeMode: ThemeMode.light,
               onGenerateRoute: AppRouter.generateRoute,
               initialRoute: Routing.splash,
             );
