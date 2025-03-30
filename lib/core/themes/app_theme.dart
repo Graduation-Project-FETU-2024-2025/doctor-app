@@ -5,35 +5,22 @@ import 'package:google_fonts/google_fonts.dart';
 abstract class Themes {
   static const Color _lightScaffoldColor = AppColors.white;
   static const Color _lightAppBarColor = AppColors.primaryColor;
-  static const Color _lightElevatedButtonColor = AppColors.primaryColor;
   static const Color _foregroundTextColor = AppColors.white;
 
   static const Color _darkAppBarColor = Color(0xff1F1F1F);
-  static const Color _darkPrimaryColor = Color(0xff292929);
-  static const Color _darkElevatedButtonColor = Color(0xff2D88D6);
 
   static get lightTheme => ThemeData(
         scaffoldBackgroundColor: _lightScaffoldColor,
+        brightness: Brightness.light,
         appBarTheme: const AppBarTheme(
           backgroundColor: _lightAppBarColor,
           foregroundColor: _foregroundTextColor,
           centerTitle: true,
         ),
         textTheme: GoogleFonts.latoTextTheme(ThemeData.light().textTheme),
-        elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(
-            minimumSize: Size(255, 55),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(30),
-            ),
-            backgroundColor: _lightElevatedButtonColor,
-            foregroundColor: _foregroundTextColor,
-            textStyle: const TextStyle(
-                color: _foregroundTextColor,
-                fontSize: 20,
-                fontWeight: FontWeight.w500),
-          ),
-        ),
+        elevatedButtonTheme: _elevatedButtonTheme(
+            backgroundColor: AppColors.primaryColor,
+            foregroundColor: AppColors.white),
         inputDecorationTheme: InputDecorationTheme(
           filled: true,
           fillColor: Color(0xffD9E1F9),
@@ -54,26 +41,16 @@ abstract class Themes {
       );
 
   static get darkTheme => ThemeData(
-        scaffoldBackgroundColor: _darkPrimaryColor,
+        brightness: Brightness.dark,
         appBarTheme: const AppBarTheme(
           backgroundColor: _darkAppBarColor,
           centerTitle: true,
           foregroundColor: Colors.white,
         ),
         textTheme: GoogleFonts.latoTextTheme(ThemeData.dark().textTheme),
-        elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(15),
-            ),
-            backgroundColor: _darkElevatedButtonColor,
-            foregroundColor: Colors.white,
-            textStyle: const TextStyle(
-              color: Colors.white,
-              fontSize: 25,
-            ),
-          ),
-        ),
+        elevatedButtonTheme: _elevatedButtonTheme(
+            backgroundColor: AppColors.primaryColor,
+            foregroundColor: AppColors.white),
         inputDecorationTheme: InputDecorationTheme(
           filled: true,
           fillColor: Color(0xff203470),
@@ -92,6 +69,24 @@ abstract class Themes {
           errorStyle: const TextStyle(color: Colors.red),
         ),
       );
+
+  static ElevatedButtonThemeData _elevatedButtonTheme(
+      {required Color backgroundColor, required Color foregroundColor}) {
+    return ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        minimumSize: Size(255, 55),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30),
+        ),
+        backgroundColor: backgroundColor,
+        foregroundColor: foregroundColor,
+        textStyle: const TextStyle(
+          color: Colors.white,
+          fontSize: 25,
+        ),
+      ),
+    );
+  }
 
   static OutlineInputBorder _borderDecoration(
           {required Color color, double radius = 10, double width = 0}) =>
