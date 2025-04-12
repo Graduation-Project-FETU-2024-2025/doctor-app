@@ -1,8 +1,7 @@
 import 'package:doctor_app/core/utils/app_colors.dart';
-import 'package:doctor_app/core/utils/app_icons.dart';
+import 'package:doctor_app/core/utils/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
-import 'package:flutter_svg/svg.dart';
 
 class MainView extends StatefulWidget {
   const MainView({super.key});
@@ -14,6 +13,7 @@ class MainView extends StatefulWidget {
 class _MainViewState extends State<MainView> {
   NotchBottomBarController notchBottomBarController =
       NotchBottomBarController();
+
   int currentIndex = 0;
   double kIconSize = 24.0;
   double kBottomRadius = 20.0;
@@ -21,7 +21,10 @@ class _MainViewState extends State<MainView> {
     const Center(child: Text('Email')),
     const Center(child: Text('Onboarding')),
     const Center(child: Text('Splash')),
+    const Center(child: Text('Splash')),
+    const Center(child: Text('Splash')),
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,25 +36,29 @@ class _MainViewState extends State<MainView> {
         notchBottomBarController: notchBottomBarController,
         bottomBarItems: [
           BottomBarItem(
-            inActiveItem: SvgPicture.asset(AppIcons.svgsEmailIcon),
-            activeItem: SvgPicture.asset(AppIcons.svgsEmailIcon),
-            itemLabel: 'Email',
+            inActiveItem: Image.asset(AppImages.imagesUnselectedHome),
+            activeItem: Image.asset(AppImages.imagesSelectedHome),
           ),
           BottomBarItem(
-            inActiveItem: SvgPicture.asset(AppIcons.svgsAuthBackIcon),
-            activeItem: SvgPicture.asset(AppIcons.svgsAuthBackIcon),
-            itemLabel: 'Onboarding',
+            inActiveItem: Image.asset(AppImages.imagesUnselectedAppoinment),
+            activeItem: Image.asset(AppImages.imagesSelectedAppoinment),
           ),
           BottomBarItem(
-            inActiveItem: SvgPicture.asset(AppIcons.svgsEmailCheckedIcon),
-            activeItem: SvgPicture.asset(AppIcons.svgsEmailCheckedIcon),
-            itemLabel: 'Splash',
+            inActiveItem: Image.asset(AppImages.imagesUnselectedCalender),
+            activeItem: Image.asset(AppImages.imagesSelectedCalender),
+          ),
+          BottomBarItem(
+            inActiveItem: Image.asset(AppImages.imagesUnselectedClinic),
+            activeItem: Image.asset(AppImages.imagesSelectedClinic),
+          ),
+          BottomBarItem(
+            inActiveItem: Image.asset(AppImages.imagesUnselectedProfile),
+            activeItem: Image.asset(AppImages.imagesSelectedProfile),
           ),
         ],
         onTap: (index) {
           setState(() {
             currentIndex = index;
-            print(Theme.of(context).brightness);
           });
         },
         kIconSize: kIconSize,
