@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_single_quotes
 class AppIcons {
   AppIcons._();
-  
+
   /// Assets for svgsAuthBackIcon
   /// assets/svgs/auth_back_icon.svg
   static const String svgsAuthBackIcon = "assets/svgs/auth_back_icon.svg";
@@ -12,7 +12,8 @@ class AppIcons {
 
   /// Assets for svgsEmailCheckedIcon
   /// assets/svgs/correct-success-tick-svgrepo-com.svg
-  static const String svgsEmailCheckedIcon = "assets/svgs/correct-success-tick-svgrepo-com.svg";
+  static const String svgsEmailCheckedIcon =
+      "assets/svgs/correct-success-tick-svgrepo-com.svg";
 
   /// Assets for svgsEmailIcon
   /// assets/svgs/email_icon.svg
@@ -25,5 +26,13 @@ class AppIcons {
   /// Assets for svgsSplashIcon
   /// assets/svgs/splash_icon.svg
   static const String svgsSplashIcon = "assets/svgs/splash_icon.svg";
-}
 
+  /// Assets for iconsBack
+  /// assets/svgs/back.svg
+  static const String iconsBack = "assets/svgs/back.svg";
+  static const String iconsBackRight = "assets/svgs/back_right.svg";
+
+  /// Assets for iconsSearch
+  /// assets/icons/search.svg
+  static const String iconsSearch = "assets/svgs/search.svg";
+}

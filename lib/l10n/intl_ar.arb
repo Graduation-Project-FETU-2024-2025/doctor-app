@@ -11,5 +11,10 @@
         "resend":"إعادة إرسال",
         "password": "كلمة المرور",
         "name": "الاسم",
-        "phone": "الهاتف"
+        "phone": "الهاتف",
+        "searchButtonTitle":"ابحث",
+        "searchHint":"ابحث عن دواء",
+        "medicines": "الأدوية",
+        "selectMedicines": "اختر الأدوية",
+        "save": "حفظ"
 }

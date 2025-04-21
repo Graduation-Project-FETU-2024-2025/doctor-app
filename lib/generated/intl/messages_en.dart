@@ -32,12 +32,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "loginToYourAccount":
             MessageLookupByLibrary.simpleMessage("Login to your account"),
+        "medicines": MessageLookupByLibrary.simpleMessage("Medicines"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
         "onboarding": MessageLookupByLibrary.simpleMessage(
             "All Services for your health"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone"),
         "resend": MessageLookupByLibrary.simpleMessage("Resend"),
+        "save": MessageLookupByLibrary.simpleMessage("Save"),
+        "searchButtonTitle": MessageLookupByLibrary.simpleMessage("search"),
+        "searchHint":
+            MessageLookupByLibrary.simpleMessage("Search for medicine"),
+        "selectMedicines":
+            MessageLookupByLibrary.simpleMessage("Select Medicines"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome back!")
       };
 }

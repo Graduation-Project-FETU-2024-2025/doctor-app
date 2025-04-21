@@ -33,12 +33,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginToYourAccount":
             MessageLookupByLibrary.simpleMessage("تسجيل الدخول إلى حسابك"),
+        "medicines": MessageLookupByLibrary.simpleMessage("الأدوية"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "onboarding":
             MessageLookupByLibrary.simpleMessage("جميع الخدمات لصحتك"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "phone": MessageLookupByLibrary.simpleMessage("الهاتف"),
         "resend": MessageLookupByLibrary.simpleMessage("إعادة إرسال"),
+        "save": MessageLookupByLibrary.simpleMessage("حفظ"),
+        "searchButtonTitle": MessageLookupByLibrary.simpleMessage("ابحث"),
+        "searchHint": MessageLookupByLibrary.simpleMessage("ابحث عن دواء"),
+        "selectMedicines": MessageLookupByLibrary.simpleMessage("اختر الأدوية"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("!مرحبا بك مجددا")
       };
 }

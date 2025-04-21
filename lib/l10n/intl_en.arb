@@ -11,5 +11,10 @@
     "resend": "Resend",
     "password": "Password",
     "name": "Name",
-    "phone": "Phone"
+    "phone": "Phone",
+    "searchButtonTitle":"search",
+    "searchHint":"Search for medicine",
+    "medicines": "Medicines",
+    "selectMedicines": "Select Medicines",
+    "save":"Save"
 }
