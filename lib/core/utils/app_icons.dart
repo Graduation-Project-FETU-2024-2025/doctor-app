@@ -25,5 +25,9 @@ class AppIcons {
   /// Assets for svgsSplashIcon
   /// assets/svgs/splash_icon.svg
   static const String svgsSplashIcon = "assets/svgs/splash_icon.svg";
+  static const String svgsLocationIcon = "assets/svgs/location.svg";
+  static const String svgsPhoneIcon = "assets/svgs/phone.svg";
+  static const String svgsStarIcon = "assets/svgs/star.svg";
+  static const String svgsEditIcon = "assets/svgs/edit.svg";
 }
 

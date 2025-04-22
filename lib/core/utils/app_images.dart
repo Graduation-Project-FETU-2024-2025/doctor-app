@@ -61,5 +61,6 @@ class AppImages {
   /// Assets for svgClinicDetail
   static const String svgClinicDetail = "assets/svgs/clinic-detail.svg";
   static const String imagesClinicDetail = "assets/images/clinic-detail.png";
+  static const String svgClinicCardImg = "assets/svgs/clinic_card_img.png";
 }
 

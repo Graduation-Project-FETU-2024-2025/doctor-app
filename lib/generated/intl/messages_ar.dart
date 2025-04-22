@@ -23,6 +23,7 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "continueOtp": MessageLookupByLibrary.simpleMessage("استمر"),
+        "delete": MessageLookupByLibrary.simpleMessage("حذف"),
         "emailAddress":
             MessageLookupByLibrary.simpleMessage(" البريد الإلكتروني"),
         "enterOtp": MessageLookupByLibrary.simpleMessage("إدخال رمز التعيين"),
@@ -34,11 +35,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "loginToYourAccount":
             MessageLookupByLibrary.simpleMessage("تسجيل الدخول إلى حسابك"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
+        "no": MessageLookupByLibrary.simpleMessage("لا"),
         "onboarding":
             MessageLookupByLibrary.simpleMessage("جميع الخدمات لصحتك"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "phone": MessageLookupByLibrary.simpleMessage("الهاتف"),
         "resend": MessageLookupByLibrary.simpleMessage("إعادة إرسال"),
-        "welcomeBack": MessageLookupByLibrary.simpleMessage("!مرحبا بك مجددا")
+        "wantToDeleteClinic":
+            MessageLookupByLibrary.simpleMessage("هل تريد حذف هذه العياده؟"),
+        "welcomeBack": MessageLookupByLibrary.simpleMessage("!مرحبا بك مجددا"),
+        "yes": MessageLookupByLibrary.simpleMessage("نعم")
       };
 }

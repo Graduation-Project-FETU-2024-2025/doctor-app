@@ -11,5 +11,9 @@
     "resend": "Resend",
     "password": "Password",
     "name": "Name",
-    "phone": "Phone"
+    "phone": "Phone",
+    "delete":"Delete",
+    "wantToDeleteClinic": "You Want To Delete This Clinic?",
+    "yes":"Yes",
+    "no":"No"
 }

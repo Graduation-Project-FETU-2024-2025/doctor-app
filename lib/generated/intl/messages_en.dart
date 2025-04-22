@@ -23,6 +23,7 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "continueOtp": MessageLookupByLibrary.simpleMessage("Continue"),
+        "delete": MessageLookupByLibrary.simpleMessage("Delete"),
         "emailAddress": MessageLookupByLibrary.simpleMessage("Email address"),
         "enterOtp": MessageLookupByLibrary.simpleMessage("Enter OTP"),
         "enterOtpWeSent":
@@ -33,11 +34,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "loginToYourAccount":
             MessageLookupByLibrary.simpleMessage("Login to your account"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
+        "no": MessageLookupByLibrary.simpleMessage("No"),
         "onboarding": MessageLookupByLibrary.simpleMessage(
             "All Services for your health"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone"),
         "resend": MessageLookupByLibrary.simpleMessage("Resend"),
-        "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome back!")
+        "wantToDeleteClinic": MessageLookupByLibrary.simpleMessage(
+            "You Want To Delete This Clinic?"),
+        "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome back!"),
+        "yes": MessageLookupByLibrary.simpleMessage("Yes")
       };
 }

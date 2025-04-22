@@ -14,11 +14,11 @@ class ClinicDetailView extends StatelessWidget {
       body: CustomScrollView(
         slivers: [
           CustomSliverAppBar(
-            img: AppImages.imagesClinicDetail,
-            isBtnValid: true,
-            height: MediaQuery.of(context).size.height * 0.4,
-            isLocalImage: true,
-          ),
+          img: AppImages.imagesClinicDetail,
+          isBtnValid: true,
+          height: MediaQuery.of(context).size.height * 0.4,
+          isLocalImage: true,
+                      ),
           SliverToBoxAdapter(
             child: Padding(
               padding:
@@ -28,8 +28,8 @@ class ClinicDetailView extends StatelessWidget {
             ),
           ),
           SliverToBoxAdapter(
-            child: ClinicDetailViewBody(),
-          )
+            child: ClinicDetailViewBody()
+            )
         ],
       ),
     );
