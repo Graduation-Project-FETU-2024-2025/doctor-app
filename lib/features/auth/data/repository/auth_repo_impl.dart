@@ -41,6 +41,6 @@ class AuthRepoImpl extends AuthRepo {
     await SecureStorage.instance.addData(key: CacheKeys.token, data: token);
     Map<String, dynamic> payload = Jwt.parseJwt(token);
     await SecureStorage.instance
-        .addData(key: CacheKeys.id, data: payload['PharmacyID']);
+        .addData(key: CacheKeys.id, data: payload['Pharmacy']);//TODO this will change to clinic
   }
 }

@@ -1,5 +1,6 @@
 import 'package:doctor_app/core/database/cache/cashe_helper.dart';
 import 'package:doctor_app/core/global_cubits/change_language_cubit/change_language_cubit.dart';
+import 'package:doctor_app/core/global_cubits/change_themes_cubit/change_themes_cubit.dart';
 import 'package:doctor_app/core/helpers/bloc_observer.dart';
 import 'package:doctor_app/core/services/get_it.dart';
 import 'package:doctor_app/doctor_app.dart';
@@ -12,8 +13,15 @@ void main() async {
   setup();
   await getIt<CacheHelper>().init();
   runApp(
-    BlocProvider(
-      create: (context) => ChangeLanguageCubit(),
+    MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => ChangeLanguageCubit(),
+        ),
+        BlocProvider(
+          create: (context) => ChangeThemesCubit(),
+        ),
+      ],
       child: const DoctorApp(),
     ),
   );

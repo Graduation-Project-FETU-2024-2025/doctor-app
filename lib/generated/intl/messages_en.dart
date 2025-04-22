@@ -22,17 +22,22 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
         "continueOtp": MessageLookupByLibrary.simpleMessage("Continue"),
+        "darkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
         "delete": MessageLookupByLibrary.simpleMessage("Delete"),
         "emailAddress": MessageLookupByLibrary.simpleMessage("Email address"),
+        "english": MessageLookupByLibrary.simpleMessage("English"),
         "enterOtp": MessageLookupByLibrary.simpleMessage("Enter OTP"),
         "enterOtpWeSent":
             MessageLookupByLibrary.simpleMessage("Enter the code we sent at"),
         "haventReceivedOtp":
             MessageLookupByLibrary.simpleMessage("Haven\'t received the OTP?"),
+        "language": MessageLookupByLibrary.simpleMessage("Language"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "loginToYourAccount":
             MessageLookupByLibrary.simpleMessage("Login to your account"),
+        "logout": MessageLookupByLibrary.simpleMessage("Logout"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
         "no": MessageLookupByLibrary.simpleMessage("No"),
         "onboarding": MessageLookupByLibrary.simpleMessage(

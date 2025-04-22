@@ -15,5 +15,10 @@
     "delete":"Delete",
     "wantToDeleteClinic": "You Want To Delete This Clinic?",
     "yes":"Yes",
-    "no":"No"
+    "no":"No",
+    "english":"English",
+    "arabic":"Arabic",
+    "language":"Language",
+    "darkMode":"Dark Mode",
+    "logout":"Logout"
 }
