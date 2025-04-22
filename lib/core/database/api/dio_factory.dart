@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:doctor_app/core/database/api/end_points.dart';
+import 'package:doctor_app/core/database/cache/cache_keys.dart';
 import 'package:doctor_app/core/database/cache/cashe_helper.dart';
 import 'package:doctor_app/core/database/cache/secure_storage.dart';
 import 'package:doctor_app/core/services/get_it.dart';
@@ -28,7 +29,7 @@ class DioFactory {
     return InterceptorsWrapper(
       onRequest: (options, handler) async {
         final token = await SecureStorage.instance.getData(key: ApiKeys.token);
-        final lang = getIt<CacheHelper>().getCurrentLanguage();
+        final lang = getIt<CacheHelper>().getString(key: CacheKeys.currentLanguage)??'en';
         options.headers.addAll({
           'Authorization': token == null ? null : "Bearer $token",
           'lang': lang,

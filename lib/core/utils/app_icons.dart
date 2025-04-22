@@ -8,16 +8,38 @@ class AppIcons {
 
   /// Assets for svgsAuthIcon
   /// assets/svgs/auth_icon.svg
-  static const String svgsAuthIcon = "assets/svgs/auth_icon.svg";
+  static const String svgsAuthIcon = "assets/svgs/auth_icon.svg"; 
+
+  /// Assets for svgsCamera
+  /// assets/svgs/camera.svg
+  static const String svgsCamera = "assets/svgs/camera.svg";
+
+  /// Assets for svgsCorrectSuccessTickSvgrepoCom
+  /// assets/svgs/correct-success-tick-svgrepo-com.svg
+  static const String svgsCorrectSuccessTickSvgrepoCom = "assets/svgs/correct-success-tick-svgrepo-com.svg";
+
+  /// Assets for svgsEditsvg
+  /// assets/svgs/editsvg.svg
+  static const String svgsEditsvg = "assets/svgs/editsvg.svg";
 
   /// Assets for svgsEmailCheckedIcon
   /// assets/svgs/correct-success-tick-svgrepo-com.svg
   static const String svgsEmailCheckedIcon =
       "assets/svgs/correct-success-tick-svgrepo-com.svg";
 
+
+
   /// Assets for svgsEmailIcon
   /// assets/svgs/email_icon.svg
   static const String svgsEmailIcon = "assets/svgs/email_icon.svg";
+
+  /// Assets for svgsLanguage
+  /// assets/svgs/language.svg
+  static const String svgsLanguage = "assets/svgs/language.svg";
+
+  /// Assets for svgsLogout
+  /// assets/svgs/logout.svg
+  static const String svgsLogout = "assets/svgs/logout.svg";
 
   /// Assets for svgsOnboardingIcon
   /// assets/svgs/onboarding_icon.svg
@@ -27,8 +49,7 @@ class AppIcons {
   /// assets/svgs/splash_icon.svg
   static const String svgsSplashIcon = "assets/svgs/splash_icon.svg";
 
-  /// Assets for iconsBack
-  /// assets/svgs/back.svg
+  static const String svgsLocationIcon = "assets/svgs/location.svg";
   static const String iconsBack = "assets/svgs/back.svg";
   static const String iconsBackRight = "assets/svgs/back_right.svg";
 

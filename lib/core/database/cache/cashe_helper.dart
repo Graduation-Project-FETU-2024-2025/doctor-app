@@ -1,6 +1,5 @@
+import 'dart:developer';
 
-
-import 'package:doctor_app/core/database/cache/cache_keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class CacheHelper {
@@ -9,23 +8,35 @@ class CacheHelper {
     sharedPreferences = await SharedPreferences.getInstance();
   }
 
-  Future<void> saveData({required String key, required bool value}) async {
-    await sharedPreferences.setBool(key, value);
+  Future<void> saveData({required String key, required dynamic value}) async {
+    if (value is String) {
+      await sharedPreferences.setString(key, value);
+    } else if (value is int) {
+      await sharedPreferences.setInt(key, value);
+    } else if (value is double) {
+      await sharedPreferences.setDouble(key, value);
+    } else if (value is bool) {
+      await sharedPreferences.setBool(key, value);
+    } else {
+      throw Exception('Unsupported value type');
+    }
+
+    log('The $key is stored in memory as $value');
   }
 
-  bool getData({required String key}) {
-    return sharedPreferences.getBool(key)??true;
+  String? getString({required String key}) {
+    return sharedPreferences.getString(key);
   }
 
- 
-
-  Future<void> setCurrentLanguage({required String language}) async {
-    sharedPreferences.setString(CacheKeys.currentLanguage, language);
+  int? getInt({required String key}) {
+    return sharedPreferences.getInt(key);
   }
 
-  String getCurrentLanguage() {
-    return sharedPreferences.getString(CacheKeys.currentLanguage)??'en';
+  double? getDouble({required String key}) {
+    return sharedPreferences.getDouble(key);
+  }
+
+  bool? getBool({required String key}) {
+    return sharedPreferences.getBool(key);
   }
 }
-
-

@@ -22,19 +22,26 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
         "continueOtp": MessageLookupByLibrary.simpleMessage("استمر"),
+        "darkMode": MessageLookupByLibrary.simpleMessage("الوضع المظلم"),
+        "delete": MessageLookupByLibrary.simpleMessage("حذف"),
         "emailAddress":
             MessageLookupByLibrary.simpleMessage(" البريد الإلكتروني"),
+        "english": MessageLookupByLibrary.simpleMessage("الإنجليزية"),
         "enterOtp": MessageLookupByLibrary.simpleMessage("إدخال رمز التعيين"),
         "enterOtpWeSent":
             MessageLookupByLibrary.simpleMessage("أدخل الرمز الذي أرسلناه إلى"),
         "haventReceivedOtp":
             MessageLookupByLibrary.simpleMessage("لم تتلقى رمز التعيين؟"),
+        "language": MessageLookupByLibrary.simpleMessage("اللغة"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginToYourAccount":
             MessageLookupByLibrary.simpleMessage("تسجيل الدخول إلى حسابك"),
+        "logout": MessageLookupByLibrary.simpleMessage("تسجيل خروج"),
         "medicines": MessageLookupByLibrary.simpleMessage("الأدوية"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
+        "no": MessageLookupByLibrary.simpleMessage("لا"),
         "onboarding":
             MessageLookupByLibrary.simpleMessage("جميع الخدمات لصحتك"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
@@ -44,6 +51,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "searchButtonTitle": MessageLookupByLibrary.simpleMessage("ابحث"),
         "searchHint": MessageLookupByLibrary.simpleMessage("ابحث عن دواء"),
         "selectMedicines": MessageLookupByLibrary.simpleMessage("اختر الأدوية"),
-        "welcomeBack": MessageLookupByLibrary.simpleMessage("!مرحبا بك مجددا")
+        "wantToDeleteClinic":
+            MessageLookupByLibrary.simpleMessage("هل تريد حذف هذه العياده؟"),
+        "welcomeBack": MessageLookupByLibrary.simpleMessage("!مرحبا بك مجددا"),
+        "yes": MessageLookupByLibrary.simpleMessage("نعم")
       };
 }

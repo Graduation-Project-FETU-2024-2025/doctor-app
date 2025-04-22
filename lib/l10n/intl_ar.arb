@@ -16,5 +16,14 @@
         "searchHint":"ابحث عن دواء",
         "medicines": "الأدوية",
         "selectMedicines": "اختر الأدوية",
-        "save": "حفظ"
+        "save": "حفظ",
+        "delete":"حذف",
+        "wantToDeleteClinic":"هل تريد حذف هذه العياده؟",
+        "yes":"نعم",
+        "no":"لا",
+        "english":"الإنجليزية",
+        "arabic":"العربية",
+        "language":"اللغة",
+        "darkMode":"الوضع المظلم",
+         "logout":"تسجيل خروج"
 }

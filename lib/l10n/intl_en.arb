@@ -16,5 +16,14 @@
     "searchHint":"Search for medicine",
     "medicines": "Medicines",
     "selectMedicines": "Select Medicines",
-    "save":"Save"
+    "save":"Save",
+    "delete":"Delete",
+    "wantToDeleteClinic": "You Want To Delete This Clinic?",
+    "yes":"Yes",
+    "no":"No",
+    "english":"English",
+    "arabic":"Arabic",
+    "language":"Language",
+    "darkMode":"Dark Mode",
+    "logout":"Logout"
 }
