@@ -34,6 +34,7 @@ dependencies:
   dartz: ^0.10.1
   device_preview: ^1.2.0
   dio: ^5.8.0+1
+  fl_chart: ^0.71.0
   flutter:
     sdk: flutter
   flutter_bloc: ^9.1.0
@@ -103,16 +104,14 @@ flutter:
 flutter_intl:
   enabled: true
 
-
 flutter_launcher_icons:
   android: "launcher_icon"
   adaptive_icon_background: "#ffffff"
   adaptive_icon_foreground: "assets/images/app_icon.png"
-  min_sdk_android: 21 
+  min_sdk_android: 21
   ios: true
   remove_alpha_ios: true
   image_path: "assets/images/app_icon.png"
-
 
 flutter_assets:
   assets_path: assets/svgs/

@@ -21,7 +21,7 @@ class ClinicDetailInfo extends StatelessWidget {
               height: 20.h,
               width: 20.w,
               child: SvgPicture.asset(
-                AppIcons.svgsLocationIcon,
+                AppIcons.svgsLocation,
                 fit: BoxFit.cover,
               ),
             ),
@@ -41,7 +41,7 @@ class ClinicDetailInfo extends StatelessWidget {
               height: 20.h,
               width: 20.w,
               child: SvgPicture.asset(
-                AppIcons.svgsPhoneIcon,
+                AppIcons.svgsPhone,
                 fit: BoxFit.cover,
               ),
             ),
@@ -61,7 +61,7 @@ class ClinicDetailInfo extends StatelessWidget {
               width: 20.w,
               height: 20.h,
               child: SvgPicture.asset(
-                AppIcons.svgsStarIcon,
+                AppIcons.svgsStar,
                 fit: BoxFit.cover,
               ),
             ),

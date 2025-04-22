@@ -51,7 +51,7 @@ class BookingPriceCard extends StatelessWidget {
                 width: 11.w,
                 height: 10.h,
                 child: SvgPicture.asset(
-                  AppIcons.svgsStarIcon,
+                  AppIcons.svgsStar,
                   fit: BoxFit.cover,
                 ),
               ),

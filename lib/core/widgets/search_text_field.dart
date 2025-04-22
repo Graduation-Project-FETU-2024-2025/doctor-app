@@ -40,7 +40,7 @@ class SearchTextField extends StatelessWidget {
                 prefixIcon: Padding(
                   padding: const EdgeInsets.all(10),
                   child: SvgPicture.asset(
-                    AppIcons.iconsSearch,
+                    AppIcons.svgsSearch,
                     colorFilter: ColorFilter.mode(
                       Color(0xffBDBDBD),
                       BlendMode.srcIn,

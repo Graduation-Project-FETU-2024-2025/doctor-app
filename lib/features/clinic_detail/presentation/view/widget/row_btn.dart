@@ -34,7 +34,7 @@ class RowBtn extends StatelessWidget {
                 //TODO
               },
               child: SvgPicture.asset(
-                AppIcons.svgsEditIcon,
+                AppIcons.svgsEditsvg,
                 colorFilter: ColorFilter.mode(Colors.white, BlendMode.dst),
               )),
         ),
