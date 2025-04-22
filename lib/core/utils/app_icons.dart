@@ -8,7 +8,7 @@ class AppIcons {
 
   /// Assets for svgsAuthIcon
   /// assets/svgs/auth_icon.svg
-  static const String svgsAuthIcon = "assets/svgs/auth_icon.svg";
+  static const String svgsAuthIcon = "assets/svgs/auth_icon.svg"; 
 
   /// Assets for svgsCamera
   /// assets/svgs/camera.svg
