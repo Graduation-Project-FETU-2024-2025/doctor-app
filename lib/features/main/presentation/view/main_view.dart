@@ -1,5 +1,6 @@
 import 'package:doctor_app/core/utils/app_colors.dart';
 import 'package:doctor_app/core/utils/app_images.dart';
+import 'package:doctor_app/features/profile/presentation/view/profile_view.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 
@@ -22,7 +23,7 @@ class _MainViewState extends State<MainView> {
     const Center(child: Text('Onboarding')),
     const Center(child: Text('Splash')),
     const Center(child: Text('Splash')),
-    const Center(child: Text('Splash')),
+    const ProfileView(),
   ];
 
   @override

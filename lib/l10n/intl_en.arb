@@ -11,5 +11,10 @@
     "resend": "Resend",
     "password": "Password",
     "name": "Name",
-    "phone": "Phone"
+    "phone": "Phone",
+    "english":"English",
+    "arabic":"Arabic",
+    "language":"Language",
+    "darkMode":"Dark Mode",
+    "logout":"Logout"
 }
