@@ -39,6 +39,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "loginToYourAccount":
             MessageLookupByLibrary.simpleMessage("تسجيل الدخول إلى حسابك"),
         "logout": MessageLookupByLibrary.simpleMessage("تسجيل خروج"),
+        "medicines": MessageLookupByLibrary.simpleMessage("الأدوية"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "no": MessageLookupByLibrary.simpleMessage("لا"),
         "onboarding":
@@ -46,6 +47,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "phone": MessageLookupByLibrary.simpleMessage("الهاتف"),
         "resend": MessageLookupByLibrary.simpleMessage("إعادة إرسال"),
+        "save": MessageLookupByLibrary.simpleMessage("حفظ"),
+        "searchButtonTitle": MessageLookupByLibrary.simpleMessage("ابحث"),
+        "searchHint": MessageLookupByLibrary.simpleMessage("ابحث عن دواء"),
+        "selectMedicines": MessageLookupByLibrary.simpleMessage("اختر الأدوية"),
         "wantToDeleteClinic":
             MessageLookupByLibrary.simpleMessage("هل تريد حذف هذه العياده؟"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("!مرحبا بك مجددا"),

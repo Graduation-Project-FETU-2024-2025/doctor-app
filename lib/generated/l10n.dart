@@ -180,6 +180,56 @@ class S {
     );
   }
 
+  /// `search`
+  String get searchButtonTitle {
+    return Intl.message(
+      'search',
+      name: 'searchButtonTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search for medicine`
+  String get searchHint {
+    return Intl.message(
+      'Search for medicine',
+      name: 'searchHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Medicines`
+  String get medicines {
+    return Intl.message(
+      'Medicines',
+      name: 'medicines',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Medicines`
+  String get selectMedicines {
+    return Intl.message(
+      'Select Medicines',
+      name: 'selectMedicines',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save`
+  String get save {
+    return Intl.message(
+      'Save',
+      name: 'save',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Delete`
   String get delete {
     return Intl.message(

@@ -1,7 +1,9 @@
+import 'package:doctor_app/core/utils/app_icons.dart';
+import 'package:doctor_app/core/utils/app_styles.dart';
+import 'package:doctor_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '../../../../../core/utils/app_colors.dart';
-
 
 class SearchTextField extends StatelessWidget {
   const SearchTextField({super.key});
@@ -25,11 +27,10 @@ class SearchTextField extends StatelessWidget {
               cursorHeight: 25,
               cursorColor: AppColors.primaryColor,
               decoration: InputDecoration(
-                contentPadding: const EdgeInsets.symmetric(horizontal: 16),
-                hintText: 'Search',//TODO change to S.of(context).search
-                hintStyle: Theme.of(context).textTheme.titleMedium?.copyWith(
-                      color: Color(0xffBDBDBD),
-                    ),
+                hintText: S.of(context).searchHint,
+                hintStyle: AppStyles.semiBold15(context).copyWith(
+                  color: Color(0xffBDBDBD),
+                ),
                 border: InputBorder.none,
                 enabledBorder: InputBorder.none,
                 focusedBorder: InputBorder.none,
@@ -39,7 +40,7 @@ class SearchTextField extends StatelessWidget {
                 prefixIcon: Padding(
                   padding: const EdgeInsets.all(10),
                   child: SvgPicture.asset(
-                    'assets/svgs/email_checked_icon.svg',
+                    AppIcons.iconsSearch,
                     colorFilter: ColorFilter.mode(
                       Color(0xffBDBDBD),
                       BlendMode.srcIn,
@@ -69,10 +70,10 @@ class SearchTextField extends StatelessWidget {
                   ),
                 ),
                 child: Text(
-                  'Search',//TODO change to S.of(context).searchButtonTitle
-                  style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                        color: AppColors.white,
-                      ),
+                  S.of(context).searchButtonTitle,
+                  style: AppStyles.semiBold20(context).copyWith(
+                    color: Colors.white,
+                  ),
                 ),
               ),
             ),
