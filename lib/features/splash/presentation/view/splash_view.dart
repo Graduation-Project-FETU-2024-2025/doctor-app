@@ -55,10 +55,11 @@ class _SplashViewState extends State<SplashView> {
   _getInitRoute() async {
 
     final token = await SecureStorage.instance.getData(key: ApiKeys.token);
+    bool frisTime=getIt<CacheHelper>().getBool(key: CacheKeys.isFirstTime)??true;
     if (mounted) {
       if (token != null) {
         context.pushReplacementNamed(Routing.home);
-      } else if (!getIt<CacheHelper>().getData(key: CacheKeys.isFirstTime)) {
+      } else if (!frisTime) {
         context.pushReplacementNamed(Routing.signIn);
       } else {
         context.pushReplacementNamed(Routing.onboarding);

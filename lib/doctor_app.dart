@@ -1,6 +1,8 @@
+import 'package:doctor_app/core/database/cache/cache_keys.dart';
 import 'package:doctor_app/core/database/cache/cashe_helper.dart';
 import 'package:doctor_app/core/global_cubits/change_language_cubit/change_language_cubit.dart';
 import 'package:doctor_app/core/global_cubits/change_language_cubit/change_language_state.dart';
+import 'package:doctor_app/core/global_cubits/change_themes_cubit/change_themes_cubit.dart';
 import 'package:doctor_app/core/routers/app_router.dart';
 import 'package:doctor_app/core/routers/routing.dart';
 import 'package:doctor_app/core/services/get_it.dart';
@@ -30,10 +32,14 @@ class DoctorApp extends StatelessWidget {
                 GlobalCupertinoLocalizations.delegate,
               ],
               supportedLocales: S.delegate.supportedLocales,
-              locale: Locale(getIt<CacheHelper>().getCurrentLanguage()),
+              locale: Locale(getIt<CacheHelper>()
+                      .getString(key: CacheKeys.currentLanguage) ??
+                  'en'),
               theme: Themes.lightTheme,
               darkTheme: Themes.darkTheme,
-              themeMode: ThemeMode.light,
+              themeMode: context.watch<ChangeThemesCubit>().isDarkMode
+                  ? ThemeMode.dark
+                  : ThemeMode.light,
               onGenerateRoute: AppRouter.generateRoute,
               initialRoute: Routing.splash,
             );
