@@ -14,6 +14,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../features/clinic_detail/presentation/view/clinic_detail_view.dart';
+
 class AppRouter {
   static Route? generateRoute(RouteSettings routeSettings) {
     final args = routeSettings.arguments;
@@ -38,6 +40,8 @@ class AppRouter {
         return _buildRoute(MainView());
       case Routing.profile:
         return _buildRoute(Scaffold());
+      case Routing.clinicDetail:
+        return _buildRoute(ClinicDetailView());
 
       default:
         return null;

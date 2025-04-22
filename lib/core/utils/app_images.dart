@@ -54,8 +54,13 @@ class AppImages {
   /// assets/images/unselected_home.png
   static const String imagesUnselectedHome = "assets/images/unselected_home.png";
 
-  /// Assets for imagesUnselectedProfile
   /// assets/images/unselected_profile.png
+  /// Assets for imagesUnselectedProfile
   static const String imagesUnselectedProfile = "assets/images/unselected_profile.png";
+
+  /// Assets for svgClinicDetail
+  static const String svgClinicDetail = "assets/svgs/clinic-detail.svg";
+  static const String imagesClinicDetail = "assets/images/clinic-detail.png";
+  static const String svgClinicCardImg = "assets/svgs/clinic_card_img.png";
 }
 

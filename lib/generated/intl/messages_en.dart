@@ -25,6 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
         "continueOtp": MessageLookupByLibrary.simpleMessage("Continue"),
         "darkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
+        "delete": MessageLookupByLibrary.simpleMessage("Delete"),
         "emailAddress": MessageLookupByLibrary.simpleMessage("Email address"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
         "enterOtp": MessageLookupByLibrary.simpleMessage("Enter OTP"),
@@ -38,11 +39,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Login to your account"),
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
+        "no": MessageLookupByLibrary.simpleMessage("No"),
         "onboarding": MessageLookupByLibrary.simpleMessage(
             "All Services for your health"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone"),
         "resend": MessageLookupByLibrary.simpleMessage("Resend"),
-        "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome back!")
+        "wantToDeleteClinic": MessageLookupByLibrary.simpleMessage(
+            "You Want To Delete This Clinic?"),
+        "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome back!"),
+        "yes": MessageLookupByLibrary.simpleMessage("Yes")
       };
 }

@@ -25,6 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
         "continueOtp": MessageLookupByLibrary.simpleMessage("استمر"),
         "darkMode": MessageLookupByLibrary.simpleMessage("الوضع المظلم"),
+        "delete": MessageLookupByLibrary.simpleMessage("حذف"),
         "emailAddress":
             MessageLookupByLibrary.simpleMessage(" البريد الإلكتروني"),
         "english": MessageLookupByLibrary.simpleMessage("الإنجليزية"),
@@ -39,11 +40,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تسجيل الدخول إلى حسابك"),
         "logout": MessageLookupByLibrary.simpleMessage("تسجيل خروج"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
+        "no": MessageLookupByLibrary.simpleMessage("لا"),
         "onboarding":
             MessageLookupByLibrary.simpleMessage("جميع الخدمات لصحتك"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "phone": MessageLookupByLibrary.simpleMessage("الهاتف"),
         "resend": MessageLookupByLibrary.simpleMessage("إعادة إرسال"),
-        "welcomeBack": MessageLookupByLibrary.simpleMessage("!مرحبا بك مجددا")
+        "wantToDeleteClinic":
+            MessageLookupByLibrary.simpleMessage("هل تريد حذف هذه العياده؟"),
+        "welcomeBack": MessageLookupByLibrary.simpleMessage("!مرحبا بك مجددا"),
+        "yes": MessageLookupByLibrary.simpleMessage("نعم")
       };
 }
