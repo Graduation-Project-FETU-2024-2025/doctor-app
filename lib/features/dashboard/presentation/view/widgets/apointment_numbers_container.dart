@@ -19,7 +19,9 @@ class AppointmentNumbersContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: AppColors.white,
+      color: Theme.of(context).brightness == Brightness.light
+          ? AppColors.white
+          : AppColors.darkWhite,
       child: Container(
         constraints: BoxConstraints(
           minWidth: 100.w,
@@ -33,6 +35,7 @@ class AppointmentNumbersContainer extends StatelessWidget {
         ),
         child: Column(
           children: [
+            Gap(10.h),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [

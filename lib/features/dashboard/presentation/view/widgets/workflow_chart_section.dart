@@ -1,4 +1,4 @@
-
+import 'package:doctor_app/core/utils/app_colors.dart';
 import 'package:doctor_app/features/dashboard/presentation/view/widgets/workflow_data_coulmn.dart';
 import 'package:doctor_app/generated/l10n.dart';
 import 'package:fl_chart/fl_chart.dart';
@@ -43,7 +43,9 @@ class WorkflowChartSection extends StatelessWidget {
       margin: const EdgeInsets.all(16),
       padding: const EdgeInsets.symmetric(vertical: 16),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Theme.of(context).brightness == Brightness.light
+            ? AppColors.white
+            : AppColors.darkWhite,
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(color: Colors.black12, blurRadius: 6, offset: Offset(0, 2)),
@@ -131,4 +133,3 @@ class WorkflowChartSection extends StatelessWidget {
     );
   }
 }
-
