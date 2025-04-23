@@ -25,5 +25,11 @@
         "arabic":"العربية",
         "language":"اللغة",
         "darkMode":"الوضع المظلم",
-         "logout":"تسجيل خروج"
+        "logout":"تسجيل خروج",
+        "clinicTiming":"مواعيد العيادة",
+        "thisWeek": " الاسبوع الحالى",
+        "nextWeek": " الاسبوع القادم",
+        "startTime": "وقت البداية",
+        "endTime": "وقت الانتهاء",
+        "bookingPrice": "سعر الحجز"
 }

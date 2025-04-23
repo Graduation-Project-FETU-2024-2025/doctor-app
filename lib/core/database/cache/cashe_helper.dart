@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:doctor_app/core/database/cache/cache_keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class CacheHelper {
@@ -39,4 +40,9 @@ class CacheHelper {
   bool? getBool({required String key}) {
     return sharedPreferences.getBool(key);
   }
+  Future<void> setCurrentLanguage({required String language}) async {
+    sharedPreferences.setString(CacheKeys.currentLanguage, language);
+  }
+  String getCurrentLanguage() {
+    return sharedPreferences.getString(CacheKeys.currentLanguage)??'en';}
 }
