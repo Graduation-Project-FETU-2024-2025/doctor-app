@@ -1,5 +1,6 @@
 import 'package:doctor_app/core/utils/app_colors.dart';
 import 'package:doctor_app/core/utils/app_images.dart';
+import 'package:doctor_app/features/dashboard/presentation/view/dashboard_view.dart';
 import 'package:doctor_app/features/profile/presentation/view/profile_view.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
@@ -21,7 +22,7 @@ class _MainViewState extends State<MainView> {
   double kIconSize = 24.0;
   double kBottomRadius = 20.0;
   List<Widget> screens = [
-    const Center(child: Text('Home')),
+    DashboardView(),
     const Center(child: Text('Onboarding')),
     const Center(child: Text('Splash')),
     const ClinicDetailView(),

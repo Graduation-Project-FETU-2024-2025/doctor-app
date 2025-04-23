@@ -25,5 +25,13 @@
         "arabic":"العربية",
         "language":"اللغة",
         "darkMode":"الوضع المظلم",
-         "logout":"تسجيل خروج"
+         "logout":"تسجيل خروج",
+         "goodMorning":"صباح الخير\n دكتور",
+         "letsSee":"أخر المستجدات",
+         "clinic":"العيادة",
+         "checkups":"الكشف",
+         "newVisits":"كشف اول مرة",
+         "reVisits":"إعادة كشف",
+         "booking":"الحوجزات",
+         "totalIncome":"قيمة الدخل"
 }

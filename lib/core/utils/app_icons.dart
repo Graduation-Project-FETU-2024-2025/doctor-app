@@ -34,9 +34,25 @@ class AppIcons {
   /// assets/svgs/correct-success-tick-svgrepo-com.svg
   static const String svgsCorrectSuccessTickSvgrepoCom = "assets/svgs/correct-success-tick-svgrepo-com.svg";
 
+  /// Assets for svgsDateCancle
+  /// assets/svgs/date_cancle.svg
+  static const String svgsDateCancle = "assets/svgs/date_cancle.svg";
+
+  /// Assets for svgsDateComplete
+  /// assets/svgs/date_complete.svg
+  static const String svgsDateComplete = "assets/svgs/date_complete.svg";
+
+  /// Assets for svgsDatePending
+  /// assets/svgs/date_pending.svg
+  static const String svgsDatePending = "assets/svgs/date_pending.svg";
+
   /// Assets for svgsEdit
   /// assets/svgs/edit.svg
   static const String svgsEdit = "assets/svgs/edit.svg";
+
+  /// Assets for svgsEditIcon
+  /// assets/svgs/editIcon.svg
+  static const String svgsEditIcon = "assets/svgs/editIcon.svg";
 
   /// Assets for svgsEditsvg
   /// assets/svgs/editsvg.svg
@@ -61,6 +77,10 @@ class AppIcons {
   /// Assets for svgsLogout
   /// assets/svgs/logout.svg
   static const String svgsLogout = "assets/svgs/logout.svg";
+
+  /// Assets for svgsNotificationIcon
+  /// assets/svgs/notification_icon.svg
+  static const String svgsNotificationIcon = "assets/svgs/notification_icon.svg";
 
   /// Assets for svgsOnboardingIcon
   /// assets/svgs/onboarding_icon.svg

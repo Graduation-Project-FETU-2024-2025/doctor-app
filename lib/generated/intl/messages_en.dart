@@ -23,6 +23,9 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
+        "booking": MessageLookupByLibrary.simpleMessage("Booking"),
+        "checkups": MessageLookupByLibrary.simpleMessage("Checkups"),
+        "clinic": MessageLookupByLibrary.simpleMessage("Clinic"),
         "continueOtp": MessageLookupByLibrary.simpleMessage("Continue"),
         "darkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
         "delete": MessageLookupByLibrary.simpleMessage("Delete"),
@@ -31,20 +34,26 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterOtp": MessageLookupByLibrary.simpleMessage("Enter OTP"),
         "enterOtpWeSent":
             MessageLookupByLibrary.simpleMessage("Enter the code we sent at"),
+        "goodMorning":
+            MessageLookupByLibrary.simpleMessage("Good Morning\nDr."),
         "haventReceivedOtp":
             MessageLookupByLibrary.simpleMessage("Haven\'t received the OTP?"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
+        "letsSee":
+            MessageLookupByLibrary.simpleMessage("Let\'s see What\'s going on"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "loginToYourAccount":
             MessageLookupByLibrary.simpleMessage("Login to your account"),
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
         "medicines": MessageLookupByLibrary.simpleMessage("Medicines"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
+        "newVisits": MessageLookupByLibrary.simpleMessage("New Visits"),
         "no": MessageLookupByLibrary.simpleMessage("No"),
         "onboarding": MessageLookupByLibrary.simpleMessage(
             "All Services for your health"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone"),
+        "reVisits": MessageLookupByLibrary.simpleMessage("Re-Visits"),
         "resend": MessageLookupByLibrary.simpleMessage("Resend"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
         "searchButtonTitle": MessageLookupByLibrary.simpleMessage("search"),
@@ -52,6 +61,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Search for medicine"),
         "selectMedicines":
             MessageLookupByLibrary.simpleMessage("Select Medicines"),
+        "totalIncome": MessageLookupByLibrary.simpleMessage("Total Income"),
         "wantToDeleteClinic": MessageLookupByLibrary.simpleMessage(
             "You Want To Delete This Clinic?"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome back!"),

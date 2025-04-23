@@ -25,5 +25,15 @@
     "arabic":"Arabic",
     "language":"Language",
     "darkMode":"Dark Mode",
-    "logout":"Logout"
+    "logout":"Logout",
+    "goodMorning":"Good Morning\nDr.",
+    "letsSee":"Let's see What's going on",
+    "clinic":"Clinic",
+    "checkups":"Checkups",
+    "newVisits":"New Visits",
+    "reVisits":"Re-Visits",
+    "booking":"Booking",
+    "totalIncome":"Total Income"
+    
+
 }

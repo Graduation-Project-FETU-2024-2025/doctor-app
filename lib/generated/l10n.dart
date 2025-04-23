@@ -319,6 +319,86 @@ class S {
       args: [],
     );
   }
+
+  /// `Good Morning\nDr.`
+  String get goodMorning {
+    return Intl.message(
+      'Good Morning\nDr.',
+      name: 'goodMorning',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Let's see What's going on`
+  String get letsSee {
+    return Intl.message(
+      'Let\'s see What\'s going on',
+      name: 'letsSee',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Clinic`
+  String get clinic {
+    return Intl.message(
+      'Clinic',
+      name: 'clinic',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Checkups`
+  String get checkups {
+    return Intl.message(
+      'Checkups',
+      name: 'checkups',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New Visits`
+  String get newVisits {
+    return Intl.message(
+      'New Visits',
+      name: 'newVisits',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Re-Visits`
+  String get reVisits {
+    return Intl.message(
+      'Re-Visits',
+      name: 'reVisits',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Booking`
+  String get booking {
+    return Intl.message(
+      'Booking',
+      name: 'booking',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total Income`
+  String get totalIncome {
+    return Intl.message(
+      'Total Income',
+      name: 'totalIncome',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

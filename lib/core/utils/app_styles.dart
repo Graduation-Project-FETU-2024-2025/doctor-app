@@ -6,6 +6,11 @@ class AppStyles {
     fontWeight: FontWeight.w400,
     color: Theme.of(context).textTheme.bodyLarge?.color,
   );
+  static TextStyle regular20(context) => TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeight.w400,
+    color: Theme.of(context).textTheme.bodyLarge?.color,
+  );
 
   static TextStyle medium12(context) => TextStyle(
     fontSize: 12,
@@ -72,6 +77,11 @@ class AppStyles {
     fontWeight: FontWeight.w600,
     color: Theme.of(context).textTheme.bodyLarge?.color,
   );
+  static TextStyle semiBold18(context) => TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.w600,
+    color: Theme.of(context).textTheme.bodyLarge?.color,
+  );
 
   static TextStyle semiBold20(context) => TextStyle(
     fontSize: 20,
@@ -81,6 +91,11 @@ class AppStyles {
 
   static TextStyle semiBold25(context) => TextStyle(
     fontSize: 25,
+    fontWeight: FontWeight.w600,
+    color: Theme.of(context).textTheme.bodyLarge?.color,
+  );
+  static TextStyle semiBold30(context) => TextStyle(
+    fontSize: 30,
     fontWeight: FontWeight.w600,
     color: Theme.of(context).textTheme.bodyLarge?.color,
   );

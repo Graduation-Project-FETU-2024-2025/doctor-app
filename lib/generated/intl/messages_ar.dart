@@ -23,6 +23,9 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
+        "booking": MessageLookupByLibrary.simpleMessage("الحوجزات"),
+        "checkups": MessageLookupByLibrary.simpleMessage("الكشف"),
+        "clinic": MessageLookupByLibrary.simpleMessage("العيادة"),
         "continueOtp": MessageLookupByLibrary.simpleMessage("استمر"),
         "darkMode": MessageLookupByLibrary.simpleMessage("الوضع المظلم"),
         "delete": MessageLookupByLibrary.simpleMessage("حذف"),
@@ -32,25 +35,31 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterOtp": MessageLookupByLibrary.simpleMessage("إدخال رمز التعيين"),
         "enterOtpWeSent":
             MessageLookupByLibrary.simpleMessage("أدخل الرمز الذي أرسلناه إلى"),
+        "goodMorning":
+            MessageLookupByLibrary.simpleMessage("صباح الخير\n دكتور"),
         "haventReceivedOtp":
             MessageLookupByLibrary.simpleMessage("لم تتلقى رمز التعيين؟"),
         "language": MessageLookupByLibrary.simpleMessage("اللغة"),
+        "letsSee": MessageLookupByLibrary.simpleMessage("أخر المستجدات"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginToYourAccount":
             MessageLookupByLibrary.simpleMessage("تسجيل الدخول إلى حسابك"),
         "logout": MessageLookupByLibrary.simpleMessage("تسجيل خروج"),
         "medicines": MessageLookupByLibrary.simpleMessage("الأدوية"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
+        "newVisits": MessageLookupByLibrary.simpleMessage("كشف اول مرة"),
         "no": MessageLookupByLibrary.simpleMessage("لا"),
         "onboarding":
             MessageLookupByLibrary.simpleMessage("جميع الخدمات لصحتك"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "phone": MessageLookupByLibrary.simpleMessage("الهاتف"),
+        "reVisits": MessageLookupByLibrary.simpleMessage("إعادة كشف"),
         "resend": MessageLookupByLibrary.simpleMessage("إعادة إرسال"),
         "save": MessageLookupByLibrary.simpleMessage("حفظ"),
         "searchButtonTitle": MessageLookupByLibrary.simpleMessage("ابحث"),
         "searchHint": MessageLookupByLibrary.simpleMessage("ابحث عن دواء"),
         "selectMedicines": MessageLookupByLibrary.simpleMessage("اختر الأدوية"),
+        "totalIncome": MessageLookupByLibrary.simpleMessage("قيمة الدخل"),
         "wantToDeleteClinic":
             MessageLookupByLibrary.simpleMessage("هل تريد حذف هذه العياده؟"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("!مرحبا بك مجددا"),
