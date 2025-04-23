@@ -24,13 +24,16 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
         "booking": MessageLookupByLibrary.simpleMessage("Booking"),
+        "bookingPrice": MessageLookupByLibrary.simpleMessage("Booking Price"),
         "checkups": MessageLookupByLibrary.simpleMessage("Checkups"),
         "clinic": MessageLookupByLibrary.simpleMessage("Clinic"),
+        "clinicTiming": MessageLookupByLibrary.simpleMessage("Clinic Timings"),
         "completed": MessageLookupByLibrary.simpleMessage("Completed"),
         "continueOtp": MessageLookupByLibrary.simpleMessage("Continue"),
         "darkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
         "delete": MessageLookupByLibrary.simpleMessage("Delete"),
         "emailAddress": MessageLookupByLibrary.simpleMessage("Email address"),
+        "endTime": MessageLookupByLibrary.simpleMessage("End Time"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
         "enterOtp": MessageLookupByLibrary.simpleMessage("Enter OTP"),
         "enterOtpWeSent":
@@ -50,6 +53,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "missed": MessageLookupByLibrary.simpleMessage("Missed"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
         "newVisits": MessageLookupByLibrary.simpleMessage("New Visits"),
+        "nextWeek": MessageLookupByLibrary.simpleMessage("Next Week"),
         "no": MessageLookupByLibrary.simpleMessage("No"),
         "onboarding": MessageLookupByLibrary.simpleMessage(
             "All Services for your health"),
@@ -64,6 +68,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Search for medicine"),
         "selectMedicines":
             MessageLookupByLibrary.simpleMessage("Select Medicines"),
+        "startTime": MessageLookupByLibrary.simpleMessage("Start time"),
+        "thisWeek": MessageLookupByLibrary.simpleMessage("This Week"),
         "totalIncome": MessageLookupByLibrary.simpleMessage("Total Income"),
         "wantToDeleteClinic": MessageLookupByLibrary.simpleMessage(
             "You Want To Delete This Clinic?"),

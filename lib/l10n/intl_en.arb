@@ -36,7 +36,13 @@
     "totalIncome":"Total Income",
     "missed":"Missed",
     "completed":"Completed",
-    "pending":"Pending"
+    "pending":"Pending",
     
+    "clinicTiming": "Clinic Timings",
+    "thisWeek": "This Week",
+    "nextWeek": "Next Week",
+    "startTime": "Start time",
+    "endTime": "End Time",
+    "bookingPrice": "Booking Price"
 
 }

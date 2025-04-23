@@ -24,14 +24,17 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
         "booking": MessageLookupByLibrary.simpleMessage("الحوجزات"),
+        "bookingPrice": MessageLookupByLibrary.simpleMessage("سعر الحجز"),
         "checkups": MessageLookupByLibrary.simpleMessage("الكشف"),
         "clinic": MessageLookupByLibrary.simpleMessage("العيادة"),
+        "clinicTiming": MessageLookupByLibrary.simpleMessage("مواعيد العيادة"),
         "completed": MessageLookupByLibrary.simpleMessage("مكتمل"),
         "continueOtp": MessageLookupByLibrary.simpleMessage("استمر"),
         "darkMode": MessageLookupByLibrary.simpleMessage("الوضع المظلم"),
         "delete": MessageLookupByLibrary.simpleMessage("حذف"),
         "emailAddress":
             MessageLookupByLibrary.simpleMessage(" البريد الإلكتروني"),
+        "endTime": MessageLookupByLibrary.simpleMessage("وقت الانتهاء"),
         "english": MessageLookupByLibrary.simpleMessage("الإنجليزية"),
         "enterOtp": MessageLookupByLibrary.simpleMessage("إدخال رمز التعيين"),
         "enterOtpWeSent":
@@ -50,6 +53,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "missed": MessageLookupByLibrary.simpleMessage("الفائته"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "newVisits": MessageLookupByLibrary.simpleMessage("كشف اول مرة"),
+        "nextWeek": MessageLookupByLibrary.simpleMessage(" الاسبوع القادم"),
         "no": MessageLookupByLibrary.simpleMessage("لا"),
         "onboarding":
             MessageLookupByLibrary.simpleMessage("جميع الخدمات لصحتك"),
@@ -62,6 +66,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "searchButtonTitle": MessageLookupByLibrary.simpleMessage("ابحث"),
         "searchHint": MessageLookupByLibrary.simpleMessage("ابحث عن دواء"),
         "selectMedicines": MessageLookupByLibrary.simpleMessage("اختر الأدوية"),
+        "startTime": MessageLookupByLibrary.simpleMessage("وقت البداية"),
+        "thisWeek": MessageLookupByLibrary.simpleMessage(" الاسبوع الحالى"),
         "totalIncome": MessageLookupByLibrary.simpleMessage("قيمة الدخل"),
         "wantToDeleteClinic":
             MessageLookupByLibrary.simpleMessage("هل تريد حذف هذه العياده؟"),

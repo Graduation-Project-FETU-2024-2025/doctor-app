@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_single_quotes
+
 class AppIcons {
   AppIcons._();
   
@@ -45,14 +45,6 @@ class AppIcons {
   /// Assets for svgsDatePending
   /// assets/svgs/date_pending.svg
   static const String svgsDatePending = "assets/svgs/date_pending.svg";
-
-  /// Assets for svgsEdit
-  /// assets/svgs/edit.svg
-  static const String svgsEdit = "assets/svgs/edit.svg";
-
-  /// Assets for svgsEditIcon
-  /// assets/svgs/editIcon.svg
-  static const String svgsEditIcon = "assets/svgs/editIcon.svg";
 
   /// Assets for svgsEditsvg
   /// assets/svgs/editsvg.svg
@@ -103,5 +95,24 @@ class AppIcons {
   /// Assets for svgsTheme
   /// assets/svgs/theme.svg
   static const String svgsTheme = "assets/svgs/theme.svg";
+  /// Assets for iconsSearch
+  /// assets/icons/search.svg
+  static const String iconsSearch = "assets/svgs/search.svg";
+
+  /// Assets for svgsStarIcon
+  // assets/svgs/star.svg
+  static const String svgsStarIcon = "assets/svgs/star.svg";
+
+
+  // Assets for svgsEditIcon
+  // assets/svgs/edit.svg
+  static const String svgsEditIcon = "assets/svgs/edit.svg";
+  
+
+  /// Assets for svgsTheme
+  // assets/svgs/theme.svg
+  static const String iconTime = "assets/svgs/clock.svg";
+
+
 }
 

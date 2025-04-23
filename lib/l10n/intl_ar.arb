@@ -36,5 +36,11 @@
          "totalIncome":"قيمة الدخل",
          "missed":"الفائته",
          "completed":"مكتمل",
-         "pending":"معلق"
+         "pending":"معلق",
+        "clinicTiming":"مواعيد العيادة",
+        "thisWeek": " الاسبوع الحالى",
+        "nextWeek": " الاسبوع القادم",
+        "startTime": "وقت البداية",
+        "endTime": "وقت الانتهاء",
+        "bookingPrice": "سعر الحجز"
 }
