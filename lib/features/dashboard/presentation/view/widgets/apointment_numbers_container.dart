@@ -26,12 +26,8 @@ class AppointmentNumbersContainer extends StatelessWidget {
         constraints: BoxConstraints(
           minWidth: 100.w,
         ),
-        // padding: EdgeInsets.symmetric(
-        //   horizontal: 25.w,
-        // ),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(25.r),
-          // border: Border.all(color: AppColors.black, width: 1),
         ),
         child: Column(
           children: [
@@ -39,7 +35,10 @@ class AppointmentNumbersContainer extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Image.asset(iconPath),
+                Image.asset(
+                  iconPath,
+                  height: 15.h,
+                ),
               ],
             ),
             Gap(12.h),

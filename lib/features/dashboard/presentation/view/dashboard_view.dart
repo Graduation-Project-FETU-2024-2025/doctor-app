@@ -1,12 +1,11 @@
-import 'package:doctor_app/core/utils/app_icons.dart';
+import 'package:doctor_app/core/utils/app_images.dart';
 import 'package:doctor_app/core/utils/app_styles.dart';
 import 'package:doctor_app/features/dashboard/presentation/view/widgets/booking_section.dart';
 import 'package:doctor_app/features/dashboard/presentation/view/widgets/total_income_section.dart';
 import 'package:doctor_app/features/dashboard/presentation/view/widgets/user_welcome_section.dart';
 import 'package:doctor_app/features/dashboard/presentation/view/widgets/workflow_chart_section.dart';
 import 'package:doctor_app/generated/l10n.dart';
-import 'package:flutter/widgets.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -16,14 +15,21 @@ class DashboardView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 30.0.w),
+      padding: EdgeInsets.symmetric(horizontal: 30.0.w, vertical: 10.h),
       child: ListView(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              SvgPicture.asset(AppIcons.svgsNotificationIcon),
-            ],
+          Align(
+            alignment: AlignmentDirectional.topEnd,
+            child: CircleAvatar(
+              backgroundColor: Color(0xffD9E1F9),
+              child: IconButton(
+                onPressed: () {},
+                icon: Image.asset(
+                  AppImages.imagesNotification,
+                  height: 20.h,
+                ),
+              ),
+            ),
           ),
           Gap(30.h),
           const UserWelcomeSection(),

@@ -78,9 +78,7 @@ class AppIcons {
   /// assets/svgs/logout.svg
   static const String svgsLogout = "assets/svgs/logout.svg";
 
-  /// Assets for svgsNotificationIcon
-  /// assets/svgs/notification_icon.svg
-  static const String svgsNotificationIcon = "assets/svgs/notification_icon.svg";
+
 
   /// Assets for svgsOnboardingIcon
   /// assets/svgs/onboarding_icon.svg

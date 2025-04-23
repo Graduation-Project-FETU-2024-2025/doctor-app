@@ -25,6 +25,9 @@ class AppImages {
   /// Assets for imagesOnboarding
   /// assets/images/onboarding.png
   static const String imagesOnboarding = "assets/images/onboarding.png";
+  /// Assets for imagesNotification
+  /// assets/images/notification.png
+  static const String imagesNotification= "assets/images/notification.png";
 
   /// Assets for imagesOtp
   /// assets/images/otp.png
