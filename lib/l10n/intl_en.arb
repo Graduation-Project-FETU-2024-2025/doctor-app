@@ -25,5 +25,10 @@
     "arabic":"Arabic",
     "language":"Language",
     "darkMode":"Dark Mode",
-    "logout":"Logout"
+    "logout":"Logout",
+    "clinicTiming": "Clinic Timings",
+    "thisWeek": "This Week",
+    "nextWeek": "Next Week",
+    "startTime": "Start time",
+    "endTime": "End Time"
 }

@@ -71,6 +71,9 @@ class AppIcons {
   /// Assets for svgsTheme
   // assets/svgs/theme.svg
   static const String svgsTheme = "assets/svgs/theme.svg";
+  /// Assets for svgsTheme
+  // assets/svgs/theme.svg
+  static const String iconTime = "assets/svgs/clock.svg";
 
 
 }

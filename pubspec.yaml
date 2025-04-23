@@ -32,6 +32,7 @@ dependencies:
   cached_network_image: ^3.4.1
   cupertino_icons: ^1.0.8
   dartz: ^0.10.1
+  date_picker_timeline: ^1.2.6
   device_preview: ^1.2.0
   dio: ^5.8.0+1
   flutter:

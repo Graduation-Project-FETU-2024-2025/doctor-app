@@ -319,6 +319,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Clinic Timings`
+  String get clinicTiming {
+    return Intl.message(
+      'Clinic Timings',
+      name: 'clinicTiming',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This Week`
+  String get thisWeek {
+    return Intl.message(
+      'This Week',
+      name: 'thisWeek',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next Week`
+  String get nextWeek {
+    return Intl.message(
+      'Next Week',
+      name: 'nextWeek',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Start time`
+  String get startTime {
+    return Intl.message(
+      'Start time',
+      name: 'startTime',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `End Time`
+  String get endTime {
+    return Intl.message(
+      'End Time',
+      name: 'endTime',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
