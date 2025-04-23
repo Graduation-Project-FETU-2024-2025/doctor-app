@@ -38,6 +38,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "loginToYourAccount":
             MessageLookupByLibrary.simpleMessage("Login to your account"),
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
+        "medicines": MessageLookupByLibrary.simpleMessage("Medicines"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
         "no": MessageLookupByLibrary.simpleMessage("No"),
         "onboarding": MessageLookupByLibrary.simpleMessage(
@@ -45,6 +46,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone"),
         "resend": MessageLookupByLibrary.simpleMessage("Resend"),
+        "save": MessageLookupByLibrary.simpleMessage("Save"),
+        "searchButtonTitle": MessageLookupByLibrary.simpleMessage("search"),
+        "searchHint":
+            MessageLookupByLibrary.simpleMessage("Search for medicine"),
+        "selectMedicines":
+            MessageLookupByLibrary.simpleMessage("Select Medicines"),
         "wantToDeleteClinic": MessageLookupByLibrary.simpleMessage(
             "You Want To Delete This Clinic?"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome back!"),

@@ -21,7 +21,7 @@ class _MainViewState extends State<MainView> {
   double kIconSize = 24.0;
   double kBottomRadius = 20.0;
   List<Widget> screens = [
-    const Center(child: Text('Email')),
+    const Center(child: Text('Home')),
     const Center(child: Text('Onboarding')),
     const Center(child: Text('Splash')),
     const ClinicDetailView(),

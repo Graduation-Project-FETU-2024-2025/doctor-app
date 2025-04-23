@@ -1,3 +1,4 @@
+import 'package:doctor_app/core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 
 import '../utils/app_colors.dart';
@@ -26,10 +27,10 @@ class AddDeleteButton extends StatelessWidget {
       onPressed: onpressed,
       child: Text(
         title,
-        style: Theme.of(context)
-            .textTheme
-            .displayMedium!
-            .copyWith(fontSize: 18, color: AppColors.white),
+        style: AppStyles.semiBold15(context).copyWith(
+          fontSize: 18,
+          color: AppColors.white,
+        ),
       ),
     );
   }
