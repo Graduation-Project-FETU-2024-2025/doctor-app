@@ -30,5 +30,7 @@
     "thisWeek": "This Week",
     "nextWeek": "Next Week",
     "startTime": "Start time",
-    "endTime": "End Time"
+    "endTime": "End Time",
+    "bookingPrice": "Booking Price"
+
 }

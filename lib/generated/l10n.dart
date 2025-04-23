@@ -369,6 +369,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Booking Price`
+  String get bookingPrice {
+    return Intl.message(
+      'Booking Price',
+      name: 'bookingPrice',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
