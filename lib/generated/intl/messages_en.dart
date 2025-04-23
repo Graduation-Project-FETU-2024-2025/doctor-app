@@ -23,8 +23,12 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
+        "booking": MessageLookupByLibrary.simpleMessage("Booking"),
         "bookingPrice": MessageLookupByLibrary.simpleMessage("Booking Price"),
+        "checkups": MessageLookupByLibrary.simpleMessage("Checkups"),
+        "clinic": MessageLookupByLibrary.simpleMessage("Clinic"),
         "clinicTiming": MessageLookupByLibrary.simpleMessage("Clinic Timings"),
+        "completed": MessageLookupByLibrary.simpleMessage("Completed"),
         "continueOtp": MessageLookupByLibrary.simpleMessage("Continue"),
         "darkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
         "delete": MessageLookupByLibrary.simpleMessage("Delete"),
@@ -34,21 +38,29 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterOtp": MessageLookupByLibrary.simpleMessage("Enter OTP"),
         "enterOtpWeSent":
             MessageLookupByLibrary.simpleMessage("Enter the code we sent at"),
+        "goodMorning":
+            MessageLookupByLibrary.simpleMessage("Good Morning\nDr."),
         "haventReceivedOtp":
             MessageLookupByLibrary.simpleMessage("Haven\'t received the OTP?"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
+        "letsSee":
+            MessageLookupByLibrary.simpleMessage("Let\'s see What\'s going on"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "loginToYourAccount":
             MessageLookupByLibrary.simpleMessage("Login to your account"),
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
         "medicines": MessageLookupByLibrary.simpleMessage("Medicines"),
+        "missed": MessageLookupByLibrary.simpleMessage("Missed"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
+        "newVisits": MessageLookupByLibrary.simpleMessage("New Visits"),
         "nextWeek": MessageLookupByLibrary.simpleMessage("Next Week"),
         "no": MessageLookupByLibrary.simpleMessage("No"),
         "onboarding": MessageLookupByLibrary.simpleMessage(
             "All Services for your health"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "pending": MessageLookupByLibrary.simpleMessage("Pending"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone"),
+        "reVisits": MessageLookupByLibrary.simpleMessage("Re-Visits"),
         "resend": MessageLookupByLibrary.simpleMessage("Resend"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
         "searchButtonTitle": MessageLookupByLibrary.simpleMessage("search"),
@@ -58,6 +70,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Select Medicines"),
         "startTime": MessageLookupByLibrary.simpleMessage("Start time"),
         "thisWeek": MessageLookupByLibrary.simpleMessage("This Week"),
+        "totalIncome": MessageLookupByLibrary.simpleMessage("Total Income"),
         "wantToDeleteClinic": MessageLookupByLibrary.simpleMessage(
             "You Want To Delete This Clinic?"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome back!"),

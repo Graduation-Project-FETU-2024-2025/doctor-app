@@ -10,13 +10,32 @@ class AppImages {
   /// assets/images/auth_header.png
   static const String imagesAuthHeader = "assets/images/auth_header.png";
 
+  /// Assets for imagesClinicDetail
+  /// assets/images/clinic-detail.png
+  static const String imagesClinicDetail = "assets/images/clinic-detail.png";
+
+  /// Assets for imagesCompletedAppointment
+  /// assets/images/completed_appointment.png
+  static const String imagesCompletedAppointment = "assets/images/completed_appointment.png";
+
+  /// Assets for imagesMissedAppointment
+  /// assets/images/missed_appointment.png
+  static const String imagesMissedAppointment = "assets/images/missed_appointment.png";
+
   /// Assets for imagesOnboarding
   /// assets/images/onboarding.png
   static const String imagesOnboarding = "assets/images/onboarding.png";
+  /// Assets for imagesNotification
+  /// assets/images/notification.png
+  static const String imagesNotification= "assets/images/notification.png";
 
   /// Assets for imagesOtp
   /// assets/images/otp.png
   static const String imagesOtp = "assets/images/otp.png";
+
+  /// Assets for imagesPendingAppointment
+  /// assets/images/pending_appointment.png
+  static const String imagesPendingAppointment = "assets/images/pending_appointment.png";
 
   /// Assets for imagesSelectedAppoinment
   /// assets/images/selected_appoinment.png
@@ -54,13 +73,8 @@ class AppImages {
   /// assets/images/unselected_home.png
   static const String imagesUnselectedHome = "assets/images/unselected_home.png";
 
-  /// assets/images/unselected_profile.png
   /// Assets for imagesUnselectedProfile
+  /// assets/images/unselected_profile.png
   static const String imagesUnselectedProfile = "assets/images/unselected_profile.png";
-
-  /// Assets for svgClinicDetail
-  static const String svgClinicDetail = "assets/svgs/clinic-detail.svg";
-  static const String imagesClinicDetail = "assets/images/clinic-detail.png";
-  static const String svgClinicCardImg = "assets/svgs/clinic_card_img.png";
 }
 

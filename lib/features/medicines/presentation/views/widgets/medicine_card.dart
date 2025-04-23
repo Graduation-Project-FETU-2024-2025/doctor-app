@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:doctor_app/core/database/cache/cache_keys.dart';
 import 'package:doctor_app/core/database/cache/cashe_helper.dart';
 import 'package:doctor_app/core/services/get_it.dart';
 import 'package:doctor_app/core/utils/app_colors.dart';
@@ -70,7 +71,7 @@ class MedicineCard extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    getIt<CacheHelper>().getCurrentLanguage() ==
+                                    getIt<CacheHelper>().getString(key: CacheKeys.currentLanguage) ==
                                             'ar'
                                         ? 'أباكافير'
                                         : 'Abacavir',

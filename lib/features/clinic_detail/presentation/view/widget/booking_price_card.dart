@@ -25,52 +25,50 @@ class BookingPriceCard extends StatelessWidget {
             SizedBox(
               width: 95.w,
               height: 95.h,
-              child: Image.asset(AppImages.svgClinicCardImg
-              ),
+              child: Image.asset(AppImages.imagesClinicDetail),
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.start
-              ,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                'Orthopedist',
-                style: AppStyles.semiBold15(context)
-                    .copyWith(color: AppColors.primaryColor,fontSize: 18),
-                overflow: TextOverflow.ellipsis,
-              ),
-              Row(
-                children: [
-                  Text(
-                    '4.5',
-                    style: AppStyles.semiBold12(context)
-                        .copyWith(color: AppColors.black.withOpacity(0.4)),
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                  SizedBox(
-                width: 11.w,
-                height: 10.h,
-                child: SvgPicture.asset(
-                  AppIcons.svgsStarIcon,
-                  fit: BoxFit.cover,
+                  'Orthopedist',
+                  style: AppStyles.semiBold15(context)
+                      .copyWith(color: AppColors.primaryColor, fontSize: 18),
+                  overflow: TextOverflow.ellipsis,
                 ),
-              ),
-                  Text(
-                    '(120 Reviews)',
-                    style: AppStyles.semiBold12(context)
-                        .copyWith(color: AppColors.black.withOpacity(0.4)),
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ],
-              ),
+                Row(
+                  children: [
+                    Text(
+                      '4.5',
+                      style: AppStyles.semiBold12(context)
+                          .copyWith(color: AppColors.black.withOpacity(0.4)),
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    SizedBox(
+                      width: 11.w,
+                      height: 10.h,
+                      child: SvgPicture.asset(
+                        AppIcons.svgsStar,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    Text(
+                      '(120 Reviews)',
+                      style: AppStyles.semiBold12(context)
+                          .copyWith(color: AppColors.black.withOpacity(0.4)),
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ],
+                ),
               ],
             ),
             Text(
-                '\$155.00',
-                style: AppStyles.semiBold15(context)
-                    .copyWith(color: AppColors.red),
-                overflow: TextOverflow.ellipsis,
-              ),
+              '\$155.00',
+              style:
+                  AppStyles.semiBold15(context).copyWith(color: AppColors.red),
+              overflow: TextOverflow.ellipsis,
+            ),
           ],
         ),
       ),
