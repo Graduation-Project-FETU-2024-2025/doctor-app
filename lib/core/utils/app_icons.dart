@@ -56,4 +56,21 @@ class AppIcons {
   /// Assets for iconsSearch
   /// assets/icons/search.svg
   static const String iconsSearch = "assets/svgs/search.svg";
+
+  /// Assets for svgsStarIcon
+  // assets/svgs/star.svg
+  static const String svgsStarIcon = "assets/svgs/star.svg";
+
+  /// Assets for svgsPhoneIcon
+  // assets/svgs/phone.svg
+  static const String svgsPhoneIcon = "assets/svgs/phone.svg";
+  // Assets for svgsEditIcon
+  // assets/svgs/edit.svg
+  static const String svgsEditIcon = "assets/svgs/edit.svg";
+  
+  /// Assets for svgsTheme
+  // assets/svgs/theme.svg
+  static const String svgsTheme = "assets/svgs/theme.svg";
+
+
 }
