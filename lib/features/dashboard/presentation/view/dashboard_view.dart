@@ -1,5 +1,6 @@
 import 'package:doctor_app/core/utils/app_icons.dart';
 import 'package:doctor_app/core/utils/app_styles.dart';
+import 'package:doctor_app/features/dashboard/presentation/view/widgets/booking_section.dart';
 import 'package:doctor_app/features/dashboard/presentation/view/widgets/user_welcome_section.dart';
 import 'package:doctor_app/features/dashboard/presentation/view/widgets/workflow_chart_section.dart';
 import 'package:doctor_app/generated/l10n.dart';
@@ -31,6 +32,12 @@ class DashboardView extends StatelessWidget {
             style: AppStyles.semiBold18(context),
           ),
           WorkflowChartSection(),
+          Gap(35.h),
+          Text(
+            S.of(context).booking,
+            style: AppStyles.semiBold18(context),
+          ),
+          BookingSection(),
         ],
       ),
     );

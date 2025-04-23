@@ -33,7 +33,10 @@
     "newVisits":"New Visits",
     "reVisits":"Re-Visits",
     "booking":"Booking",
-    "totalIncome":"Total Income"
+    "totalIncome":"Total Income",
+    "missed":"Missed",
+    "completed":"Completed",
+    "pending":"Pending"
     
 
 }

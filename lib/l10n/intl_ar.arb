@@ -33,5 +33,8 @@
          "newVisits":"كشف اول مرة",
          "reVisits":"إعادة كشف",
          "booking":"الحوجزات",
-         "totalIncome":"قيمة الدخل"
+         "totalIncome":"قيمة الدخل",
+         "missed":"الفائته",
+         "completed":"مكتمل",
+         "pending":"معلق"
 }

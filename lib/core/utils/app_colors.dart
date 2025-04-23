@@ -12,4 +12,7 @@ abstract class AppColors {
   static const Color red = Color(0xffFA0909);
   static Color lightRed = Color(0xffFA0909).withOpacity(.3);
   static Color green = Color(0xff24B58E);
+  static Color missedAppointment = Color(0xffF24822);
+  static Color completedAppointment = Color(0xff4169E1);
+  static Color pendingAppointment = Color(0xff24B58E);
 }

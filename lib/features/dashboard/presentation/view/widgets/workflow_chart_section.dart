@@ -1,5 +1,5 @@
-import 'package:doctor_app/core/utils/app_colors.dart';
-import 'package:doctor_app/core/utils/app_styles.dart';
+
+import 'package:doctor_app/features/dashboard/presentation/view/widgets/workflow_data_coulmn.dart';
 import 'package:doctor_app/generated/l10n.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
@@ -132,30 +132,3 @@ class WorkflowChartSection extends StatelessWidget {
   }
 }
 
-class WorkflowDataColumn extends StatelessWidget {
-  const WorkflowDataColumn({
-    super.key,
-    required this.title,
-    required this.count,
-  });
-  final String title;
-  final String count;
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Text(
-          title,
-          style: AppStyles.semiBold15(context),
-        ),
-        Text(
-          count,
-          style: AppStyles.regular20(context).copyWith(
-            color: AppColors.primaryColor,
-          ),
-        ),
-      ],
-    );
-  }
-}
