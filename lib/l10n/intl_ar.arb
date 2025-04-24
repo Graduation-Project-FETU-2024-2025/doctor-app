@@ -48,5 +48,21 @@
         "past":"الماضية",
         "appointmentRequest":"طلب المواعيد",
         "accept":"موافقة",
-        "decline":"الغاء"
+        "decline":"الغاء",
+        "enableLocationService": "يرجى تفعيل خدمة الموقع",
+        "locationPermissionDenied": "تم رفض إذن الموقع",
+        "locationPermanentlyDenied": "تم رفض إذن الموقع بشكل دائم",
+        "latitude":"العرض",
+        "longitude":"الطول",
+        "getAddressInfo":"الحصول على معلومات العنوان",
+        "clinicStatus": "حالة الفرع",
+        "open": "مفتوح",
+        "close": "مغلق",
+        "clinicName": "اسم العيادة",
+        "enterClinicName": "ادخل اسم العيادة",
+        "enterClinicStatus": "ادخل حالة العيادة",
+        "enterSpecializationName": "ادخل اسم التخصص",
+        "specializationName": "اسم التخصص",
+        "enterPrice": "ادخل السعر",
+        "price": "السعر"
 }

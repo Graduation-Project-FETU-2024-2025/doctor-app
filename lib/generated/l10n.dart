@@ -549,6 +549,166 @@ class S {
       args: [],
     );
   }
+
+  /// `Please enable location service`
+  String get enableLocationService {
+    return Intl.message(
+      'Please enable location service',
+      name: 'enableLocationService',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Location permission denied`
+  String get locationPermissionDenied {
+    return Intl.message(
+      'Location permission denied',
+      name: 'locationPermissionDenied',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Location permission permanently denied`
+  String get locationPermanentlyDenied {
+    return Intl.message(
+      'Location permission permanently denied',
+      name: 'locationPermanentlyDenied',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Latitude`
+  String get latitude {
+    return Intl.message(
+      'Latitude',
+      name: 'latitude',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Longitude`
+  String get longitude {
+    return Intl.message(
+      'Longitude',
+      name: 'longitude',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Get Address Info`
+  String get getAddressInfo {
+    return Intl.message(
+      'Get Address Info',
+      name: 'getAddressInfo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Clinic Status`
+  String get clinicStatus {
+    return Intl.message(
+      'Clinic Status',
+      name: 'clinicStatus',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Open`
+  String get open {
+    return Intl.message(
+      'Open',
+      name: 'open',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Close`
+  String get close {
+    return Intl.message(
+      'Close',
+      name: 'close',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Clinic Name`
+  String get clinicName {
+    return Intl.message(
+      'Clinic Name',
+      name: 'clinicName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Clinic Name`
+  String get enterClinicName {
+    return Intl.message(
+      'Enter Clinic Name',
+      name: 'enterClinicName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Clinic Status`
+  String get enterClinicStatus {
+    return Intl.message(
+      'Enter Clinic Status',
+      name: 'enterClinicStatus',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Specialization Name`
+  String get enterSpecializationName {
+    return Intl.message(
+      'Enter Specialization Name',
+      name: 'enterSpecializationName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Price`
+  String get enterPrice {
+    return Intl.message(
+      'Enter Price',
+      name: 'enterPrice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Price`
+  String get price {
+    return Intl.message(
+      'Price',
+      name: 'price',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Specialization Name`
+  String get specializationName {
+    return Intl.message(
+      'Specialization Name',
+      name: 'specializationName',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

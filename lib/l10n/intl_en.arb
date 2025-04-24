@@ -49,6 +49,22 @@
     "past":"Past",
     "appointmentRequest":"Appointment Request",
     "accept":"Accept",
-    "decline":"Decline"
+    "decline":"Decline",
+    "enableLocationService": "Please enable location service",
+    "locationPermissionDenied": "Location permission denied",
+    "locationPermanentlyDenied": "Location permission permanently denied",
+    "latitude":"Latitude",
+    "longitude":"Longitude",
+    "getAddressInfo":"Get Address Info",
+    "clinicStatus": "Clinic Status",
+    "open": "Open",
+    "close": "Close",
+    "clinicName":"Clinic Name",
+    "enterClinicName": "Enter Clinic Name",
+    "enterClinicStatus": "Enter Clinic Status",
+    "enterSpecializationName": "Enter Specialization Name",
+    "enterPrice": "Enter Price",
+    "price": "Price",
+    "specializationName": "Specialization Name"
 
 }
