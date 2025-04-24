@@ -22,6 +22,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "accept": MessageLookupByLibrary.simpleMessage("Accept"),
+        "appointmentRequest":
+            MessageLookupByLibrary.simpleMessage("Appointment Request"),
         "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
         "booking": MessageLookupByLibrary.simpleMessage("Booking"),
         "bookingPrice": MessageLookupByLibrary.simpleMessage("Booking Price"),
@@ -31,6 +34,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "completed": MessageLookupByLibrary.simpleMessage("Completed"),
         "continueOtp": MessageLookupByLibrary.simpleMessage("Continue"),
         "darkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
+        "decline": MessageLookupByLibrary.simpleMessage("Decline"),
         "delete": MessageLookupByLibrary.simpleMessage("Delete"),
         "emailAddress": MessageLookupByLibrary.simpleMessage("Email address"),
         "endTime": MessageLookupByLibrary.simpleMessage("End Time"),
@@ -58,6 +62,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "onboarding": MessageLookupByLibrary.simpleMessage(
             "All Services for your health"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "past": MessageLookupByLibrary.simpleMessage("Past"),
         "pending": MessageLookupByLibrary.simpleMessage("Pending"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone"),
         "reVisits": MessageLookupByLibrary.simpleMessage("Re-Visits"),
@@ -70,7 +75,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Select Medicines"),
         "startTime": MessageLookupByLibrary.simpleMessage("Start time"),
         "thisWeek": MessageLookupByLibrary.simpleMessage("This Week"),
+        "today": MessageLookupByLibrary.simpleMessage("Today"),
         "totalIncome": MessageLookupByLibrary.simpleMessage("Total Income"),
+        "upcoming": MessageLookupByLibrary.simpleMessage("Upcoming"),
         "wantToDeleteClinic": MessageLookupByLibrary.simpleMessage(
             "You Want To Delete This Clinic?"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome back!"),

@@ -43,6 +43,12 @@
     "nextWeek": "Next Week",
     "startTime": "Start time",
     "endTime": "End Time",
-    "bookingPrice": "Booking Price"
+    "bookingPrice": "Booking Price",
+    "today":"Today",
+    "upcoming":"Upcoming",
+    "past":"Past",
+    "appointmentRequest":"Appointment Request",
+    "accept":"Accept",
+    "decline":"Decline"
 
 }

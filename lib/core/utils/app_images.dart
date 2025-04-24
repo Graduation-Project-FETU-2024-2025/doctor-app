@@ -22,12 +22,13 @@ class AppImages {
   /// assets/images/missed_appointment.png
   static const String imagesMissedAppointment = "assets/images/missed_appointment.png";
 
+  /// Assets for imagesNotification
+  /// assets/images/notification.png
+  static const String imagesNotification = "assets/images/notification.png";
+
   /// Assets for imagesOnboarding
   /// assets/images/onboarding.png
   static const String imagesOnboarding = "assets/images/onboarding.png";
-  /// Assets for imagesNotification
-  /// assets/images/notification.png
-  static const String imagesNotification= "assets/images/notification.png";
 
   /// Assets for imagesOtp
   /// assets/images/otp.png
@@ -76,5 +77,9 @@ class AppImages {
   /// Assets for imagesUnselectedProfile
   /// assets/images/unselected_profile.png
   static const String imagesUnselectedProfile = "assets/images/unselected_profile.png";
+  
+  /// Assets for imagesAppointmentRequest
+  /// assets/images/assets/images/appointment_request.png
+  static const String imagesAppointmentRequest = "assets/images/appointment_request.png";
 }
 

@@ -57,6 +57,7 @@ dependencies:
   shared_preferences: ^2.3.2
   shimmer: ^3.0.0
   skeletonizer: ^1.4.3
+  sliver_tools: ^0.2.12
 
 dev_dependencies:
   build_runner: ^2.4.13
@@ -120,7 +121,6 @@ flutter_launcher_icons:
 #   filename: app_icons.dart
 #   field_prefix: null
 #   classname: AppIcons
-
 flutter_assets:
   assets_path: assets/images/
   output_path: lib/core/utils/
