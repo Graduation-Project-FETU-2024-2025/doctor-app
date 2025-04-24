@@ -42,5 +42,11 @@
         "nextWeek": " الاسبوع القادم",
         "startTime": "وقت البداية",
         "endTime": "وقت الانتهاء",
-        "bookingPrice": "سعر الحجز"
+        "bookingPrice": "سعر الحجز",
+        "today":"اليوم",
+        "upcoming":"القادمة",
+        "past":"الماضية",
+        "appointmentRequest":"طلب المواعيد",
+        "accept":"موافقة",
+        "decline":"الغاء"
 }

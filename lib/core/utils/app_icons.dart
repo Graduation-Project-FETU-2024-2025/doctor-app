@@ -113,6 +113,10 @@ class AppIcons {
   // assets/svgs/theme.svg
   static const String iconTime = "assets/svgs/clock.svg";
 
+  /// Assets for iconAppointmentClock
+  // assets/svgs/appointment_clock.svg
+  static const String iconAppointmentClock ='assets/svgs/appointment_clock.svg';
+
 
 }
 

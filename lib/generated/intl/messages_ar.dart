@@ -22,6 +22,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "accept": MessageLookupByLibrary.simpleMessage("موافقة"),
+        "appointmentRequest":
+            MessageLookupByLibrary.simpleMessage("طلب المواعيد"),
         "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
         "booking": MessageLookupByLibrary.simpleMessage("الحوجزات"),
         "bookingPrice": MessageLookupByLibrary.simpleMessage("سعر الحجز"),
@@ -31,6 +34,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "completed": MessageLookupByLibrary.simpleMessage("مكتمل"),
         "continueOtp": MessageLookupByLibrary.simpleMessage("استمر"),
         "darkMode": MessageLookupByLibrary.simpleMessage("الوضع المظلم"),
+        "decline": MessageLookupByLibrary.simpleMessage("الغاء"),
         "delete": MessageLookupByLibrary.simpleMessage("حذف"),
         "emailAddress":
             MessageLookupByLibrary.simpleMessage(" البريد الإلكتروني"),
@@ -58,6 +62,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "onboarding":
             MessageLookupByLibrary.simpleMessage("جميع الخدمات لصحتك"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "past": MessageLookupByLibrary.simpleMessage("الماضية"),
         "pending": MessageLookupByLibrary.simpleMessage("معلق"),
         "phone": MessageLookupByLibrary.simpleMessage("الهاتف"),
         "reVisits": MessageLookupByLibrary.simpleMessage("إعادة كشف"),
@@ -68,7 +73,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "selectMedicines": MessageLookupByLibrary.simpleMessage("اختر الأدوية"),
         "startTime": MessageLookupByLibrary.simpleMessage("وقت البداية"),
         "thisWeek": MessageLookupByLibrary.simpleMessage(" الاسبوع الحالى"),
+        "today": MessageLookupByLibrary.simpleMessage("اليوم"),
         "totalIncome": MessageLookupByLibrary.simpleMessage("قيمة الدخل"),
+        "upcoming": MessageLookupByLibrary.simpleMessage("القادمة"),
         "wantToDeleteClinic":
             MessageLookupByLibrary.simpleMessage("هل تريد حذف هذه العياده؟"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("!مرحبا بك مجددا"),

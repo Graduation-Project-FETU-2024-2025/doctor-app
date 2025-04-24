@@ -1,9 +1,12 @@
 import 'package:doctor_app/core/utils/app_colors.dart';
 import 'package:doctor_app/core/utils/app_images.dart';
+import 'package:doctor_app/features/appointment/presentation/view/appointment_view.dart';
+import 'package:doctor_app/features/appointment/presentation/view_model/appointment_cubit/appointment_cubit.dart';
 import 'package:doctor_app/features/dashboard/presentation/view/dashboard_view.dart';
 import 'package:doctor_app/features/profile/presentation/view/profile_view.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../clinic_detail/presentation/view/clinic_detail_view.dart';
 import '../../../clinic_timing/presentation/view/clinic_timing_view.dart';
@@ -22,12 +25,15 @@ class _MainViewState extends State<MainView> {
   int currentIndex = 0;
   double kIconSize = 24.0;
   double kBottomRadius = 20.0;
-  List<Widget> screens = [
+  List<Widget> screens =  [
     DashboardView(),
-    const Center(child: Text('Onboarding')),
-    const ClinicTimingView(),
-    const ClinicDetailView(),
-    const ProfileView(),
+    BlocProvider(
+      create: (context) => AppointmentCubit(),
+      child: AppointmentView(),
+    ),
+    ClinicTimingView(),
+    ClinicDetailView(),
+    ProfileView(),
   ];
 
   @override
