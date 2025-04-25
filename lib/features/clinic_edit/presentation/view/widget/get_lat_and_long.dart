@@ -1,8 +1,8 @@
-// import 'dart:developer';
+import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
-// import 'package:geolocator/geolocator.dart';
+import 'package:geolocator/geolocator.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_styles.dart';
 import '../../../../../core/widgets/custom_edit_text_form_field.dart';
@@ -18,48 +18,48 @@ class GetLatAndLong extends StatefulWidget {
 }
 
 class _GetLatAndLongState extends State<GetLatAndLong> {
-  // Future<void> getCurrentLocation() async {
-  //   bool serviceEnabled;
-  //   LocationPermission permission;
+  Future<void> getCurrentLocation() async {
+    bool serviceEnabled;
+    LocationPermission permission;
 
-  //   serviceEnabled = await Geolocator.isLocationServiceEnabled();
-  //   if (!serviceEnabled) {
-  //     ScaffoldMessenger.of(context).showSnackBar(
-  //       SnackBar(content: Text(S.of(context).enableLocationService)),
-  //     );
-  //     return;
-  //   }
+    serviceEnabled = await Geolocator.isLocationServiceEnabled();
+    if (!serviceEnabled) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(S.of(context).enableLocationService)),
+      );
+      return;
+    }
 
-  //   permission = await Geolocator.checkPermission();
-  //   if (permission == LocationPermission.denied) {
-  //     permission = await Geolocator.requestPermission();
-  //     if (permission == LocationPermission.denied) {
-  //       ScaffoldMessenger.of(context).showSnackBar(
-  //         SnackBar(content: Text(S.of(context).locationPermissionDenied)),
-  //       );
-  //       return;
-  //     }
-  //   }
+    permission = await Geolocator.checkPermission();
+    if (permission == LocationPermission.denied) {
+      permission = await Geolocator.requestPermission();
+      if (permission == LocationPermission.denied) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(S.of(context).locationPermissionDenied)),
+        );
+        return;
+      }
+    }
 
-  //   if (permission == LocationPermission.deniedForever) {
-  //     ScaffoldMessenger.of(context).showSnackBar(
-  //       SnackBar(content: Text(S.of(context).locationPermanentlyDenied)),
-  //     );
-  //     return;
-  //   }
+    if (permission == LocationPermission.deniedForever) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(S.of(context).locationPermanentlyDenied)),
+      );
+      return;
+    }
 
-  //   Position position = await Geolocator.getCurrentPosition(
-  //     desiredAccuracy: LocationAccuracy.high,
-  //   );
+    Position position = await Geolocator.getCurrentPosition(
+      desiredAccuracy: LocationAccuracy.high,
+    );
 
-  //   setState(() {
-  //     log(position.longitude.toString());
-  //     // Cubit.get(context).latitudeController.text =
-  //     //     position.latitude.toString();
-  //     // Cubit.get(context).longitudeController.text =
-  //     //     position.longitude.toString();
-  //   });
-  // }
+    setState(() {
+      log(position.longitude.toString());
+      // Cubit.get(context).latitudeController.text =
+      //     position.latitude.toString();
+      // Cubit.get(context).longitudeController.text =
+      //     position.longitude.toString();
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -130,7 +130,7 @@ class _GetLatAndLongState extends State<GetLatAndLong> {
                 ),
               ),
             ),
-            onPressed: () {}, //getCurrentLocation,
+            onPressed: getCurrentLocation,
             child: Text(
               S.of(context).getAddressInfo,
               style: Theme.of(context)

@@ -41,14 +41,13 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>We need your location to show nearby places.</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>We need your location to show nearby places.</string>
-
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We need your location to provide better service.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>We need your location to provide better service.</string>
 </dict>
 </plist>
