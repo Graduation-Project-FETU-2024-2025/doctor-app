@@ -60,7 +60,7 @@ class _SplashViewState extends State<SplashView> {
       if (token != null) {
         context.pushReplacementNamed(Routing.home);
       } else if (!frisTime) {
-        context.pushReplacementNamed(Routing.home); //TODO change to sign in 
+        context.pushReplacementNamed(Routing.signIn);
       } else {
         context.pushReplacementNamed(Routing.onboarding);
       }
