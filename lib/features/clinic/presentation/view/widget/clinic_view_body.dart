@@ -1,4 +1,4 @@
-import 'package:doctor_app/features/clinic_detail/presentation/view/widget/clinic_detail_info.dart';
+import 'package:doctor_app/features/clinic/presentation/view/widget/clinic_info.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
@@ -7,8 +7,8 @@ import '../../../../../generated/l10n.dart';
 import 'booking_price_card.dart';
 import 'row_btn.dart';
 
-class ClinicDetailViewBody extends StatelessWidget {
-  const ClinicDetailViewBody({super.key});
+class ClinicViewBody extends StatelessWidget {
+  const ClinicViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class ClinicDetailViewBody extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const ClinicDetailInfo(),
+          const ClinicInfo(),
           Gap(50.h),
           Text(
               S.of(context).bookingPrice,

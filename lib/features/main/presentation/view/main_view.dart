@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../clinic_detail/presentation/view/clinic_detail_view.dart';
+import '../../../clinic/presentation/view/clinic_view.dart';
 import '../../../clinic_timing/presentation/view/clinic_timing_view.dart';
 
 class MainView extends StatefulWidget {
@@ -32,7 +32,7 @@ class _MainViewState extends State<MainView> {
       child: AppointmentView(),
     ),
     ClinicTimingView(),
-    ClinicDetailView(),
+    ClinicView(),
     ProfileView(),
   ];
 
