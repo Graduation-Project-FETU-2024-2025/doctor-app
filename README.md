@@ -16,4 +16,10 @@ A few resources to get you started if this is your first Flutter project:
 
 **For Code Generation**
 
-dart run build_runner build --delete-conflicting-outputs
+``dart run build_runner build --delete-conflicting-outputs``
+
+
+**For active localization run**
+`` 
+    flutter pub global activate intl_utils
+``

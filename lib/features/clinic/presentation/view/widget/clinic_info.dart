@@ -3,10 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
-
-import '../../../../../core/database/cache/cache_keys.dart';
-import '../../../../../core/database/cache/cashe_helper.dart';
-import '../../../../../core/services/get_it.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_icons.dart';
 
@@ -32,8 +28,9 @@ class ClinicInfo extends StatelessWidget {
             Text(
               'Egypt, Tanta, El Estad Street',
               style: AppStyles.semiBold15(context).copyWith(
-                color: getIt<CacheHelper>().getBool(key: CacheKeys.theme)!? Colors.white60:Colors.black38
-              ),
+                  color: Theme.of(context).brightness == Brightness.dark
+                      ? Colors.white60
+                      : Colors.black38),
               overflow: TextOverflow.ellipsis,
             ),
           ],
@@ -53,8 +50,9 @@ class ClinicInfo extends StatelessWidget {
             Text(
               '0108749834685',
               style: AppStyles.semiBold15(context).copyWith(
-                color: getIt<CacheHelper>().getBool(key: CacheKeys.theme)!? Colors.white60:Colors.black38
-              ),
+                  color: Theme.of(context).brightness == Brightness.dark
+                      ? Colors.white60
+                      : Colors.black38),
               overflow: TextOverflow.ellipsis,
             ),
           ],
@@ -74,8 +72,9 @@ class ClinicInfo extends StatelessWidget {
             Text(
               "4.5 (120 Reviews)",
               style: AppStyles.semiBold15(context).copyWith(
-                color: getIt<CacheHelper>().getBool(key: CacheKeys.theme)!? Colors.white60:Colors.black38
-              ),
+                  color: Theme.of(context).brightness == Brightness.dark
+                      ? Colors.white60
+                      : Colors.black38),
               overflow: TextOverflow.ellipsis,
             ),
           ],
@@ -92,15 +91,17 @@ class ClinicInfo extends StatelessWidget {
             Text(
               ".Closes ",
               style: AppStyles.semiBold15(context).copyWith(
-                color: getIt<CacheHelper>().getBool(key: CacheKeys.theme)!? Colors.white60:Colors.black38
-              ),
+                  color: Theme.of(context).brightness == Brightness.dark
+                      ? Colors.white60
+                      : Colors.black38),
               overflow: TextOverflow.ellipsis,
             ),
             Text(
               "17:00",
               style: AppStyles.semiBold15(context).copyWith(
-                color: getIt<CacheHelper>().getBool(key: CacheKeys.theme)!? Colors.white60:Colors.black38
-              ),
+                  color: Theme.of(context).brightness == Brightness.dark
+                      ? Colors.white60
+                      : Colors.black38),
               overflow: TextOverflow.ellipsis,
             ),
           ],

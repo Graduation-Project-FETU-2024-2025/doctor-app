@@ -1,11 +1,8 @@
-import 'package:doctor_app/core/database/cache/cashe_helper.dart';
 import 'package:doctor_app/core/utils/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../../../core/database/cache/cache_keys.dart';
-import '../../../../../core/services/get_it.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_icons.dart';
 import '../../../../../core/utils/app_styles.dart';
@@ -16,7 +13,9 @@ class BookingPriceCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: getIt<CacheHelper>().getBool(key: CacheKeys.theme)!? AppColors.darkGray: AppColors.white,
+      color: Theme.of(context).brightness == Brightness.dark
+          ? AppColors.darkGray
+          : AppColors.white,
       elevation: 2,
       child: SizedBox(
         width: 340.w,
@@ -57,8 +56,7 @@ class BookingPriceCard extends StatelessWidget {
                     ),
                     Text(
                       ' (120 Reviews)',
-                      style: AppStyles.semiBold12(context)
-                        ,
+                      style: AppStyles.semiBold12(context),
                       overflow: TextOverflow.ellipsis,
                     ),
                   ],
