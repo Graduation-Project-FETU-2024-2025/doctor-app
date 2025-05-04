@@ -1,7 +1,9 @@
+import 'package:doctor_app/core/helpers/extentions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
+import '../../../../../core/routers/routing.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_icons.dart';
 import 'delete_button.dart';
@@ -31,7 +33,8 @@ class RowBtn extends StatelessWidget {
                 ),
               ),
               onPressed: () {
-                //TODO
+                context.pushNamed(Routing.clinicEdit);
+                //if (result) TODO
               },
               child: SvgPicture.asset(
                 AppIcons.svgsEditIcon,

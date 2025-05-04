@@ -30,7 +30,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "bookingPrice": MessageLookupByLibrary.simpleMessage("سعر الحجز"),
         "checkups": MessageLookupByLibrary.simpleMessage("الكشف"),
         "clinic": MessageLookupByLibrary.simpleMessage("العيادة"),
+        "clinicName": MessageLookupByLibrary.simpleMessage("اسم العيادة"),
+        "clinicStatus": MessageLookupByLibrary.simpleMessage("حالة الفرع"),
         "clinicTiming": MessageLookupByLibrary.simpleMessage("مواعيد العيادة"),
+        "close": MessageLookupByLibrary.simpleMessage("مغلق"),
         "completed": MessageLookupByLibrary.simpleMessage("مكتمل"),
         "continueOtp": MessageLookupByLibrary.simpleMessage("استمر"),
         "darkMode": MessageLookupByLibrary.simpleMessage("الوضع المظلم"),
@@ -38,21 +41,38 @@ class MessageLookup extends MessageLookupByLibrary {
         "delete": MessageLookupByLibrary.simpleMessage("حذف"),
         "emailAddress":
             MessageLookupByLibrary.simpleMessage(" البريد الإلكتروني"),
+        "enableLocationService":
+            MessageLookupByLibrary.simpleMessage("يرجى تفعيل خدمة الموقع"),
         "endTime": MessageLookupByLibrary.simpleMessage("وقت الانتهاء"),
         "english": MessageLookupByLibrary.simpleMessage("الإنجليزية"),
+        "enterClinicName":
+            MessageLookupByLibrary.simpleMessage("ادخل اسم العيادة"),
+        "enterClinicStatus":
+            MessageLookupByLibrary.simpleMessage("ادخل حالة العيادة"),
         "enterOtp": MessageLookupByLibrary.simpleMessage("إدخال رمز التعيين"),
         "enterOtpWeSent":
             MessageLookupByLibrary.simpleMessage("أدخل الرمز الذي أرسلناه إلى"),
+        "enterPrice": MessageLookupByLibrary.simpleMessage("ادخل السعر"),
+        "enterSpecializationName":
+            MessageLookupByLibrary.simpleMessage("ادخل اسم التخصص"),
+        "getAddressInfo":
+            MessageLookupByLibrary.simpleMessage("الحصول على معلومات العنوان"),
         "goodMorning":
             MessageLookupByLibrary.simpleMessage("صباح الخير\n دكتور"),
         "haventReceivedOtp":
             MessageLookupByLibrary.simpleMessage("لم تتلقى رمز التعيين؟"),
         "language": MessageLookupByLibrary.simpleMessage("اللغة"),
+        "latitude": MessageLookupByLibrary.simpleMessage("العرض"),
         "letsSee": MessageLookupByLibrary.simpleMessage("أخر المستجدات"),
+        "locationPermanentlyDenied":
+            MessageLookupByLibrary.simpleMessage("تم رفض إذن الموقع بشكل دائم"),
+        "locationPermissionDenied":
+            MessageLookupByLibrary.simpleMessage("تم رفض إذن الموقع"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginToYourAccount":
             MessageLookupByLibrary.simpleMessage("تسجيل الدخول إلى حسابك"),
         "logout": MessageLookupByLibrary.simpleMessage("تسجيل خروج"),
+        "longitude": MessageLookupByLibrary.simpleMessage("الطول"),
         "medicines": MessageLookupByLibrary.simpleMessage("الأدوية"),
         "missed": MessageLookupByLibrary.simpleMessage("الفائته"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
@@ -61,16 +81,20 @@ class MessageLookup extends MessageLookupByLibrary {
         "no": MessageLookupByLibrary.simpleMessage("لا"),
         "onboarding":
             MessageLookupByLibrary.simpleMessage("جميع الخدمات لصحتك"),
+        "open": MessageLookupByLibrary.simpleMessage("مفتوح"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "past": MessageLookupByLibrary.simpleMessage("الماضية"),
         "pending": MessageLookupByLibrary.simpleMessage("معلق"),
         "phone": MessageLookupByLibrary.simpleMessage("الهاتف"),
+        "price": MessageLookupByLibrary.simpleMessage("السعر"),
         "reVisits": MessageLookupByLibrary.simpleMessage("إعادة كشف"),
         "resend": MessageLookupByLibrary.simpleMessage("إعادة إرسال"),
         "save": MessageLookupByLibrary.simpleMessage("حفظ"),
         "searchButtonTitle": MessageLookupByLibrary.simpleMessage("ابحث"),
         "searchHint": MessageLookupByLibrary.simpleMessage("ابحث عن دواء"),
         "selectMedicines": MessageLookupByLibrary.simpleMessage("اختر الأدوية"),
+        "specializationName":
+            MessageLookupByLibrary.simpleMessage("اسم التخصص"),
         "startTime": MessageLookupByLibrary.simpleMessage("وقت البداية"),
         "thisWeek": MessageLookupByLibrary.simpleMessage(" الاسبوع الحالى"),
         "today": MessageLookupByLibrary.simpleMessage("اليوم"),
