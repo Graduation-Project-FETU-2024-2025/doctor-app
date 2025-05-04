@@ -7,8 +7,8 @@ import 'package:gap/gap.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_icons.dart';
 
-class ClinicDetailInfo extends StatelessWidget {
-  const ClinicDetailInfo({super.key});
+class ClinicInfo extends StatelessWidget {
+  const ClinicInfo({super.key});
 
   @override
   Widget build(BuildContext context) {
