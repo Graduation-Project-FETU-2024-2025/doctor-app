@@ -64,5 +64,6 @@
         "enterSpecializationName": "ادخل اسم التخصص",
         "specializationName": "اسم التخصص",
         "enterPrice": "ادخل السعر",
-        "price": "السعر"
+        "price": "السعر",
+        "patientComment":"تعليق"
 }

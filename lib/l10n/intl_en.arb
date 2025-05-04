@@ -65,6 +65,6 @@
     "enterSpecializationName": "Enter Specialization Name",
     "enterPrice": "Enter Price",
     "price": "Price",
-    "specializationName": "Specialization Name"
-
+    "specializationName": "Specialization Name",
+    "patientComment":"Comment"
 }

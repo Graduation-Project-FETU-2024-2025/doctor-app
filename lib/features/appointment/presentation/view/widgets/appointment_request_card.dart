@@ -82,7 +82,10 @@ class AppointmentRequestCard extends StatelessWidget {
                     ],
                   ),
                   Gap(30.h),
-                  AppointmentRequestButtonsSection(),
+                  AppointmentRequestButtonsSection(
+                    onAccept: () {},
+                    onDecline: () {},
+                  ),
                   Gap(10.h)
                 ],
               ),
