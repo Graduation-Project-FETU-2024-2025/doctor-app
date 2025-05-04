@@ -26,7 +26,9 @@ class MedicinesViewBody extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-               getIt<CacheHelper>().getString(key: CacheKeys.currentLanguage) == 'en'
+                getIt<CacheHelper>()
+                            .getString(key: CacheKeys.currentLanguage) ==
+                        'en'
                     ? SvgPicture.asset(
                         AppIcons.svgsBack,
                         height: 37,
@@ -57,8 +59,7 @@ class MedicinesViewBody extends StatelessWidget {
             ),
             Text(
               S.of(context).selectMedicines,
-              style: AppStyles.semiBold15(context)
-                  .copyWith(color: AppColors.black, fontSize: 18),
+              style: AppStyles.semiBold15(context).copyWith(fontSize: 18),
             ),
             SizedBox(
               height: 30.h,

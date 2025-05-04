@@ -43,6 +43,7 @@
     "nextWeek": "Next Week",
     "startTime": "Start time",
     "endTime": "End Time",
-    "bookingPrice": "Booking Price"
+    "bookingPrice": "Booking Price",
+    "Dosage": "Dosage"
 
 }

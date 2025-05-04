@@ -14,7 +14,9 @@ class SearchTextField extends StatelessWidget {
       height: 56,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(25),
-        color: Color(0xffE5E5E5),
+        color: Theme.of(context).brightness == Brightness.light
+            ? Color(0xffE5E5E5)
+            : AppColors.darkWhite,
       ),
       child: Row(
         children: [

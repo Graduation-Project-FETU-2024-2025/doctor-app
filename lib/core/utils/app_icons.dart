@@ -1,7 +1,6 @@
-
 class AppIcons {
   AppIcons._();
-  
+
   /// Assets for svgsAuthBackIcon
   /// assets/svgs/auth_back_icon.svg
   static const String svgsAuthBackIcon = "assets/svgs/auth_back_icon.svg";
@@ -15,8 +14,8 @@ class AppIcons {
   static const String svgsBack = "assets/svgs/back.svg";
 
   /// Assets for svgsBackRight
-  /// assets/svgs/back_right.svg
-  static const String svgsBackRight = "assets/svgs/back_right.svg";
+  /// assets/svgs/back-right.svg
+  static const String svgsBackRight = "assets/svgs/back-right.svg";
 
   /// Assets for svgsCamera
   /// assets/svgs/camera.svg
@@ -32,7 +31,8 @@ class AppIcons {
 
   /// Assets for svgsCorrectSuccessTickSvgrepoCom
   /// assets/svgs/correct-success-tick-svgrepo-com.svg
-  static const String svgsCorrectSuccessTickSvgrepoCom = "assets/svgs/correct-success-tick-svgrepo-com.svg";
+  static const String svgsCorrectSuccessTickSvgrepoCom =
+      "assets/svgs/correct-success-tick-svgrepo-com.svg";
 
   /// Assets for svgsDateCancle
   /// assets/svgs/date_cancle.svg
@@ -52,7 +52,8 @@ class AppIcons {
 
   /// Assets for svgsEmailCheckedIcon
   /// assets/svgs/email_checked_icon.svg
-  static const String svgsEmailCheckedIcon = "assets/svgs/email_checked_icon.svg";
+  static const String svgsEmailCheckedIcon =
+      "assets/svgs/email_checked_icon.svg";
 
   /// Assets for svgsEmailIcon
   /// assets/svgs/email_icon.svg
@@ -69,8 +70,6 @@ class AppIcons {
   /// Assets for svgsLogout
   /// assets/svgs/logout.svg
   static const String svgsLogout = "assets/svgs/logout.svg";
-
-
 
   /// Assets for svgsOnboardingIcon
   /// assets/svgs/onboarding_icon.svg
@@ -95,6 +94,7 @@ class AppIcons {
   /// Assets for svgsTheme
   /// assets/svgs/theme.svg
   static const String svgsTheme = "assets/svgs/theme.svg";
+
   /// Assets for iconsSearch
   /// assets/icons/search.svg
   static const String iconsSearch = "assets/svgs/search.svg";
@@ -103,16 +103,11 @@ class AppIcons {
   // assets/svgs/star.svg
   static const String svgsStarIcon = "assets/svgs/star.svg";
 
-
   // Assets for svgsEditIcon
   // assets/svgs/edit.svg
   static const String svgsEditIcon = "assets/svgs/edit.svg";
-  
 
   /// Assets for svgsTheme
   // assets/svgs/theme.svg
   static const String iconTime = "assets/svgs/clock.svg";
-
-
 }
-
