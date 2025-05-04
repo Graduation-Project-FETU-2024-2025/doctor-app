@@ -7,6 +7,7 @@ import 'package:doctor_app/features/auth/presentation/view_model/otp_cubit/otp_c
 import 'package:doctor_app/features/auth/presentation/view_model/sign_in_cubit/sign_in_cubit.dart';
 import 'package:doctor_app/features/auth/presentation/views/otp_view.dart';
 import 'package:doctor_app/features/auth/presentation/views/sign_in_view.dart';
+import 'package:doctor_app/features/clinic/presentation/view/clinic_view.dart';
 import 'package:doctor_app/features/main/presentation/view/main_view.dart';
 import 'package:doctor_app/features/onboarding/presentation/view/onboarding_view.dart';
 import 'package:doctor_app/features/splash/presentation/view/splash_view.dart';
@@ -41,8 +42,8 @@ class AppRouter {
         return _buildRoute(MainView());
       case Routing.profile:
         return _buildRoute(Scaffold());
-      // case Routing.clinicDetail:
-      //   return _buildRoute(ClinicDetailView());
+      case Routing.clinicDetail:
+        return _buildRoute(ClinicView());
       case Routing.clinicEdit:
         return _buildRoute(ClinicEditView());
 
