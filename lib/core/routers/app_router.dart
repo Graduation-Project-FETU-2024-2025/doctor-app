@@ -8,6 +8,7 @@ import 'package:doctor_app/features/auth/presentation/view_model/sign_in_cubit/s
 import 'package:doctor_app/features/auth/presentation/views/otp_view.dart';
 import 'package:doctor_app/features/auth/presentation/views/sign_in_view.dart';
 import 'package:doctor_app/features/main/presentation/view/main_view.dart';
+import 'package:doctor_app/features/medicines/presentation/views/medicines_view.dart';
 import 'package:doctor_app/features/onboarding/presentation/view/onboarding_view.dart';
 import 'package:doctor_app/features/splash/presentation/view/splash_view.dart';
 import 'package:flutter/cupertino.dart';
@@ -42,7 +43,8 @@ class AppRouter {
         return _buildRoute(Scaffold());
       case Routing.clinicDetail:
         return _buildRoute(ClinicDetailView());
-
+      case Routing.medicines:
+        return _buildRoute(MedicinesView());
       default:
         return null;
     }
