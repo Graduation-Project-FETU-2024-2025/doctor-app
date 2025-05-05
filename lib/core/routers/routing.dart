@@ -8,4 +8,5 @@ abstract class Routing {
   static const String otp = '/otp';
   static const String clinicDetail = '/clinicDetail';
   static const String clinicEdit = '/clinicEdit';
+  static const String examination = '/examination';
 }

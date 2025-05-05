@@ -66,5 +66,12 @@
     "enterPrice": "Enter Price",
     "price": "Price",
     "specializationName": "Specialization Name",
-    "patientComment":"Comment"
+    "patientComment":"Comment",
+    "Examination":"Examination",
+    "fieldRequired":"field Required",
+    "patientName":"Patient Name",
+    "nextAppointment":"Next Appointment",
+    "addanalysis":"Add Analysis",
+    "diagnosis":"Diagnosis",
+    "addDiagnosis":"Add Diagnosis"
 }
