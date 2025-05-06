@@ -8,18 +8,21 @@ import 'package:doctor_app/core/widgets/add_delete_button.dart';
 import 'package:doctor_app/features/examination/presentation/view_models/examination_cubit/examination_cubit.dart';
 import 'package:doctor_app/features/examination/presentation/views/widgets/analysis_drop_down_menu.dart';
 import 'package:doctor_app/features/examination/presentation/views/widgets/custom_text_field.dart';
+import 'package:doctor_app/features/medicines/presentation/views/medicines_view.dart';
 import 'package:doctor_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
+// ignore: must_be_immutable
 class ExaminationViewBody extends StatelessWidget {
   const ExaminationViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final cubit = context.read<ExaminationCubit>();
+    final cubit = context.watch<ExaminationCubit>();
+    cubit.initializeModel(patientName: 'khaled gamal');
     return SingleChildScrollView(
       child: Padding(
         padding: EdgeInsets.symmetric(vertical: 24.h, horizontal: 24.w),
@@ -28,19 +31,22 @@ class ExaminationViewBody extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                getIt<CacheHelper>()
-                            .getString(key: CacheKeys.currentLanguage) ==
-                        'en'
-                    ? SvgPicture.asset(
-                        AppIcons.svgsBack,
-                        height: 37,
-                        width: 37,
-                      )
-                    : SvgPicture.asset(
-                        AppIcons.svgsBackRight,
-                        height: 37,
-                        width: 37,
-                      ),
+                GestureDetector(
+                  onTap: () => Navigator.pop(context),
+                  child: getIt<CacheHelper>()
+                              .getString(key: CacheKeys.currentLanguage) ==
+                          'en'
+                      ? SvgPicture.asset(
+                          AppIcons.svgsBack,
+                          height: 37,
+                          width: 37,
+                        )
+                      : SvgPicture.asset(
+                          AppIcons.svgsBackRight,
+                          height: 37,
+                          width: 37,
+                        ),
+                ),
                 Text(
                   S.of(context).Examination,
                   style: AppStyles.semiBold20(context).copyWith(
@@ -93,9 +99,16 @@ class ExaminationViewBody extends StatelessWidget {
                   height: 36.h,
                   width: 120.w,
                   child: AddDeleteButton(
-                    title: S.of(context).save,
+                    title: S.of(context).next,
                     color: AppColors.primaryColor,
-                    onpressed: () {},
+                    onpressed: () {
+                      cubit.updateModelData();
+                      Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) {
+                          return MedicinesView();
+                        }),
+                      );
+                    },
                   ),
                 ),
               ],

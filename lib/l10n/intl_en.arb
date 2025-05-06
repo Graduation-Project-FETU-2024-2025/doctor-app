@@ -73,5 +73,7 @@
     "nextAppointment":"Next Appointment",
     "addanalysis":"Add Analysis",
     "diagnosis":"Diagnosis",
-    "addDiagnosis":"Add Diagnosis"
+    "addDiagnosis":"Add Diagnosis",
+    "next":"Next",
+    "prescription":"Prescription"
 }

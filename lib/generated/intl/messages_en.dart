@@ -82,6 +82,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "missed": MessageLookupByLibrary.simpleMessage("Missed"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
         "newVisits": MessageLookupByLibrary.simpleMessage("New Visits"),
+        "next": MessageLookupByLibrary.simpleMessage("Next"),
         "nextAppointment":
             MessageLookupByLibrary.simpleMessage("Next Appointment"),
         "nextWeek": MessageLookupByLibrary.simpleMessage("Next Week"),
@@ -95,6 +96,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "patientName": MessageLookupByLibrary.simpleMessage("Patient Name"),
         "pending": MessageLookupByLibrary.simpleMessage("Pending"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone"),
+        "prescription": MessageLookupByLibrary.simpleMessage("Prescription"),
         "price": MessageLookupByLibrary.simpleMessage("Price"),
         "reVisits": MessageLookupByLibrary.simpleMessage("Re-Visits"),
         "resend": MessageLookupByLibrary.simpleMessage("Resend"),

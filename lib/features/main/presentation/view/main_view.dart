@@ -25,7 +25,7 @@ class _MainViewState extends State<MainView> {
   int currentIndex = 0;
   double kIconSize = 24.0;
   double kBottomRadius = 20.0;
-  List<Widget> screens =  [
+  List<Widget> screens = [
     DashboardView(),
     BlocProvider(
       create: (context) => AppointmentCubit(),

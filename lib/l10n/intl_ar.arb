@@ -72,7 +72,8 @@
         "nextAppointment":"الموعد القادم",
         "addanalysis":"إضافة تحليل",
         "diagnosis":"التشخيص",
-        "addDiagnosis":"اضافة التشخيص"
-        
+        "addDiagnosis":"اضافة التشخيص",
+        "next":"التالي",
+        "prescription":"الوصفة الطبية"
         
 }

@@ -83,6 +83,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "missed": MessageLookupByLibrary.simpleMessage("الفائته"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "newVisits": MessageLookupByLibrary.simpleMessage("كشف اول مرة"),
+        "next": MessageLookupByLibrary.simpleMessage("التالي"),
         "nextAppointment":
             MessageLookupByLibrary.simpleMessage("الموعد القادم"),
         "nextWeek": MessageLookupByLibrary.simpleMessage(" الاسبوع القادم"),
@@ -96,6 +97,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "patientName": MessageLookupByLibrary.simpleMessage("اسم المريض"),
         "pending": MessageLookupByLibrary.simpleMessage("معلق"),
         "phone": MessageLookupByLibrary.simpleMessage("الهاتف"),
+        "prescription": MessageLookupByLibrary.simpleMessage("الوصفة الطبية"),
         "price": MessageLookupByLibrary.simpleMessage("السعر"),
         "reVisits": MessageLookupByLibrary.simpleMessage("إعادة كشف"),
         "resend": MessageLookupByLibrary.simpleMessage("إعادة إرسال"),
