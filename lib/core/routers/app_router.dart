@@ -10,6 +10,10 @@ import 'package:doctor_app/features/auth/presentation/view_model/sign_in_cubit/s
 import 'package:doctor_app/features/auth/presentation/views/otp_view.dart';
 import 'package:doctor_app/features/auth/presentation/views/sign_in_view.dart';
 import 'package:doctor_app/features/clinic/presentation/view/clinic_view.dart';
+import 'package:doctor_app/features/examination/data/models/examination_model.dart';
+import 'package:doctor_app/features/examination/presentation/view_models/examination_cubit/examination_cubit.dart';
+import 'package:doctor_app/features/examination/presentation/views/details_examination_view.dart';
+import 'package:doctor_app/features/examination/presentation/views/examination_view.dart';
 import 'package:doctor_app/features/main/presentation/view/main_view.dart';
 import 'package:doctor_app/features/onboarding/presentation/view/onboarding_view.dart';
 import 'package:doctor_app/features/splash/presentation/view/splash_view.dart';
@@ -45,6 +49,18 @@ class AppRouter {
         return _buildRoute(AppointmentDetails(
           patientAppointmentModel: args as PatientAppointmentModel,
         ));
+      case Routing.examination:
+        return _buildRoute(BlocProvider(
+          create: (context) => ExaminationCubit(),
+          child: ExaminationView(),
+        ));
+      case Routing.detailsExamination:
+        final examinationModel = args as ExaminationModel;
+        return _buildRoute(
+          DetailsExaminationView(
+            examinationModel: examinationModel,
+          ),
+        );
       case Routing.clinicDetail:
         return _buildRoute(ClinicView());
       case Routing.clinicEdit:

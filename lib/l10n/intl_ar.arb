@@ -65,5 +65,15 @@
         "specializationName": "اسم التخصص",
         "enterPrice": "ادخل السعر",
         "price": "السعر",
-        "patientComment":"تعليق"
+        "patientComment":"تعليق",
+        "Examination":"الفحص",
+        "fieldRequired":"هذا الحقل مطلوب",
+        "patientName":"اسم المريض",
+        "nextAppointment":"الموعد القادم",
+        "addanalysis":"إضافة تحليل",
+        "diagnosis":"التشخيص",
+        "addDiagnosis":"اضافة التشخيص",
+        "next":"التالي",
+        "prescription":"الوصفة الطبية"
+        
 }

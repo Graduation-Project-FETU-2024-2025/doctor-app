@@ -71,7 +71,9 @@ class MedicineCard extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    getIt<CacheHelper>().getString(key: CacheKeys.currentLanguage) ==
+                                    getIt<CacheHelper>().getString(
+                                                key: CacheKeys
+                                                    .currentLanguage) ==
                                             'ar'
                                         ? 'أباكافير'
                                         : 'Abacavir',
