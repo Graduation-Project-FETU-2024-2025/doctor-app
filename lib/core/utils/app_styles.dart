@@ -18,6 +18,11 @@ class AppStyles {
     color: Theme.of(context).textTheme.bodyLarge?.color,
   );
 
+  static TextStyle medium15(context) => TextStyle(
+    fontSize: 15,
+    fontWeight: FontWeight.w500,
+    color: Theme.of(context).textTheme.bodyLarge?.color,
+  );
   static TextStyle medium16(context) => TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.w500,

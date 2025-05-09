@@ -3,12 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
-
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_icons.dart';
 
-class ClinicDetailInfo extends StatelessWidget {
-  const ClinicDetailInfo({super.key});
+class ClinicInfo extends StatelessWidget {
+  const ClinicInfo({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,8 +27,10 @@ class ClinicDetailInfo extends StatelessWidget {
             Gap(5.w),
             Text(
               'Egypt, Tanta, El Estad Street',
-              style: AppStyles.semiBold15(context)
-                  .copyWith(color: AppColors.black.withOpacity(0.4)),
+              style: AppStyles.semiBold15(context).copyWith(
+                  color: Theme.of(context).brightness == Brightness.dark
+                      ? Colors.white60
+                      : Colors.black38),
               overflow: TextOverflow.ellipsis,
             ),
           ],
@@ -48,8 +49,10 @@ class ClinicDetailInfo extends StatelessWidget {
             Gap(5.w),
             Text(
               '0108749834685',
-              style: AppStyles.semiBold15(context)
-                  .copyWith(color: AppColors.black.withOpacity(0.4)),
+              style: AppStyles.semiBold15(context).copyWith(
+                  color: Theme.of(context).brightness == Brightness.dark
+                      ? Colors.white60
+                      : Colors.black38),
               overflow: TextOverflow.ellipsis,
             ),
           ],
@@ -68,8 +71,10 @@ class ClinicDetailInfo extends StatelessWidget {
             Gap(5.h),
             Text(
               "4.5 (120 Reviews)",
-              style: AppStyles.semiBold15(context)
-                  .copyWith(color: AppColors.black.withOpacity(0.4)),
+              style: AppStyles.semiBold15(context).copyWith(
+                  color: Theme.of(context).brightness == Brightness.dark
+                      ? Colors.white60
+                      : Colors.black38),
               overflow: TextOverflow.ellipsis,
             ),
           ],
@@ -85,14 +90,18 @@ class ClinicDetailInfo extends StatelessWidget {
             ),
             Text(
               ".Closes ",
-              style: AppStyles.semiBold15(context)
-                  .copyWith(color: AppColors.black.withOpacity(0.4)),
+              style: AppStyles.semiBold15(context).copyWith(
+                  color: Theme.of(context).brightness == Brightness.dark
+                      ? Colors.white60
+                      : Colors.black38),
               overflow: TextOverflow.ellipsis,
             ),
             Text(
               "17:00",
-              style: AppStyles.semiBold15(context)
-                  .copyWith(color: AppColors.black.withOpacity(0.4)),
+              style: AppStyles.semiBold15(context).copyWith(
+                  color: Theme.of(context).brightness == Brightness.dark
+                      ? Colors.white60
+                      : Colors.black38),
               overflow: TextOverflow.ellipsis,
             ),
           ],

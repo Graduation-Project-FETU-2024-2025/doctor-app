@@ -1,5 +1,6 @@
 import 'package:doctor_app/core/database/cache/cache_keys.dart';
 import 'package:doctor_app/core/database/cache/cashe_helper.dart';
+import 'package:doctor_app/core/routers/routing.dart';
 import 'package:doctor_app/core/services/get_it.dart';
 import 'package:doctor_app/core/utils/app_colors.dart';
 import 'package:doctor_app/core/utils/app_icons.dart';
@@ -14,7 +15,6 @@ import 'package:flutter_svg/svg.dart';
 
 class MedicinesViewBody extends StatelessWidget {
   const MedicinesViewBody({super.key});
-
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -77,7 +77,12 @@ class MedicinesViewBody extends StatelessWidget {
                   child: AddDeleteButton(
                     title: S.of(context).save,
                     color: AppColors.primaryColor,
-                    onpressed: () {},
+                    onpressed: () {
+                      Navigator.pushNamed(
+                        context,
+                        Routing.detailsExamination,
+                      );
+                    },
                   ),
                 ),
               ],

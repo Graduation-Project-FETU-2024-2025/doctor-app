@@ -13,18 +13,20 @@ class BookingPriceCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: AppColors.white,
+      color: Theme.of(context).brightness == Brightness.dark
+          ? AppColors.darkGray
+          : AppColors.white,
       elevation: 2,
       child: SizedBox(
-        width: 334.w,
-        height: 116.h,
+        width: 340.w,
+        height: 120.h,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             SizedBox(
-              width: 95.w,
-              height: 95.h,
+              width: 90.w,
+              height: 90.h,
               child: Image.asset(AppImages.imagesClinicDetail),
             ),
             Column(
@@ -40,9 +42,8 @@ class BookingPriceCard extends StatelessWidget {
                 Row(
                   children: [
                     Text(
-                      '4.5',
-                      style: AppStyles.semiBold12(context)
-                          .copyWith(color: AppColors.black.withOpacity(0.4)),
+                      '4.5 ',
+                      style: AppStyles.semiBold12(context),
                       overflow: TextOverflow.ellipsis,
                     ),
                     SizedBox(
@@ -54,9 +55,8 @@ class BookingPriceCard extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      '(120 Reviews)',
-                      style: AppStyles.semiBold12(context)
-                          .copyWith(color: AppColors.black.withOpacity(0.4)),
+                      ' (120 Reviews)',
+                      style: AppStyles.semiBold12(context),
                       overflow: TextOverflow.ellipsis,
                     ),
                   ],

@@ -1,12 +1,12 @@
 import 'package:doctor_app/core/utils/app_colors.dart';
 import 'package:doctor_app/core/utils/app_images.dart';
-import 'package:doctor_app/features/clinic_detail/presentation/view/widget/clinic_detail_view_body.dart';
+import 'package:doctor_app/features/clinic/presentation/view/widget/clinic_view_body.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/utils/app_styles.dart';
 import 'widget/custom_sliver_app_bar.dart';
 
-class ClinicDetailView extends StatelessWidget {
-  const ClinicDetailView({super.key});
+class ClinicView extends StatelessWidget {
+  const ClinicView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class ClinicDetailView extends StatelessWidget {
             ),
           ),
           SliverToBoxAdapter(
-            child: ClinicDetailViewBody()
+            child: ClinicViewBody()
             )
         ],
       ),
