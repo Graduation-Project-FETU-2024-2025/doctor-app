@@ -15,7 +15,7 @@ class MedicineGrid extends StatelessWidget {
         crossAxisCount: 2,
         crossAxisSpacing: 20.w,
         mainAxisSpacing: 20.h,
-        childAspectRatio: 150 / 157,
+        childAspectRatio: 157 / 180,
       ),
       itemBuilder: (context, index) => MedicineCard(),
     );

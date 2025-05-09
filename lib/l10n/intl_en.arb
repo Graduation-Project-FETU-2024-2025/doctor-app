@@ -44,6 +44,8 @@
     "startTime": "Start time",
     "endTime": "End Time",
     "bookingPrice": "Booking Price",
+    "Dosage": "Dosage",
+
     "today":"Today",
     "upcoming":"Upcoming",
     "past":"Past",

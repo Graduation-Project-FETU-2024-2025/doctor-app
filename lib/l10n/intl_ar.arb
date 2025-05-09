@@ -43,6 +43,7 @@
         "startTime": "وقت البداية",
         "endTime": "وقت الانتهاء",
         "bookingPrice": "سعر الحجز",
+        "Dosage": "الجرعة",
         "today":"اليوم",
         "upcoming":"القادمة",
         "past":"الماضية",

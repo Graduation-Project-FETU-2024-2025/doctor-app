@@ -7,6 +7,7 @@ abstract class Routing {
   static const String profile = '/profile';
   static const String otp = '/otp';
   static const String clinicDetail = '/clinicDetail';
+  static const String medicines = '/medicines';
   static const String clinicEdit = '/clinicEdit';
   static const String examination = '/examination';
   static const String detailsExamination = '/detailsExamination';

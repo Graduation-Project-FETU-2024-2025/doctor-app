@@ -15,6 +15,7 @@ import 'package:doctor_app/features/examination/presentation/view_models/examina
 import 'package:doctor_app/features/examination/presentation/views/details_examination_view.dart';
 import 'package:doctor_app/features/examination/presentation/views/examination_view.dart';
 import 'package:doctor_app/features/main/presentation/view/main_view.dart';
+import 'package:doctor_app/features/medicines/presentation/views/medicines_view.dart';
 import 'package:doctor_app/features/onboarding/presentation/view/onboarding_view.dart';
 import 'package:doctor_app/features/splash/presentation/view/splash_view.dart';
 import 'package:flutter/cupertino.dart';
@@ -63,6 +64,9 @@ class AppRouter {
         );
       case Routing.clinicDetail:
         return _buildRoute(ClinicView());
+      case Routing.medicines:
+        return _buildRoute(MedicinesView());
+
       case Routing.clinicEdit:
         return _buildRoute(ClinicEditView());
 

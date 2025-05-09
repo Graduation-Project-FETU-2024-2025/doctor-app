@@ -14,8 +14,8 @@ class AppIcons {
   static const String svgsBack = "assets/svgs/back.svg";
 
   /// Assets for svgsBackRight
-  /// assets/svgs/back_right.svg
-  static const String svgsBackRight = "assets/svgs/back_right.svg";
+  /// assets/svgs/back-right.svg
+  static const String svgsBackRight = "assets/svgs/back-right.svg";
 
   /// Assets for svgsCamera
   /// assets/svgs/camera.svg
