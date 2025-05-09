@@ -77,5 +77,6 @@
     "diagnosis":"Diagnosis",
     "addDiagnosis":"Add Diagnosis",
     "next":"Next",
-    "prescription":"Prescription"
+    "prescription":"Prescription",
+    "submit":"Submit"
 }

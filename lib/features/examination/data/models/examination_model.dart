@@ -1,17 +1,17 @@
-import 'package:doctor_app/features/medicines/data/models/medicine_model.dart';
+import 'package:doctor_app/features/examination/data/models/prescription_medicine_model.dart';
 
 class ExaminationModel {
   final String id;
-  final String name;
+  final String patientName;
   final List<String> analyses;
-  final List<MedicineModel> medicines;
+  final List<PrescriptionMedicineModel> medicines;
   final String diagonsis;
   final String nextAppointment;
   final DateTime createdAt;
 
   ExaminationModel({
     required this.id,
-    required this.name,
+    required this.patientName,
     required this.analyses,
     required this.medicines,
     required this.diagonsis,
@@ -20,15 +20,15 @@ class ExaminationModel {
   });
   ExaminationModel copyWith({
     String? id,
-    String? name,
+    String? patientName,
     List<String>? analyses,
-    List<MedicineModel>? medicines,
+    List<PrescriptionMedicineModel>? medicines,
     String? diagonsis,
     String? nextAppointment,
   }) {
     return ExaminationModel(
       id: id ?? this.id,
-      name: name ?? this.name,
+      patientName: patientName ?? this.patientName,
       analyses: analyses ?? this.analyses,
       medicines: medicines ?? this.medicines,
       diagonsis: diagonsis ?? this.diagonsis,

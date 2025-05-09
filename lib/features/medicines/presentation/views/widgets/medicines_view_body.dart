@@ -7,6 +7,7 @@ import 'package:doctor_app/core/utils/app_icons.dart';
 import 'package:doctor_app/core/utils/app_styles.dart';
 import 'package:doctor_app/core/widgets/add_delete_button.dart';
 import 'package:doctor_app/core/widgets/search_text_field.dart';
+import 'package:doctor_app/features/examination/presentation/view_models/examination_cubit/examination_cubit.dart';
 import 'package:doctor_app/features/medicines/presentation/views/widgets/medicines_grid.dart';
 import 'package:doctor_app/generated/l10n.dart';
 import 'package:flutter/widgets.dart';
@@ -78,9 +79,12 @@ class MedicinesViewBody extends StatelessWidget {
                     title: S.of(context).save,
                     color: AppColors.primaryColor,
                     onpressed: () {
+                      final cubit = ExaminationCubit.get(context);
+                      cubit.updateModelData();
                       Navigator.pushNamed(
                         context,
                         Routing.detailsExamination,
+                        arguments: cubit.examinationModel,
                       );
                     },
                   ),

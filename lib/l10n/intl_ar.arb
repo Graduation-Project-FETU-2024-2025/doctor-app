@@ -75,6 +75,7 @@
         "diagnosis":"التشخيص",
         "addDiagnosis":"اضافة التشخيص",
         "next":"التالي",
-        "prescription":"الوصفة الطبية"
+        "prescription":"الوصفة الطبية",
+        "submit":"ارسال"
         
 }
