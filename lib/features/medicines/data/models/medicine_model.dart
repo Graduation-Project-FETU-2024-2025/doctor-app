@@ -13,13 +13,20 @@ class MedicineModel {
     this.imageUrl,
   });
 
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is MedicineModel &&
-          runtimeType == other.runtimeType &&
-          id == other.id;
-
-  @override
-  int get hashCode => id.hashCode;
+  MedicineModel copyWith({
+    String? id,
+    String? imageUrl,
+    String? name,
+    int? dosage,
+    String? additionalInstructions,
+  }) {
+    return MedicineModel(
+      id: id ?? this.id,
+      imageUrl: imageUrl ?? this.imageUrl,
+      name: name ?? this.name,
+      dosage: dosage ?? this.dosage,
+      additionalInstructions:
+          additionalInstructions ?? this.additionalInstructions,
+    );
+  }
 }

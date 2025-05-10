@@ -10,7 +10,9 @@ class DetailsExaminationView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: DetailsExaminationViewBody(),
+        body: DetailsExaminationViewBody(
+          examinationModel: examinationModel,
+        ),
       ),
     );
   }
