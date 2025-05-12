@@ -1,3 +1,8 @@
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:doctor_app/core/database/cache/cache_keys.dart';
+import 'package:doctor_app/core/database/cache/cashe_helper.dart';
+import 'package:doctor_app/core/functions/is_network_image.dart';
+import 'package:doctor_app/core/services/get_it.dart';
 import 'package:doctor_app/core/utils/app_colors.dart';
 import 'package:doctor_app/core/utils/app_images.dart';
 import 'package:doctor_app/core/utils/app_styles.dart';
@@ -18,14 +23,23 @@ class UserWelcomeSection extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              '${S.of(context).goodMorning} khaled',
+              '${S.of(context).goodMorning} ${getIt<CacheHelper>().getString(key: CacheKeys.username)}',
               style: AppStyles.semiBold30(context),
             ),
             CircleAvatar(
               radius: 73 / 2,
-              backgroundImage: AssetImage(
-                AppImages.imagesAppIcon,
-              ),
+              backgroundColor: AppColors.gray,
+              backgroundImage: isNetworkImage(
+                getIt<CacheHelper>().getString(
+                  key: CacheKeys.profileImage,
+                ),
+              )
+                  ? CachedNetworkImageProvider(getIt<CacheHelper>().getString(
+                      key: CacheKeys.profileImage,
+                    )!)
+                  : AssetImage(
+                      AppImages.personAvatar,
+                    ),
             )
           ],
         ),

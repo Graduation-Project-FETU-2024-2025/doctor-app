@@ -10,6 +10,7 @@ import 'package:doctor_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ProfileOptionContainer extends StatelessWidget {

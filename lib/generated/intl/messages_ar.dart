@@ -31,6 +31,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
     "booking": MessageLookupByLibrary.simpleMessage("الحوجزات"),
     "bookingPrice": MessageLookupByLibrary.simpleMessage("سعر الحجز"),
+    "camera": MessageLookupByLibrary.simpleMessage("الكاميرا"),
     "checkups": MessageLookupByLibrary.simpleMessage("الكشف"),
     "clinic": MessageLookupByLibrary.simpleMessage("العيادة"),
     "clinicName": MessageLookupByLibrary.simpleMessage("اسم العيادة"),
@@ -66,6 +67,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "ادخل اسم التخصص",
     ),
     "fieldRequired": MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب"),
+    "gallery": MessageLookupByLibrary.simpleMessage("المعرض"),
     "getAddressInfo": MessageLookupByLibrary.simpleMessage(
       "الحصول على معلومات العنوان",
     ),

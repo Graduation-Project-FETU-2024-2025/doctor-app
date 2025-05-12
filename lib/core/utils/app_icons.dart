@@ -116,4 +116,7 @@ class AppIcons {
   static const String iconAppointmentClock =
       'assets/svgs/appointment_clock.svg';
   static const String svgArrowDown = 'assets/svgs/arrowDown.svg';
+
+
+
 }
