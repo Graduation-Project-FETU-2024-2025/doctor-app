@@ -45,7 +45,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "decline": MessageLookupByLibrary.simpleMessage("Decline"),
     "delete": MessageLookupByLibrary.simpleMessage("Delete"),
     "diagnosis": MessageLookupByLibrary.simpleMessage("Diagnosis"),
+    "editProfile": MessageLookupByLibrary.simpleMessage("Edit Profile"),
     "emailAddress": MessageLookupByLibrary.simpleMessage("Email address"),
+    "emailResentedSuccessfully": MessageLookupByLibrary.simpleMessage(
+      "Email resented Successfully",
+    ),
     "enableLocationService": MessageLookupByLibrary.simpleMessage(
       "Please enable location service",
     ),
@@ -96,6 +100,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "nextAppointment": MessageLookupByLibrary.simpleMessage("Next Appointment"),
     "nextWeek": MessageLookupByLibrary.simpleMessage("Next Week"),
     "no": MessageLookupByLibrary.simpleMessage("No"),
+    "noLastAdded": MessageLookupByLibrary.simpleMessage(
+      "No newly added medicines",
+    ),
     "onboarding": MessageLookupByLibrary.simpleMessage(
       "All Services for your health",
     ),

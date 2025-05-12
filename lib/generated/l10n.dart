@@ -594,6 +594,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Email resented Successfully`
+  String get emailResentedSuccessfully {
+    return Intl.message(
+      'Email resented Successfully',
+      name: 'emailResentedSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No newly added medicines`
+  String get noLastAdded {
+    return Intl.message(
+      'No newly added medicines',
+      name: 'noLastAdded',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Edit Profile`
+  String get editProfile {
+    return Intl.message(
+      'Edit Profile',
+      name: 'editProfile',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

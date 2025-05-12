@@ -43,7 +43,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "decline": MessageLookupByLibrary.simpleMessage("الغاء"),
     "delete": MessageLookupByLibrary.simpleMessage("حذف"),
     "diagnosis": MessageLookupByLibrary.simpleMessage("التشخيص"),
+    "editProfile": MessageLookupByLibrary.simpleMessage("تعديل الملف الشخصى"),
     "emailAddress": MessageLookupByLibrary.simpleMessage(" البريد الإلكتروني"),
+    "emailResentedSuccessfully": MessageLookupByLibrary.simpleMessage(
+      "تم إعادة إرسال الايميل بنجاح",
+    ),
     "enableLocationService": MessageLookupByLibrary.simpleMessage(
       "يرجى تفعيل خدمة الموقع",
     ),
@@ -92,6 +96,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "nextAppointment": MessageLookupByLibrary.simpleMessage("الموعد القادم"),
     "nextWeek": MessageLookupByLibrary.simpleMessage(" الاسبوع القادم"),
     "no": MessageLookupByLibrary.simpleMessage("لا"),
+    "noLastAdded": MessageLookupByLibrary.simpleMessage(
+      "لا توجد أدوية مضافه حديثا",
+    ),
     "onboarding": MessageLookupByLibrary.simpleMessage("جميع الخدمات لصحتك"),
     "open": MessageLookupByLibrary.simpleMessage("مفتوح"),
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),

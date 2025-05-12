@@ -17,5 +17,16 @@ final class OtpCheckFailure extends OtpState {
 }
 
 
+final class ResendOTPLoading extends OtpState {}
+
+final class ResendOTPSuccess extends OtpState {}
+
+final class ResendOTPFailure extends OtpState {
+  final ApiErrorModel apiErrorModel;
+
+  ResendOTPFailure({required this.apiErrorModel});
+}
+
+
 
 
