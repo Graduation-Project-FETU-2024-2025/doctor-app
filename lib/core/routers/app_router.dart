@@ -10,6 +10,9 @@ import 'package:doctor_app/features/auth/presentation/view_model/sign_in_cubit/s
 import 'package:doctor_app/features/auth/presentation/views/otp_view.dart';
 import 'package:doctor_app/features/auth/presentation/views/sign_in_view.dart';
 import 'package:doctor_app/features/clinic/presentation/view/clinic_view.dart';
+import 'package:doctor_app/features/edit_profile/data/repo/edit_profile_repo.dart';
+import 'package:doctor_app/features/edit_profile/presentation/view/edit_profile_view.dart';
+import 'package:doctor_app/features/edit_profile/presentation/view_model/edit_profile_cubit/edit_profile_cubit.dart';
 import 'package:doctor_app/features/examination/data/models/examination_model.dart';
 import 'package:doctor_app/features/examination/presentation/view_models/examination_cubit/examination_cubit.dart';
 import 'package:doctor_app/features/examination/presentation/views/details_examination_view.dart';
@@ -17,6 +20,7 @@ import 'package:doctor_app/features/examination/presentation/views/examination_v
 import 'package:doctor_app/features/main/presentation/view/main_view.dart';
 import 'package:doctor_app/features/medicines/presentation/views/medicines_view.dart';
 import 'package:doctor_app/features/onboarding/presentation/view/onboarding_view.dart';
+import 'package:doctor_app/features/profile/data/models/user_model.dart';
 import 'package:doctor_app/features/splash/presentation/view/splash_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -66,7 +70,13 @@ class AppRouter {
         return _buildRoute(ClinicView());
       case Routing.medicines:
         return _buildRoute(MedicinesView());
-
+      case Routing.editProfile:
+        return _buildRoute(BlocProvider(
+          create: (context) => EditProfileCubit(getIt<EditProfileRepo>()),
+          child: EditProfileView(
+            userModel: args as UserModel,
+          ),
+        ));
       case Routing.clinicEdit:
         return _buildRoute(ClinicEditView());
 

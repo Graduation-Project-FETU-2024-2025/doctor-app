@@ -79,7 +79,7 @@
         "emailResentedSuccessfully": "تم إعادة إرسال الايميل بنجاح",
         "noLastAdded": "لا توجد أدوية مضافه حديثا",
         "editProfile": "تعديل الملف الشخصى",
-        
-        "submit":"ارسال"
-        
+        "submit": "ارسال",
+        "camera": "الكاميرا",
+        "gallery": "المعرض"
 }

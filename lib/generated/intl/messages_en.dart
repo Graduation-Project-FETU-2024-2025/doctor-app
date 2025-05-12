@@ -33,6 +33,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
     "booking": MessageLookupByLibrary.simpleMessage("Booking"),
     "bookingPrice": MessageLookupByLibrary.simpleMessage("Booking Price"),
+    "camera": MessageLookupByLibrary.simpleMessage("Camera"),
     "checkups": MessageLookupByLibrary.simpleMessage("Checkups"),
     "clinic": MessageLookupByLibrary.simpleMessage("Clinic"),
     "clinicName": MessageLookupByLibrary.simpleMessage("Clinic Name"),
@@ -70,6 +71,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Enter Specialization Name",
     ),
     "fieldRequired": MessageLookupByLibrary.simpleMessage("field Required"),
+    "gallery": MessageLookupByLibrary.simpleMessage("Gallery"),
     "getAddressInfo": MessageLookupByLibrary.simpleMessage("Get Address Info"),
     "goodMorning": MessageLookupByLibrary.simpleMessage("Good Morning\nDr."),
     "haventReceivedOtp": MessageLookupByLibrary.simpleMessage(

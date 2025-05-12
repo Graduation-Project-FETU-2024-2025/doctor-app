@@ -81,5 +81,7 @@
     "emailResentedSuccessfully":"Email resented Successfully",
     "noLastAdded":"No newly added medicines",
     "editProfile":"Edit Profile",
-    "submit":"Submit"
+    "submit":"Submit",
+    "camera":"Camera",
+    "gallery":"Gallery"
 }
