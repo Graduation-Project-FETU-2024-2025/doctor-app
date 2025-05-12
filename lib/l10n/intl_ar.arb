@@ -78,5 +78,8 @@
         "prescription": "الوصفة الطبية",
         "emailResentedSuccessfully": "تم إعادة إرسال الايميل بنجاح",
         "noLastAdded": "لا توجد أدوية مضافه حديثا",
-        "editProfile": "تعديل الملف الشخصى"
+        "editProfile": "تعديل الملف الشخصى",
+        
+        "submit":"ارسال"
+        
 }

@@ -125,6 +125,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Specialization Name",
     ),
     "startTime": MessageLookupByLibrary.simpleMessage("Start time"),
+    "submit": MessageLookupByLibrary.simpleMessage("Submit"),
     "thisWeek": MessageLookupByLibrary.simpleMessage("This Week"),
     "today": MessageLookupByLibrary.simpleMessage("Today"),
     "totalIncome": MessageLookupByLibrary.simpleMessage("Total Income"),

@@ -624,6 +624,11 @@ class S {
       args: [],
     );
   }
+
+  /// `Submit`
+  String get submit {
+    return Intl.message('Submit', name: 'submit', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

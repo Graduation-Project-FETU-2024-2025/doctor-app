@@ -80,5 +80,6 @@
     "prescription":"Prescription",
     "emailResentedSuccessfully":"Email resented Successfully",
     "noLastAdded":"No newly added medicines",
-    "editProfile":"Edit Profile"
+    "editProfile":"Edit Profile",
+    "submit":"Submit"
 }

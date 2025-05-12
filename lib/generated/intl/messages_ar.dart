@@ -117,6 +117,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "selectMedicines": MessageLookupByLibrary.simpleMessage("اختر الأدوية"),
     "specializationName": MessageLookupByLibrary.simpleMessage("اسم التخصص"),
     "startTime": MessageLookupByLibrary.simpleMessage("وقت البداية"),
+    "submit": MessageLookupByLibrary.simpleMessage("ارسال"),
     "thisWeek": MessageLookupByLibrary.simpleMessage(" الاسبوع الحالى"),
     "today": MessageLookupByLibrary.simpleMessage("اليوم"),
     "totalIncome": MessageLookupByLibrary.simpleMessage("قيمة الدخل"),
