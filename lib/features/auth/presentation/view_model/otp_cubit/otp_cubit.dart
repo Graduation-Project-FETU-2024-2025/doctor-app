@@ -27,6 +27,16 @@ class OtpCubit extends Cubit<OtpState> {
     );
   }
 
+
+    void resendOTP(String email) async {
+    emit(ResendOTPLoading());
+    final result = await _authRepo.login(email);
+    result.fold(
+      (apiErrorModel) => emit(ResendOTPFailure(apiErrorModel: apiErrorModel)),
+      (r) => emit(ResendOTPSuccess()),
+    );
+  }
+
   GlobalKey<FormState> otpFormKey = GlobalKey<FormState>();
   int get numberOfOtp => _numberOTP;
   void nextFiled(String value, FocusNode focusNode) {
