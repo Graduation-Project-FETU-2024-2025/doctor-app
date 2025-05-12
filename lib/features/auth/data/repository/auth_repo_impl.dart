@@ -33,14 +33,16 @@ class AuthRepoImpl extends AuthRepo {
       await _cacheTokenAndId(data.token);
       return Right(data.message);
     } catch (e) {
-        return Left(ApiErrorHandler.handleError(e));
+      return Left(ApiErrorHandler.handleError(e));
     }
   }
 
   Future<void> _cacheTokenAndId(String token) async {
     await SecureStorage.instance.addData(key: CacheKeys.token, data: token);
     Map<String, dynamic> payload = Jwt.parseJwt(token);
-    await SecureStorage.instance
-        .addData(key: CacheKeys.id, data: payload['Pharmacy']);//TODO this will change to clinic
+    await SecureStorage.instance.addData(
+      key: CacheKeys.id,
+      data: payload['ClinicId'],
+    );
   }
 }
