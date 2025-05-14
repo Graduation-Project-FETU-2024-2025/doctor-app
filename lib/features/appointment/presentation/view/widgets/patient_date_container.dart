@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:intl/intl.dart';
 
 class PatientDateContainer extends StatelessWidget {
   const PatientDateContainer({
@@ -48,13 +49,19 @@ class PatientDateContainer extends StatelessWidget {
                   SvgPicture.asset(AppIcons.iconAppointmentClock),
                   Gap(10.w),
                   Text(
-                    '${patientAppointmentModel.startTime}- ${patientAppointmentModel.endTime}',
+                    '${DateFormat('hh:mm a').format(patientAppointmentModel.time)}-${DateFormat('hh:mm a').format(
+                      patientAppointmentModel.time.add(
+                        Duration(
+                          hours: 1,
+                        ),
+                      ),
+                    )}',
                     style: AppStyles.semiBold10(context).copyWith(
                       color: AppColors.white.withOpacity(.6),
                     ),
                   ),
                 ],
-              )
+              ),
             ],
           )
         ],

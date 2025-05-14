@@ -60,7 +60,6 @@ dependencies:
   skeletonizer: ^1.4.3
   sliver_tools: ^0.2.12
 
-
 dependency_overrides:
   geolocator_android: 4.6.1
 
