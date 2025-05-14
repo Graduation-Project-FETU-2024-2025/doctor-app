@@ -11,6 +11,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:intl/intl.dart';
 
 class AppointmentRequestCard extends StatelessWidget {
   const AppointmentRequestCard({
@@ -51,7 +52,18 @@ class AppointmentRequestCard extends StatelessWidget {
                   SvgPicture.asset(AppIcons.iconAppointmentClock),
                   Gap(10.w),
                   Text(
-                    '${patientAppointmentModel.date},  ${patientAppointmentModel.startTime} - ${patientAppointmentModel.endTime}',
+                    '${DateFormat('d MMMM yyyy').format(patientAppointmentModel.time)}, ${DateFormat('hh:mm a').format(patientAppointmentModel.time)}-${DateFormat('hh:mm a').format(
+                      patientAppointmentModel.time.add(
+                        Duration(
+                          hours: 1,
+                        ),
+                      ),
+                    )}',
+                    style: AppStyles.semiBold15(context).copyWith(
+                      color: Theme.of(context).brightness == Brightness.light
+                          ? AppColors.white
+                          : AppColors.black,
+                    ),
                   ),
                 ],
               ),
