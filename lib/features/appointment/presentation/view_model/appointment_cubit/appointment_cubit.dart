@@ -1,12 +1,13 @@
 import 'package:doctor_app/features/appointment/data/models/patient_appointment_model.dart';
+import 'package:doctor_app/features/appointment/data/repository/appointment_repo.dart';
 import 'package:doctor_app/features/appointment/presentation/view_model/appointment_cubit/appointment_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 enum CurrentAppointment { past, upComing }
 
 class AppointmentCubit extends Cubit<AppointmentState> {
-  AppointmentCubit() : super(AppointmentInitial());
-
+  AppointmentCubit(this._appointmentRepo) : super(AppointmentInitial());
+  final AppointmentRepo _appointmentRepo;
   List<PatientAppointmentModel> upcomingAppointment = List.generate(
     3,
     (index) => PatientAppointmentModel(
@@ -37,6 +38,16 @@ class AppointmentCubit extends Cubit<AppointmentState> {
       price: 510,
     ),
   );
+
+  void getAppointmentsStateEmitter() async {
+    emit(AppointmentLoading());
+    final result = await _appointmentRepo.getAppointments();
+    result.fold(
+      (message) => emit(AppointmentFailure(message: message)),
+      (patientAppointment) =>
+          emit(AppointmentSuccess(patientAppointment: patientAppointment)),
+    );
+  }
 
   CurrentAppointment appointment = CurrentAppointment.upComing;
   void selectAppointmentTypes(CurrentAppointment currentAppointment) {

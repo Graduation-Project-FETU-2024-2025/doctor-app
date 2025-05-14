@@ -22,14 +22,14 @@ class PatientAppointmentModel {
 
   factory PatientAppointmentModel.fromJson(Map<String, dynamic> json) {
     return PatientAppointmentModel(
-      patientImageUrl: json['userImage'],
-      patientName: json['userName'],
       appointmentId: json['id'],
-      patientComment: 'bla bla',
-      status: json['status'],
       time: DateTime.parse(json['date']),
-      patientId: json['id'],
+      status: json['status'],
+      patientImageUrl: json['userImage'],
+      patientId: json['userId'],
+      patientName: json['userName'],
       price: json['price'],
+      patientComment: 'bla bla',
     );
   }
 }

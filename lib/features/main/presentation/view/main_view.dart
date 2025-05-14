@@ -1,6 +1,7 @@
 import 'package:doctor_app/core/services/get_it.dart';
 import 'package:doctor_app/core/utils/app_colors.dart';
 import 'package:doctor_app/core/utils/app_images.dart';
+import 'package:doctor_app/features/appointment/data/repository/appointment_repo.dart';
 import 'package:doctor_app/features/appointment/presentation/view/appointment_view.dart';
 import 'package:doctor_app/features/appointment/presentation/view_model/appointment_cubit/appointment_cubit.dart';
 import 'package:doctor_app/features/dashboard/presentation/view/dashboard_view.dart';
@@ -31,13 +32,15 @@ class _MainViewState extends State<MainView> {
   List<Widget> screens = [
     DashboardView(),
     BlocProvider(
-      create: (context) => AppointmentCubit(),
+      create: (context) =>
+          AppointmentCubit(getIt<AppointmentRepo>())..getAppointmentsStateEmitter(),
       child: AppointmentView(),
     ),
     ClinicTimingView(),
     ClinicView(),
     BlocProvider(
-      create: (context) => ProfileCubit(getIt<ProfileRepo>())..getProfileEmitter(),
+      create: (context) =>
+          ProfileCubit(getIt<ProfileRepo>())..getProfileEmitter(),
       child: ProfileView(),
     ),
   ];

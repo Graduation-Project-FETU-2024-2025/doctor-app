@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:doctor_app/core/functions/is_network_image.dart';
 import 'package:doctor_app/core/helpers/extentions.dart';
 import 'package:doctor_app/core/routers/routing.dart';
 import 'package:doctor_app/core/utils/app_colors.dart';
@@ -82,9 +83,9 @@ class AppointmentRequestCard extends StatelessWidget {
                     children: [
                       CircleAvatar(
                         radius: 30.r,
-                        backgroundImage: CachedNetworkImageProvider(
-                          patientAppointmentModel.patientImageUrl,
-                        ),
+                        backgroundImage: isNetworkImage(patientAppointmentModel.patientImageUrl)? CachedNetworkImageProvider(
+                         patientAppointmentModel.patientImageUrl,
+                        ):AssetImage(AppImages.personAvatar),
                       ),
                       Gap(10.w),
                       Text(
