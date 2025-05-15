@@ -81,5 +81,7 @@
         "editProfile": "تعديل الملف الشخصى",
         "submit": "ارسال",
         "camera": "الكاميرا",
-        "gallery": "المعرض"
+        "gallery": "المعرض",
+        "sorry":"للأسف!",
+        "nosearchResult":"لا توجد نتائج بحث"
 }

@@ -16,7 +16,6 @@ import '../../../clinic_timing/presentation/view/clinic_timing_view.dart';
 
 class MainView extends StatefulWidget {
   const MainView({super.key});
-
   @override
   State<MainView> createState() => _MainViewState();
 }
@@ -37,7 +36,8 @@ class _MainViewState extends State<MainView> {
     ClinicTimingView(),
     ClinicView(),
     BlocProvider(
-      create: (context) => ProfileCubit(getIt<ProfileRepo>())..getProfileEmitter(),
+      create: (context) =>
+          ProfileCubit(getIt<ProfileRepo>())..getProfileEmitter(),
       child: ProfileView(),
     ),
   ];

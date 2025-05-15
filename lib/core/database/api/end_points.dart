@@ -12,7 +12,7 @@ class EndPoints {
   static String getBranchProducts = 'api/secure/Product/';
 
   static String getAllSystemMedicines = 'api/secure/Product';
-
+  static String addPrescription = 'api/Appointments/add-prescription';
   static String deleteMedicine = "api/secure/Product/";
   static String addMedicine = "api/secure/Product";
   static String updateMedicine = "api/secure/Product";

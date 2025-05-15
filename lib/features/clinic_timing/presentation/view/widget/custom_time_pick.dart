@@ -1,4 +1,5 @@
 import 'dart:developer';
+import 'package:doctor_app/core/utils/app_colors.dart';
 import 'package:doctor_app/core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -71,8 +72,16 @@ class _CustomTimePickState extends State<CustomTimePick> {
                       hintTxt: startTime,
                       initialVal: startTime == '00:00' ? '' : startTime,
                       suffixIcon: IconButton(
-                          onPressed: () => getTimeFromUser(isStartTime: true),
-                          icon: SvgPicture.asset(AppIcons.iconTime)),
+                        onPressed: () => getTimeFromUser(isStartTime: true),
+                        icon: SvgPicture.asset(
+                          AppIcons.iconTime,
+                          colorFilter: ColorFilter.mode(
+                              Theme.of(context).brightness == Brightness.light
+                                  ? AppColors.black.withOpacity(0.7)
+                                  : AppColors.white.withOpacity(0.7),
+                              BlendMode.srcIn),
+                        ),
+                      ),
                       readOnly: true,
                     ),
                   ],
@@ -94,8 +103,16 @@ class _CustomTimePickState extends State<CustomTimePick> {
                       hintTxt: endTime,
                       initialVal: endTime == '00:00' ? '' : endTime,
                       suffixIcon: IconButton(
-                          onPressed: () => getTimeFromUser(isStartTime: false),
-                          icon: SvgPicture.asset(AppIcons.iconTime)),
+                        onPressed: () => getTimeFromUser(isStartTime: false),
+                        icon: SvgPicture.asset(
+                          AppIcons.iconTime,
+                          colorFilter: ColorFilter.mode(
+                              Theme.of(context).brightness == Brightness.light
+                                  ? AppColors.black.withOpacity(0.7)
+                                  : AppColors.white.withOpacity(0.7),
+                              BlendMode.srcIn),
+                        ),
+                      ),
                       readOnly: true,
                     ),
                   ],
