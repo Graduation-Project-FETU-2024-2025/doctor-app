@@ -1,5 +1,4 @@
 import 'package:doctor_app/core/utils/app_styles.dart';
-import 'package:doctor_app/features/appointment/presentation/view/widgets/appointment_requests_list_view.dart';
 import 'package:doctor_app/features/appointment/presentation/view/widgets/due_to_appointment_section.dart';
 import 'package:doctor_app/features/clinic_timing/presentation/view/widget/custom_date_timeline.dart';
 import 'package:doctor_app/generated/l10n.dart';
@@ -38,7 +37,7 @@ class AppointmentView extends StatelessWidget {
           SliverToBoxAdapter(
             child: Gap(40.h),
           ),
-          AppointmentRequestsListView(),
+          
         ],
       ),
     );

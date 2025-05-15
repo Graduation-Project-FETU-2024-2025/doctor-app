@@ -27,7 +27,10 @@ class ClinicTimingBody extends StatelessWidget {
             Gap(30.h),
             CustomDateTimeline(),
             Gap(49.h),
-            CustomTimePick(startTime: appointmentDate[0].workingPeriods.first.startTime,endTime: appointmentDate[0].workingPeriods.first.endTime,),
+            CustomTimePick(
+              startTime: appointmentDate[0].workingPeriods.first.startTime,
+              endTime: appointmentDate[0].workingPeriods.first.endTime,
+            ),
             Gap(50.h),
             Text(
               S.of(context).nextWeek,
@@ -36,7 +39,9 @@ class ClinicTimingBody extends StatelessWidget {
             Gap(30.h),
             CustomDateTimeline(),
             Gap(40.h),
-            CustomTimePick(startTime: appointmentDate[1].workingPeriods.first.startTime, endTime:  appointmentDate[1].workingPeriods.first.endTime),
+            CustomTimePick(
+                startTime: appointmentDate[1].workingPeriods.first.startTime,
+                endTime: appointmentDate[1].workingPeriods.first.endTime),
             Gap(30.h),
             TimingSaveConsumer(),
           ],

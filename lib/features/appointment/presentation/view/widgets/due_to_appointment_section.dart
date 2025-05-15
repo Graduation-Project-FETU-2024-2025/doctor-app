@@ -1,7 +1,7 @@
-import 'package:doctor_app/features/appointment/presentation/view/widgets/appointment_type_selection_container.dart';
+import 'package:doctor_app/features/notifications/presentation/view/widgets/appointment_type_selection_container.dart';
 import 'package:doctor_app/features/appointment/presentation/view/widgets/patient_date_container_list_view.dart';
-import 'package:doctor_app/features/appointment/presentation/view_model/appointment_cubit/appointment_cubit.dart';
-import 'package:doctor_app/features/appointment/presentation/view_model/appointment_cubit/appointment_state.dart';
+import 'package:doctor_app/features/dashboard/presentation/view_model/pending_appointment_cubit/pending_appointment_cubit.dart';
+import 'package:doctor_app/features/dashboard/presentation/view_model/pending_appointment_cubit/pending_appointment_state.dart';
 import 'package:doctor_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
