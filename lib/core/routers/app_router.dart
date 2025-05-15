@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:doctor_app/core/routers/routing.dart';
 import 'package:doctor_app/core/services/get_it.dart';
-import 'package:doctor_app/features/appointment/data/models/patient_appointment_model.dart';
+import 'package:doctor_app/core/models/patient_appointment_model.dart';
 import 'package:doctor_app/features/appointment_details/presentation/view/appointment_details.dart';
 import 'package:doctor_app/features/auth/data/repository/auth_repo.dart';
 import 'package:doctor_app/features/auth/presentation/view_model/otp_cubit/otp_cubit.dart';

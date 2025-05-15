@@ -1,5 +1,7 @@
-import 'package:doctor_app/features/appointment/data/models/patient_appointment_model.dart';
-import 'package:doctor_app/features/appointment/data/repository/appointment_repo.dart';
+import 'package:doctor_app/core/enums/appointment_state_enum.dart';
+import 'package:doctor_app/core/models/appointment_params_model.dart';
+import 'package:doctor_app/core/models/patient_appointment_model.dart';
+import 'package:doctor_app/core/repositories/appointment_repo.dart';
 import 'package:doctor_app/features/appointment/presentation/view_model/appointment_cubit/appointment_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -41,7 +43,9 @@ class AppointmentCubit extends Cubit<AppointmentState> {
 
   void getAppointmentsStateEmitter() async {
     emit(AppointmentLoading());
-    final result = await _appointmentRepo.getAppointments();
+    final result = await _appointmentRepo.getPendingAppointments(
+        appointmentParamsModel: AppointmentParamsModel(
+            appointmentState: AppointmentStateEnum.accepted));
     result.fold(
       (message) => emit(AppointmentFailure(message: message)),
       (patientAppointment) =>

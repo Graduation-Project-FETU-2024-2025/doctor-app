@@ -1,7 +1,7 @@
 import 'package:doctor_app/core/services/get_it.dart';
 import 'package:doctor_app/core/utils/app_colors.dart';
 import 'package:doctor_app/core/utils/app_images.dart';
-import 'package:doctor_app/features/appointment/data/repository/appointment_repo.dart';
+import 'package:doctor_app/core/repositories/appointment_repo.dart';
 import 'package:doctor_app/features/appointment/presentation/view/appointment_view.dart';
 import 'package:doctor_app/features/appointment/presentation/view_model/appointment_cubit/appointment_cubit.dart';
 import 'package:doctor_app/features/clinic_timing/data/repo/appointment_date_repo.dart';

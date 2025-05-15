@@ -1,4 +1,4 @@
-import 'package:doctor_app/features/appointment/data/models/patient_appointment_model.dart';
+import 'package:doctor_app/core/models/patient_appointment_model.dart';
 import 'package:doctor_app/features/appointment/presentation/view/widgets/appointment_request_card.dart';
 import 'package:doctor_app/features/appointment/presentation/view_model/appointment_cubit/appointment_cubit.dart';
 import 'package:doctor_app/features/appointment/presentation/view_model/appointment_cubit/appointment_state.dart';

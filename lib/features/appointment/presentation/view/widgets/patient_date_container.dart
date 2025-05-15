@@ -2,7 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:doctor_app/core/utils/app_colors.dart';
 import 'package:doctor_app/core/utils/app_icons.dart';
 import 'package:doctor_app/core/utils/app_styles.dart';
-import 'package:doctor_app/features/appointment/data/models/patient_appointment_model.dart';
+import 'package:doctor_app/core/models/patient_appointment_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
