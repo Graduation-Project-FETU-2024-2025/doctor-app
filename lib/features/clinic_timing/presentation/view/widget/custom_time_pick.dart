@@ -10,8 +10,9 @@ import '../../../../../core/widgets/custom_edit_text_form_field.dart';
 import '../../../../../generated/l10n.dart';
 
 class CustomTimePick extends StatefulWidget {
-  const CustomTimePick({super.key});
-
+  const CustomTimePick({super.key, required this.startTime, required this.endTime});
+  final String startTime;
+  final String endTime;
   @override
   State<CustomTimePick> createState() => _CustomTimePickState();
 }
@@ -69,8 +70,8 @@ class _CustomTimePickState extends State<CustomTimePick> {
                     CustomEditTextFormField(
                       controller: TextEditingController(),
                       // Cubit.get(context).startTimeController,
-                      hintTxt: startTime,
-                      initialVal: startTime == '00:00' ? '' : startTime,
+                      hintTxt: widget.startTime,
+                      initialVal: widget.startTime,
                       suffixIcon: IconButton(
                         onPressed: () => getTimeFromUser(isStartTime: true),
                         icon: SvgPicture.asset(
@@ -100,8 +101,8 @@ class _CustomTimePickState extends State<CustomTimePick> {
                     CustomEditTextFormField(
                       controller: TextEditingController(),
                       // Cubit.get(context).endTimeController,
-                      hintTxt: endTime,
-                      initialVal: endTime == '00:00' ? '' : endTime,
+                      hintTxt: widget.endTime,
+                      initialVal: widget.endTime,
                       suffixIcon: IconButton(
                         onPressed: () => getTimeFromUser(isStartTime: false),
                         icon: SvgPicture.asset(

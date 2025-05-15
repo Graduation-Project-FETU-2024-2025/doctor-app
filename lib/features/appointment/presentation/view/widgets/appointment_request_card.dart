@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:doctor_app/core/functions/is_network_image.dart';
 import 'package:doctor_app/core/helpers/extentions.dart';
 import 'package:doctor_app/core/routers/routing.dart';
 import 'package:doctor_app/core/utils/app_colors.dart';
@@ -11,6 +12,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:intl/intl.dart';
 
 class AppointmentRequestCard extends StatelessWidget {
   const AppointmentRequestCard({
@@ -51,7 +53,18 @@ class AppointmentRequestCard extends StatelessWidget {
                   SvgPicture.asset(AppIcons.iconAppointmentClock),
                   Gap(10.w),
                   Text(
-                    '${patientAppointmentModel.date},  ${patientAppointmentModel.startTime} - ${patientAppointmentModel.endTime}',
+                    '${DateFormat('d MMMM yyyy').format(patientAppointmentModel.time)}, ${DateFormat('hh:mm a').format(patientAppointmentModel.time)}-${DateFormat('hh:mm a').format(
+                      patientAppointmentModel.time.add(
+                        Duration(
+                          hours: 1,
+                        ),
+                      ),
+                    )}',
+                    style: AppStyles.semiBold15(context).copyWith(
+                      color: Theme.of(context).brightness == Brightness.light
+                          ? AppColors.white
+                          : AppColors.black,
+                    ),
                   ),
                 ],
               ),
@@ -70,9 +83,9 @@ class AppointmentRequestCard extends StatelessWidget {
                     children: [
                       CircleAvatar(
                         radius: 30.r,
-                        backgroundImage: CachedNetworkImageProvider(
-                          patientAppointmentModel.patientImageUrl,
-                        ),
+                        backgroundImage: isNetworkImage(patientAppointmentModel.patientImageUrl)? CachedNetworkImageProvider(
+                         patientAppointmentModel.patientImageUrl,
+                        ):AssetImage(AppImages.personAvatar),
                       ),
                       Gap(10.w),
                       Text(

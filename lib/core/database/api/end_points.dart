@@ -6,10 +6,8 @@ class EndPoints {
 
   //auth
   static String auth = "api/Auth/";
-  static String signIn = "${auth}login";
-  static String otp = "${auth}test-otp";
-  static String getBranches = '/api/secure/Branch';
-  static String getBranchProducts = 'api/secure/Product/';
+  static String signIn = "${auth}get-otp";
+  static String otp = "${auth}login";
 
   static String getAllSystemMedicines = 'api/secure/Product';
   static String deleteMedicine = "api/secure/Product/";
@@ -20,6 +18,11 @@ class EndPoints {
 
   static String getProfile = "api/profile";
   static String addPrescription = 'api/Appointments/add-prescription';
+
+
+
+  static String getAllAppointment = "api/appointments/get-all-appointment-dates";
+  static String getAppointments = "api/Appointments";
 }
 
 class ApiKeys {
