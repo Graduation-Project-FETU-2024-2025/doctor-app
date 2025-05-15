@@ -6,6 +6,7 @@ import 'package:doctor_app/core/widgets/toast.dart';
 import 'package:doctor_app/features/edit_profile/presentation/view_model/edit_profile_cubit/edit_profile_cubit.dart';
 import 'package:doctor_app/features/edit_profile/presentation/view_model/edit_profile_cubit/edit_profile_state.dart';
 import 'package:doctor_app/generated/l10n.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class EditProfileButtonBlocConsumer extends StatelessWidget {
   const EditProfileButtonBlocConsumer({
@@ -28,12 +29,16 @@ class EditProfileButtonBlocConsumer extends StatelessWidget {
             ? Center(
                 child: CircularProgressIndicator(),
               )
-            : AddDeleteButton(
-                color: AppColors.primaryColor,
-                onpressed: () {
-                  context.read<EditProfileCubit>().editProfile();
-                },
-                title: S.of(context).save,
+            : SizedBox(
+                width: 120.w,
+                height: 36.h,
+                child: AddDeleteButton(
+                  color: AppColors.primaryColor,
+                  onpressed: () {
+                    context.read<EditProfileCubit>().editProfile();
+                  },
+                  title: S.of(context).save,
+                ),
               );
       },
     );
