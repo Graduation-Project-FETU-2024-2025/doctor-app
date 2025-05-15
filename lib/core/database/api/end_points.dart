@@ -13,6 +13,7 @@ class EndPoints {
 
 
   static String getProfile = "api/profile";
+  static String getAllAppointment = "api/appointments/get-all-appointment-dates";
   static String getAppointments = "api/Appointments";
 }
 
