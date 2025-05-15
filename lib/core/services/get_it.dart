@@ -2,6 +2,8 @@ import 'package:doctor_app/core/database/api/api_consumer.dart';
 import 'package:doctor_app/core/database/api/dio_consumer.dart';
 import 'package:doctor_app/core/database/api/dio_factory.dart';
 import 'package:doctor_app/core/database/cache/cashe_helper.dart';
+import 'package:doctor_app/features/appointment/data/repository/appointment_repo.dart';
+import 'package:doctor_app/features/appointment/data/repository/appointment_repo_impl.dart';
 import 'package:doctor_app/features/auth/data/repository/auth_repo.dart';
 import 'package:doctor_app/features/auth/data/repository/auth_repo_impl.dart';
 import 'package:doctor_app/features/clinic_timing/data/repo/appointment_date_repo.dart';
@@ -42,5 +44,8 @@ void setup() {
   );
   getIt.registerLazySingleton<AppointmentDateRepo>(
     () => AppointmentDateRepoImpl(apiConsumer: getIt<ApiConsumer>()),
+  );
+  getIt.registerLazySingleton<AppointmentRepo>(
+    () => AppointmentRepoImpl(getIt<ApiConsumer>()),
   );
 }
