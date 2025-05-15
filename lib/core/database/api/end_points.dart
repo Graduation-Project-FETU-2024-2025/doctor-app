@@ -20,6 +20,7 @@ class EndPoints {
   static String getOutOfStock = "api/secure/Product/out-of-stock";
 
   static String getProfile = "api/profile";
+  static String getAllAppointment = "api/appointments/get-all-appointment-dates";
 }
 
 class ApiKeys {

@@ -41,7 +41,7 @@ class DoctorApp extends StatelessWidget {
                   ? ThemeMode.dark
                   : ThemeMode.light,
               onGenerateRoute: AppRouter.generateRoute,
-              initialRoute: Routing.splash,
+              initialRoute: Routing.home,
             );
           },
         );

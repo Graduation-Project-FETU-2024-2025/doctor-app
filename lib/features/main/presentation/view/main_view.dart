@@ -3,6 +3,8 @@ import 'package:doctor_app/core/utils/app_colors.dart';
 import 'package:doctor_app/core/utils/app_images.dart';
 import 'package:doctor_app/features/appointment/presentation/view/appointment_view.dart';
 import 'package:doctor_app/features/appointment/presentation/view_model/appointment_cubit/appointment_cubit.dart';
+import 'package:doctor_app/features/clinic_timing/data/repo/appointment_date_repo.dart';
+import 'package:doctor_app/features/clinic_timing/presentation/view_model/appointment_date/appointment_date_cubit.dart';
 import 'package:doctor_app/features/dashboard/presentation/view/dashboard_view.dart';
 import 'package:doctor_app/features/profile/data/repo/profile_repo.dart';
 import 'package:doctor_app/features/profile/presentation/model_view/profile_cubit/profile_cubit.dart';
@@ -34,10 +36,14 @@ class _MainViewState extends State<MainView> {
       create: (context) => AppointmentCubit(),
       child: AppointmentView(),
     ),
-    ClinicTimingView(),
+    BlocProvider(
+      create: (context) => AppointmentDateCubit(getIt<AppointmentDateRepo>())..fetchAllAppointmentDate(),
+      child: ClinicTimingView(),
+    ),
     ClinicView(),
     BlocProvider(
-      create: (context) => ProfileCubit(getIt<ProfileRepo>())..getProfileEmitter(),
+      create: (context) =>
+          ProfileCubit(getIt<ProfileRepo>())..getProfileEmitter(),
       child: ProfileView(),
     ),
   ];
