@@ -83,5 +83,7 @@
     "editProfile":"Edit Profile",
     "submit":"Submit",
     "camera":"Camera",
-    "gallery":"Gallery"
+    "gallery":"Gallery",
+    "sorry":"Sorry!",
+    "nosearchResult":"No search result"
 }

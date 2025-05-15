@@ -1,4 +1,7 @@
+import 'package:doctor_app/core/database/cache/cache_keys.dart';
+import 'package:doctor_app/core/database/cache/cashe_helper.dart';
 import 'package:doctor_app/core/helpers/extentions.dart';
+import 'package:doctor_app/core/services/get_it.dart';
 import 'package:doctor_app/core/utils/app_colors.dart';
 import 'package:doctor_app/core/utils/app_icons.dart';
 import 'package:doctor_app/core/utils/app_images.dart';
@@ -35,8 +38,15 @@ class DetailsExaminationHeader extends StatelessWidget {
                 onPressed: () {
                   context.pop();
                 },
-                icon: SvgPicture.asset(
-                  AppIcons.svgsAuthBackIcon,
+                icon: Transform.rotate(
+                  angle: getIt<CacheHelper>()
+                              .getString(key: CacheKeys.currentLanguage) ==
+                          'en'
+                      ? 0
+                      : 3.14,
+                  child: SvgPicture.asset(
+                    AppIcons.svgsAuthBackIcon,
+                  ),
                 ),
               ),
               Text(

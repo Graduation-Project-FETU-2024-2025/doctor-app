@@ -10,9 +10,17 @@ class EndPoints {
   static String otp = "${auth}login";
 
   static String getAllSystemMedicines = 'api/secure/Product';
-
+  static String deleteMedicine = "api/secure/Product/";
+  static String addMedicine = "api/secure/Product";
+  static String updateMedicine = "api/secure/Product";
+  static String getMedicine = "api/secure/Product";
+  static String getOutOfStock = "api/secure/Product/out-of-stock";
 
   static String getProfile = "api/profile";
+  static String addPrescription = 'api/Appointments/add-prescription';
+
+
+
   static String getAllAppointment = "api/appointments/get-all-appointment-dates";
   static String getAppointments = "api/Appointments";
 }

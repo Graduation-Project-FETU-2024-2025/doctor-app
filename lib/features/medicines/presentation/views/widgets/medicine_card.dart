@@ -1,23 +1,22 @@
-import 'dart:developer';
-
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:doctor_app/core/database/cache/cache_keys.dart';
-import 'package:doctor_app/core/database/cache/cashe_helper.dart';
-import 'package:doctor_app/core/services/get_it.dart';
 import 'package:doctor_app/core/utils/app_colors.dart';
 import 'package:doctor_app/core/utils/app_styles.dart';
 import 'package:doctor_app/features/examination/data/models/prescription_medicine_model.dart';
 import 'package:doctor_app/features/examination/presentation/view_models/examination_cubit/examination_cubit.dart';
+import 'package:doctor_app/features/medicines/data/models/system_medicine_model.dart';
 import 'package:doctor_app/features/medicines/presentation/views/widgets/custom_check_box.dart';
 import 'package:doctor_app/features/medicines/presentation/views/widgets/dosage_widget.dart';
 import 'package:doctor_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:skeletonizer/skeletonizer.dart';
 
 class MedicineCard extends StatefulWidget {
   const MedicineCard({
     super.key,
+    required this.medicineModel,
   });
+  final SystemMedicineModel medicineModel;
   @override
   State<MedicineCard> createState() => _MedicineCardState();
 }
@@ -25,11 +24,15 @@ class MedicineCard extends StatefulWidget {
 class _MedicineCardState extends State<MedicineCard> {
   int dosage = 1;
   bool isChecked = false;
-  PrescriptionMedicineModel medicine = PrescriptionMedicineModel(
-      id: 'khaled', name: 'paracetamol', dosage: 1, instructions: '');
+
   @override
   Widget build(BuildContext context) {
     final cubit = ExaminationCubit.get(context);
+    PrescriptionMedicineModel medicine = PrescriptionMedicineModel(
+        id: widget.medicineModel.code,
+        name: widget.medicineModel.name,
+        dosage: 1,
+        instructions: '');
     return Stack(
       children: [
         Container(
@@ -55,7 +58,7 @@ class _MedicineCardState extends State<MedicineCard> {
                     ),
                     image: DecorationImage(
                       image: CachedNetworkImageProvider(
-                          "https://dkud4u09qff41.cloudfront.net/Products/ac84b8ac-e0e8-45e8-827f-7c7a3b0c5aca.jpeg"),
+                          widget.medicineModel.image),
                       fit: BoxFit.fill,
                     ),
                   ),
@@ -86,26 +89,15 @@ class _MedicineCardState extends State<MedicineCard> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  getIt<CacheHelper>().getString(
-                                              key: CacheKeys.currentLanguage) ==
-                                          'ar'
-                                      ? 'أباكافير'
-                                      : 'Abacavir',
+                                  widget.medicineModel.name,
                                   style: AppStyles.semiBold14(context),
                                 ),
                                 SizedBox(height: 5.h),
                                 Text(
-                                  'Beclomethasone',
+                                  widget.medicineModel.activePrincipal,
                                   style: AppStyles.semiBold10(context),
                                 ),
                               ],
-                            ),
-                            Spacer(),
-                            Text(
-                              '${41}\$',
-                              style: AppStyles.semiBold12(context).copyWith(
-                                color: AppColors.primaryColor,
-                              ),
                             ),
                           ],
                         ),
@@ -127,20 +119,21 @@ class _MedicineCardState extends State<MedicineCard> {
                         style: AppStyles.semiBold10(context),
                       ),
                       Spacer(),
-                      DosageWidget(
-                        dosage: dosage,
-                        isEnabled: isChecked,
-                        onChanged: (value) {
-                          setState(() {
-                            dosage = value;
-                            medicine.updateDosage(value);
-                            cubit.updateMedicine(
-                              medicineId: medicine.id,
-                              dosage: dosage,
-                            );
-                            cubit.updateModelData();
-                          });
-                        },
+                      Skeleton.shade(
+                        child: DosageWidget(
+                          dosage: dosage,
+                          isEnabled: isChecked,
+                          onChanged: (value) {
+                            setState(() {
+                              dosage = value;
+                              medicine.updateDosage(value);
+                              cubit.updateMedicine(
+                                medicineId: medicine.id,
+                                dosage: dosage,
+                              );
+                            });
+                          },
+                        ),
                       ),
                     ],
                   ),
@@ -153,21 +146,20 @@ class _MedicineCardState extends State<MedicineCard> {
         PositionedDirectional(
           top: 8,
           end: 10,
-          child: CustomCheckbox(
-            onChanged: (bool value) {
-              setState(() {
-                isChecked = value;
-              });
-              if (value) {
-                cubit.addMedicine(medicine);
-                cubit.updateModelData();
-              } else {
-                cubit.removeMedicine(medicine.id);
-                cubit.updateModelData();
-                log(cubit.examinationModel.nextAppointment);
-              }
-            },
-            value: isChecked,
+          child: Skeleton.shade(
+            child: CustomCheckbox(
+              onChanged: (bool value) {
+                setState(() {
+                  isChecked = value;
+                });
+                if (value) {
+                  cubit.addMedicine(medicine);
+                } else {
+                  cubit.removeMedicine(medicine.id);
+                }
+              },
+              value: isChecked,
+            ),
           ),
         ),
         // PositionedDirectional(

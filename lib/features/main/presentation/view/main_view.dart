@@ -19,7 +19,6 @@ import '../../../clinic_timing/presentation/view/clinic_timing_view.dart';
 
 class MainView extends StatefulWidget {
   const MainView({super.key});
-
   @override
   State<MainView> createState() => _MainViewState();
 }

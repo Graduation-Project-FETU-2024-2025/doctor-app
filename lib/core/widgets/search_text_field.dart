@@ -6,8 +6,15 @@ import 'package:flutter_svg/svg.dart';
 import '../../../../../core/utils/app_colors.dart';
 
 class SearchTextField extends StatelessWidget {
-  const SearchTextField({super.key});
-
+  const SearchTextField({
+    super.key,
+    required this.controller,
+    this.onPressed,
+    this.onChanged,
+  });
+  final TextEditingController controller;
+  final void Function()? onPressed;
+  final Function(String)? onChanged;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,6 +30,8 @@ class SearchTextField extends StatelessWidget {
           Expanded(
             flex: 3,
             child: TextField(
+              onChanged: onChanged,
+              controller: controller,
               onTapOutside: (v) {
                 FocusScope.of(context).unfocus();
               },
@@ -61,7 +70,7 @@ class SearchTextField extends StatelessWidget {
                 vertical: 8,
               ),
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: onPressed,
                 style: ElevatedButton.styleFrom(
                   backgroundColor: AppColors.primaryColor,
                   shape: const RoundedRectangleBorder(
