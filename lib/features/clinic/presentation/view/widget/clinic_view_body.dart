@@ -1,3 +1,4 @@
+import 'package:doctor_app/features/clinic/data/models/clinic_model.dart';
 import 'package:doctor_app/features/clinic/presentation/view/widget/clinic_info.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -8,7 +9,8 @@ import 'booking_price_card.dart';
 import 'row_btn.dart';
 
 class ClinicViewBody extends StatelessWidget {
-  const ClinicViewBody({super.key});
+  const ClinicViewBody({super.key, required this.clinicModel});
+  final ClinicModel clinicModel;
 
   @override
   Widget build(BuildContext context) {
@@ -17,14 +19,14 @@ class ClinicViewBody extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const ClinicInfo(),
+          ClinicInfo(clinicAddress: clinicModel.address,clinicPhone: clinicModel.clinicPhones.isNotEmpty ? clinicModel.clinicPhones[0] : ''),
           Gap(50.h),
           Text(
               S.of(context).bookingPrice,
               style: AppStyles.semiBold15(context),
             ),
           Gap(11.h),
-          BookingPriceCard(),
+          BookingPriceCard(price: clinicModel.price.toString(),specialization: clinicModel.specialization,),
           Gap(50.h),
           RowBtn()
         ],
