@@ -654,6 +654,26 @@ class S {
       args: [],
     );
   }
+
+  /// `No appointments requests`
+  String get noAppointmentsRequests {
+    return Intl.message(
+      'No appointments requests',
+      name: 'noAppointmentsRequests',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No appointments `
+  String get noAppointments {
+    return Intl.message(
+      'No appointments ',
+      name: 'noAppointments',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

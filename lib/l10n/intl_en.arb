@@ -85,5 +85,7 @@
     "camera":"Camera",
     "gallery":"Gallery",
     "sorry":"Sorry!",
-    "nosearchResult":"No search result"
+    "nosearchResult":"No search result",
+    "noAppointmentsRequests":"No appointments requests",
+    "noAppointments":"No appointments "
 }

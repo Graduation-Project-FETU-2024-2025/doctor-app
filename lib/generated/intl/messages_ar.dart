@@ -98,6 +98,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "nextAppointment": MessageLookupByLibrary.simpleMessage("الموعد القادم"),
     "nextWeek": MessageLookupByLibrary.simpleMessage(" الاسبوع القادم"),
     "no": MessageLookupByLibrary.simpleMessage("لا"),
+    "noAppointments": MessageLookupByLibrary.simpleMessage("لا يوجد مواعيد"),
+    "noAppointmentsRequests": MessageLookupByLibrary.simpleMessage(
+      "لا يوجد طلبات كشف",
+    ),
     "noLastAdded": MessageLookupByLibrary.simpleMessage(
       "لا توجد أدوية مضافه حديثا",
     ),

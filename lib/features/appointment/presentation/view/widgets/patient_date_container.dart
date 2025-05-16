@@ -1,6 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:doctor_app/core/functions/is_network_image.dart';
 import 'package:doctor_app/core/utils/app_colors.dart';
 import 'package:doctor_app/core/utils/app_icons.dart';
+import 'package:doctor_app/core/utils/app_images.dart';
 import 'package:doctor_app/core/utils/app_styles.dart';
 import 'package:doctor_app/core/models/patient_appointment_model.dart';
 import 'package:flutter/material.dart';
@@ -29,9 +31,13 @@ class PatientDateContainer extends StatelessWidget {
         children: [
           CircleAvatar(
             radius: 25.r,
-            backgroundImage: CachedNetworkImageProvider(
+            backgroundImage: isNetworkImage(
               patientAppointmentModel.patientImageUrl,
-            ),
+            )
+                ? CachedNetworkImageProvider(
+                    patientAppointmentModel.patientImageUrl,
+                  )
+                : AssetImage(AppImages.personAvatar),
           ),
           Gap(10.w),
           Column(
