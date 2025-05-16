@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:doctor_app/core/routers/routing.dart';
 import 'package:doctor_app/core/services/get_it.dart';
-import 'package:doctor_app/features/appointment/data/models/patient_appointment_model.dart';
+import 'package:doctor_app/core/models/patient_appointment_model.dart';
 import 'package:doctor_app/features/appointment_details/presentation/view/appointment_details.dart';
 import 'package:doctor_app/features/auth/data/repository/auth_repo.dart';
 import 'package:doctor_app/features/auth/presentation/view_model/otp_cubit/otp_cubit.dart';
@@ -18,6 +18,7 @@ import 'package:doctor_app/features/examination/presentation/views/details_exami
 import 'package:doctor_app/features/examination/presentation/views/examination_view.dart';
 import 'package:doctor_app/features/main/presentation/view/main_view.dart';
 import 'package:doctor_app/features/medicines/presentation/views/medicines_view.dart';
+import 'package:doctor_app/features/notifications/presentation/view/notification_view.dart';
 import 'package:doctor_app/features/onboarding/presentation/view/onboarding_view.dart';
 import 'package:doctor_app/features/profile/data/models/user_model.dart';
 import 'package:doctor_app/features/splash/presentation/view/splash_view.dart';
@@ -33,6 +34,10 @@ class AppRouter {
     switch (routeSettings.name) {
       case Routing.splash:
         return _buildRoute(SplashView());
+      case Routing.notification:
+        return _buildRoute(NotificationView(
+          patientAppointment: args as List<PatientAppointmentModel>,
+        ));
       case Routing.onboarding:
         return _buildRoute(OnboardingView());
       case Routing.signIn:
