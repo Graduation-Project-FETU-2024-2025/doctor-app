@@ -11,9 +11,8 @@ class PendingAppointmentCubit extends Cubit<PendingAppointmentState> {
 
   void getAppointmentsStateEmitter() async {
     emit(AppointmentLoading());
-    final result = await _getPendingAppointmentUseCase.getPendingAppointments(
-        appointmentParamsModel: AppointmentParamsModel(
-            appointmentState: AppointmentStateEnum.pending));
+    final result = await _getPendingAppointmentUseCase.call(
+        AppointmentParamsModel(appointmentState: AppointmentStateEnum.pending));
     result.fold(
       (message) => emit(AppointmentFailure(message: message)),
       (patientAppointment) =>

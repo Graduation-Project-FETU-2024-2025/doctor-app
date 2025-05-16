@@ -49,10 +49,10 @@ class _MainViewState extends State<MainView> {
     ),
     ClinicTimingView(),
     BlocProvider(
-      create: (context) => ClinicCubit(clinicRepo: getIt<ClinicRepo>())..fetchClinicDetails(),
+      create: (context) =>
+          ClinicCubit(clinicRepo: getIt<ClinicRepo>())..fetchClinicDetails(),
       child: ClinicView(),
     ),
-
     BlocProvider(
       create: (context) => AppointmentDateCubit(getIt<AppointmentDateRepo>())
         ..fetchAllAppointmentDate(),

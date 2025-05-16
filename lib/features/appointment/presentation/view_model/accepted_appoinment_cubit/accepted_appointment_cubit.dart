@@ -17,10 +17,9 @@ class AcceptedAppointmentCubit extends Cubit<AcceptedAppointmentState> {
 
   void acceptedAppointmentsStateEmitter() async {
     emit(AcceptedAppointmentLoading());
-    final result =
-        await _getAcceptedAppointmentsUseCase.getAcceptedAppointments(
-            appointmentParamsModel: AppointmentParamsModel(
-                appointmentState: AppointmentStateEnum.accepted));
+    final result = await _getAcceptedAppointmentsUseCase.call(
+        AppointmentParamsModel(
+            appointmentState: AppointmentStateEnum.accepted));
 
     result.fold(
       (apiErrorModel) =>
