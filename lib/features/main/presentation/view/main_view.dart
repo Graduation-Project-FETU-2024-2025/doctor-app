@@ -1,7 +1,9 @@
 import 'package:doctor_app/core/services/get_it.dart';
 import 'package:doctor_app/core/utils/app_colors.dart';
 import 'package:doctor_app/core/utils/app_images.dart';
+import 'package:doctor_app/features/appointment/domain/usecases/get_accepted_appointments_usecase.dart';
 import 'package:doctor_app/features/appointment/presentation/view/appointment_view.dart';
+import 'package:doctor_app/features/appointment/presentation/view_model/accepted_appoinment_cubit/accepted_appointment_cubit.dart';
 import 'package:doctor_app/features/dashboard/domain/usecase/get_pending_appointment_usecase.dart';
 import 'package:doctor_app/features/dashboard/presentation/view_model/pending_appointment_cubit/pending_appointment_cubit.dart';
 import 'package:doctor_app/features/clinic_timing/data/repo/appointment_date_repo.dart';
@@ -38,7 +40,8 @@ class _MainViewState extends State<MainView> {
         child: DashboardView()),
     BlocProvider(
       create: (context) =>
-          PendingAppointmentCubit(getIt<GetPendingAppointmentUseCase>()),
+          AcceptedAppointmentCubit(getIt<GetAcceptedAppointmentsUseCase>())
+            ..acceptedAppointmentsStateEmitter(),
       child: AppointmentView(),
     ),
     BlocProvider(

@@ -11,16 +11,20 @@ class PatientDateContainerListView extends StatelessWidget {
   final List<PatientAppointmentModel> patientList;
   @override
   Widget build(BuildContext context) {
-    return SliverList.builder(
-      itemCount: patientList.length,
-      itemBuilder: (context, index) => GestureDetector(
-        onTap: () {
-          Navigator.pushNamed(context, Routing.examination);
-        },
-        child: PatientDateContainer(
-          patientAppointmentModel: patientList[index],
-        ),
-      ),
-    );
+    return patientList.isEmpty
+        ? SliverToBoxAdapter(
+            child: Text('NO APPOINTMENTS TO DAY'),
+          )
+        : SliverList.builder(
+            itemCount: patientList.length,
+            itemBuilder: (context, index) => GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, Routing.examination);
+              },
+              child: PatientDateContainer(
+                patientAppointmentModel: patientList[index],
+              ),
+            ),
+          );
   }
 }

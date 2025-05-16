@@ -19,4 +19,3 @@ final class AppointmentFailure extends PendingAppointmentState {
   AppointmentFailure({required this.message});
 }
 
-final class ChangeAppointmentOption extends PendingAppointmentState {}

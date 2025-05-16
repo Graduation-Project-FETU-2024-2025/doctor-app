@@ -5,6 +5,7 @@ import 'package:doctor_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
+
 class AppointmentView extends StatelessWidget {
   const AppointmentView({super.key});
 
@@ -28,16 +29,6 @@ class AppointmentView extends StatelessWidget {
           SliverToBoxAdapter(
             child: Gap(30.h),
           ),
-          SliverToBoxAdapter(
-            child: Text(
-              S.of(context).appointmentRequest,
-              style: AppStyles.semiBold18(context),
-            ),
-          ),
-          SliverToBoxAdapter(
-            child: Gap(40.h),
-          ),
-          
         ],
       ),
     );
