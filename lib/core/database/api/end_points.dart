@@ -17,6 +17,7 @@ class EndPoints {
   static String getOutOfStock = "api/secure/Product/out-of-stock";
 
   static String getProfile = "api/profile";
+  static String getClinic = "api/clinic/";
   static String addPrescription = 'api/Appointments/add-prescription';
 
 

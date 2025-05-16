@@ -8,7 +8,9 @@ import '../../../../../core/utils/app_icons.dart';
 import '../../../../../core/utils/app_styles.dart';
 
 class BookingPriceCard extends StatelessWidget {
-  const BookingPriceCard({super.key});
+  const BookingPriceCard({super.key, required this.specialization, required this.price});
+  final String specialization;
+  final String price;
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +36,7 @@ class BookingPriceCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Orthopedist',
+                  specialization,
                   style: AppStyles.semiBold15(context)
                       .copyWith(color: AppColors.primaryColor, fontSize: 18),
                   overflow: TextOverflow.ellipsis,
@@ -64,7 +66,7 @@ class BookingPriceCard extends StatelessWidget {
               ],
             ),
             Text(
-              '\$155.00',
+              '\$$price',
               style:
                   AppStyles.semiBold15(context).copyWith(color: AppColors.red),
               overflow: TextOverflow.ellipsis,

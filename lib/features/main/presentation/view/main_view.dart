@@ -6,6 +6,9 @@ import 'package:doctor_app/features/appointment/presentation/view/appointment_vi
 import 'package:doctor_app/features/appointment/presentation/view_model/accepted_appoinment_cubit/accepted_appointment_cubit.dart';
 import 'package:doctor_app/features/dashboard/domain/usecase/get_pending_appointment_usecase.dart';
 import 'package:doctor_app/features/dashboard/presentation/view_model/pending_appointment_cubit/pending_appointment_cubit.dart';
+
+import 'package:doctor_app/features/clinic/data/repo/clinic_repo.dart';
+import 'package:doctor_app/features/clinic/presentation/view_model/clinic_cubit/clinic_cubit.dart';
 import 'package:doctor_app/features/clinic_timing/data/repo/appointment_date_repo.dart';
 import 'package:doctor_app/features/clinic_timing/presentation/view_model/appointment_date/appointment_date_cubit.dart';
 import 'package:doctor_app/features/dashboard/presentation/view/dashboard_view.dart';
@@ -44,6 +47,12 @@ class _MainViewState extends State<MainView> {
             ..acceptedAppointmentsStateEmitter(),
       child: AppointmentView(),
     ),
+    ClinicTimingView(),
+    BlocProvider(
+      create: (context) => ClinicCubit(clinicRepo: getIt<ClinicRepo>())..fetchClinicDetails(),
+      child: ClinicView(),
+    ),
+
     BlocProvider(
       create: (context) => AppointmentDateCubit(getIt<AppointmentDateRepo>())
         ..fetchAllAppointmentDate(),
