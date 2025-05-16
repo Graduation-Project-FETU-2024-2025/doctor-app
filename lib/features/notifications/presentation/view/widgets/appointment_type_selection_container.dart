@@ -12,8 +12,8 @@ class AppointmentTypeSelectionContainer extends StatelessWidget {
   final String title;
   @override
   Widget build(BuildContext context) {
-    final isSelected =
-        context.read<AppointmentCubit>().appointment == currentAppointment;
+    final isSelected = context.read<PendingAppointmentCubit>().appointment ==
+        currentAppointment;
     final isDark = Theme.of(context).brightness == Brightness.dark;
 
     final backgroundColor =
@@ -25,7 +25,7 @@ class AppointmentTypeSelectionContainer extends StatelessWidget {
     return InkWell(
       onTap: () {
         context
-            .read<AppointmentCubit>()
+            .read<PendingAppointmentCubit>()
             .selectAppointmentTypes(currentAppointment);
       },
       child: AnimatedContainer(

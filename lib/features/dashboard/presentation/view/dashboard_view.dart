@@ -23,7 +23,7 @@ class DashboardView extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 30.0.w, vertical: 10.h),
       child: ListView(
         children: [
-          BlocBuilder<AppointmentCubit, AppointmentState>(
+          BlocBuilder<PendingAppointmentCubit, PendingAppointmentState>(
               builder: (context, state) {
             return Align(
               alignment: AlignmentDirectional.topEnd,
@@ -37,7 +37,9 @@ class DashboardView extends StatelessWidget {
                         }
                       : null,
                   icon: Badge.count(
-                    count: state is AppointmentSuccess? state.patientAppointment.length:0,
+                    count: state is AppointmentSuccess
+                        ? state.patientAppointment.length
+                        : 0,
                     child: Image.asset(
                       AppImages.imagesNotification,
                       height: 20.h,

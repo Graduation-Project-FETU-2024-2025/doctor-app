@@ -1,8 +1,8 @@
 import 'package:doctor_app/core/services/get_it.dart';
 import 'package:doctor_app/core/utils/app_colors.dart';
 import 'package:doctor_app/core/utils/app_images.dart';
-import 'package:doctor_app/core/repositories/appointment_repo.dart';
 import 'package:doctor_app/features/appointment/presentation/view/appointment_view.dart';
+import 'package:doctor_app/features/dashboard/domain/usecase/get_pending_appointment_usecase.dart';
 import 'package:doctor_app/features/dashboard/presentation/view_model/pending_appointment_cubit/pending_appointment_cubit.dart';
 import 'package:doctor_app/features/clinic_timing/data/repo/appointment_date_repo.dart';
 import 'package:doctor_app/features/clinic_timing/presentation/view_model/appointment_date/appointment_date_cubit.dart';
@@ -32,11 +32,13 @@ class _MainViewState extends State<MainView> {
   double kBottomRadius = 20.0;
   List<Widget> screens = [
     BlocProvider(
-        create: (context) => AppointmentCubit(getIt<AppointmentRepo>())
-          ..getAppointmentsStateEmitter(),
+        create: (context) =>
+            PendingAppointmentCubit(getIt<GetPendingAppointmentUseCase>())
+              ..getAppointmentsStateEmitter(),
         child: DashboardView()),
     BlocProvider(
-      create: (context) => AppointmentCubit(getIt<AppointmentRepo>()),
+      create: (context) =>
+          PendingAppointmentCubit(getIt<GetPendingAppointmentUseCase>()),
       child: AppointmentView(),
     ),
     BlocProvider(

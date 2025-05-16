@@ -14,8 +14,8 @@ class DueToAppointmentSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var cubit = context.read<AppointmentCubit>();
-    return BlocBuilder<AppointmentCubit, AppointmentState>(
+    var cubit = context.read<PendingAppointmentCubit>();
+    return BlocBuilder<PendingAppointmentCubit, PendingAppointmentState>(
       buildWhen: (previous, current) => current is ChangeAppointmentOption,
       builder: (context, state) {
         return MultiSliver(

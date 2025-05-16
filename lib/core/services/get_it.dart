@@ -7,6 +7,7 @@ import 'package:doctor_app/core/repositories/appointment_repo_impl.dart';
 import 'package:doctor_app/features/auth/data/repository/auth_repo.dart';
 import 'package:doctor_app/features/auth/data/repository/auth_repo_impl.dart';
 import 'package:doctor_app/features/clinic_timing/data/repo/appointment_date_repo.dart';
+import 'package:doctor_app/features/dashboard/domain/usecase/get_pending_appointment_usecase.dart';
 import 'package:doctor_app/features/edit_profile/data/repo/edit_profile_repo.dart';
 import 'package:doctor_app/features/edit_profile/data/repo/edit_profile_repo_impl.dart';
 import 'package:doctor_app/features/examination/data/repos/examination_repo.dart';
@@ -61,5 +62,9 @@ void setup() {
   );
   getIt.registerLazySingleton<AppointmentRepo>(
     () => AppointmentRepoImpl(getIt<ApiConsumer>()),
+  );
+
+  getIt.registerLazySingleton<GetPendingAppointmentUseCase>(
+    () => GetPendingAppointmentUseCase(getIt<AppointmentRepo>()),
   );
 }

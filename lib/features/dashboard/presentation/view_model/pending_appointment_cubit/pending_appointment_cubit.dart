@@ -1,15 +1,16 @@
 import 'package:doctor_app/core/enums/appointment_state_enum.dart';
 import 'package:doctor_app/core/models/appointment_params_model.dart';
 import 'package:doctor_app/core/models/patient_appointment_model.dart';
-import 'package:doctor_app/core/repositories/appointment_repo.dart';
+import 'package:doctor_app/features/dashboard/domain/usecase/get_pending_appointment_usecase.dart';
 import 'package:doctor_app/features/dashboard/presentation/view_model/pending_appointment_cubit/pending_appointment_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 enum CurrentAppointment { past, upComing }
 
-class AppointmentCubit extends Cubit<AppointmentState> {
-  AppointmentCubit(this._appointmentRepo) : super(AppointmentInitial());
-  final AppointmentRepo _appointmentRepo;
+class PendingAppointmentCubit extends Cubit<PendingAppointmentState> {
+  PendingAppointmentCubit(this._getPendingAppointmentUseCase)
+      : super(AppointmentInitial());
+  final GetPendingAppointmentUseCase _getPendingAppointmentUseCase;
   List<PatientAppointmentModel> upcomingAppointment = List.generate(
     3,
     (index) => PatientAppointmentModel(
@@ -43,7 +44,7 @@ class AppointmentCubit extends Cubit<AppointmentState> {
 
   void getAppointmentsStateEmitter() async {
     emit(AppointmentLoading());
-    final result = await _appointmentRepo.getPendingAppointments(
+    final result = await _getPendingAppointmentUseCase.getPendingAppointments(
         appointmentParamsModel: AppointmentParamsModel(
             appointmentState: AppointmentStateEnum.pending));
     result.fold(
