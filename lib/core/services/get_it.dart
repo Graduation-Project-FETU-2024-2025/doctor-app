@@ -6,6 +6,7 @@ import 'package:doctor_app/features/appointment/data/repository/appointment_repo
 import 'package:doctor_app/features/appointment/data/repository/appointment_repo_impl.dart';
 import 'package:doctor_app/features/auth/data/repository/auth_repo.dart';
 import 'package:doctor_app/features/auth/data/repository/auth_repo_impl.dart';
+import 'package:doctor_app/features/clinic/data/repo/clinic_repo.dart';
 import 'package:doctor_app/features/clinic_timing/data/repo/appointment_date_repo.dart';
 import 'package:doctor_app/features/edit_profile/data/repo/edit_profile_repo.dart';
 import 'package:doctor_app/features/edit_profile/data/repo/edit_profile_repo_impl.dart';
@@ -17,6 +18,7 @@ import 'package:doctor_app/features/profile/data/repo/profile_repo.dart';
 import 'package:doctor_app/features/profile/data/repo/profile_repo_impl.dart';
 import 'package:get_it/get_it.dart';
 
+import '../../features/clinic/data/repo/clinic_repo_impl.dart';
 import '../../features/clinic_timing/data/repo/appointment_date_repo_impl.dart';
 
 final getIt = GetIt.instance;
@@ -45,6 +47,9 @@ void setup() {
   );
   getIt.registerLazySingleton<EditProfileRepo>(
     () => EditProfileRepoImpl(apiConsumer: getIt<ApiConsumer>()),
+  );
+  getIt.registerLazySingleton<ClinicRepo>(
+    () => ClinicRepoImpl(apiConsumer: getIt<ApiConsumer>()),
   );
   getIt.registerLazySingleton<ExaminationRepo>(
     () => ExaminationRepoImpl(

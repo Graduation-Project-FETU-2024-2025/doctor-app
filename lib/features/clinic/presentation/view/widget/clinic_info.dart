@@ -7,7 +7,9 @@ import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_icons.dart';
 
 class ClinicInfo extends StatelessWidget {
-  const ClinicInfo({super.key});
+  const ClinicInfo({super.key, required this.clinicAddress, required this.clinicPhone});
+  final String clinicAddress;
+  final String clinicPhone;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +28,7 @@ class ClinicInfo extends StatelessWidget {
             ),
             Gap(5.w),
             Text(
-              'Egypt, Tanta, El Estad Street',
+              clinicAddress,
               style: AppStyles.semiBold15(context).copyWith(
                   color: Theme.of(context).brightness == Brightness.dark
                       ? Colors.white60
@@ -48,7 +50,7 @@ class ClinicInfo extends StatelessWidget {
             ),
             Gap(5.w),
             Text(
-              '0108749834685',
+              clinicPhone,
               style: AppStyles.semiBold15(context).copyWith(
                   color: Theme.of(context).brightness == Brightness.dark
                       ? Colors.white60
