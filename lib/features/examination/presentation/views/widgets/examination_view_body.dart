@@ -11,18 +11,19 @@ import 'package:doctor_app/features/examination/presentation/views/widgets/custo
 import 'package:doctor_app/features/medicines/presentation/views/medicines_view.dart';
 import 'package:doctor_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
-// ignore: must_be_immutable
 class ExaminationViewBody extends StatelessWidget {
   const ExaminationViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final cubit = context.watch<ExaminationCubit>();
-    cubit.initializeModel(patientName: 'khaled gamal');
+    final cubit = ExaminationCubit.get(context);
+    cubit.initializeModel(
+      doctorId: '256aeb49-c71b-4704-81bd-945b9724359e',
+      appointmentId: '9397cc11-3968-4b77-9817-a2391351939c',
+    );
     return SingleChildScrollView(
       child: Padding(
         padding: EdgeInsets.symmetric(vertical: 24.h, horizontal: 24.w),

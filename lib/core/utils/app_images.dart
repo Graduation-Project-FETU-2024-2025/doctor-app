@@ -98,11 +98,13 @@ class AppImages {
   /// Assets for imagesAvatar
   /// assets/images/avatar.png
   static const String imagesAvatar = "assets/images/avatar.png";
+
   /// Assets for personAvatar
   /// assets/images/person_avatar.png
   static const String personAvatar = "assets/images/person_avatar.png";
 
-  static const String imgEditName='assets/images/edit.png';
+  static const String imgEditName = 'assets/images/edit.png';
 
-  static const String imgEditNameDark='assets/images/edit_dark.png';
+  static const String imgEditNameDark = 'assets/images/edit_dark.png';
+  static String imgNoSearch = 'assets/images/noSearch.png';
 }

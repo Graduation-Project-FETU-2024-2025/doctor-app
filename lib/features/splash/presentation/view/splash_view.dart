@@ -22,13 +22,16 @@ class SplashView extends StatefulWidget {
 class _SplashViewState extends State<SplashView> {
   @override
   void initState() {
-    Future.delayed(
-      Duration(seconds: 5),
-      () => _getInitRoute(),
-    );
     super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (ModalRoute.of(context)?.settings.name == Routing.splash) {
+        Future.delayed(
+          Duration(seconds: 5),
+          () => _getInitRoute(),
+        );
+      }
+    });
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

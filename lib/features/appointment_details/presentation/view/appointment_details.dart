@@ -18,9 +18,7 @@ class AppointmentDetails extends StatelessWidget {
       body: ListView(
         children: [
           AppointmentDetailsHeader(
-            date: patientAppointmentModel.date,
-            startTime: patientAppointmentModel.startTime,
-            endTime: patientAppointmentModel.endTime,
+            date: patientAppointmentModel.time,
           ),
           Gap(60.h),
           Padding(

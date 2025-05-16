@@ -14,7 +14,6 @@ import 'package:doctor_app/features/edit_profile/data/repo/edit_profile_repo.dar
 import 'package:doctor_app/features/edit_profile/presentation/view/edit_profile_view.dart';
 import 'package:doctor_app/features/edit_profile/presentation/view_model/edit_profile_cubit/edit_profile_cubit.dart';
 import 'package:doctor_app/features/examination/data/models/examination_model.dart';
-import 'package:doctor_app/features/examination/presentation/view_models/examination_cubit/examination_cubit.dart';
 import 'package:doctor_app/features/examination/presentation/views/details_examination_view.dart';
 import 'package:doctor_app/features/examination/presentation/views/examination_view.dart';
 import 'package:doctor_app/features/main/presentation/view/main_view.dart';
@@ -55,10 +54,7 @@ class AppRouter {
           patientAppointmentModel: args as PatientAppointmentModel,
         ));
       case Routing.examination:
-        return _buildRoute(BlocProvider(
-          create: (context) => ExaminationCubit(),
-          child: ExaminationView(),
-        ));
+        return _buildRoute(ExaminationView());
       case Routing.detailsExamination:
         final examinationModel = args as ExaminationModel;
         return _buildRoute(

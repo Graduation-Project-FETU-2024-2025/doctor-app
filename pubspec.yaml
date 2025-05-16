@@ -30,6 +30,7 @@ environment:
 dependencies:
   animated_notch_bottom_bar: ^1.0.3
   cached_network_image: ^3.4.1
+  calendar_view: ^1.4.0
   cupertino_icons: ^1.0.8
   dartz: ^0.10.1
   date_picker_timeline: ^1.2.6
@@ -59,7 +60,6 @@ dependencies:
   shimmer: ^3.0.0
   skeletonizer: ^1.4.3
   sliver_tools: ^0.2.12
-
 
 dependency_overrides:
   geolocator_android: 4.6.1

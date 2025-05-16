@@ -1,13 +1,17 @@
+import 'package:doctor_app/core/routers/routing.dart';
 import 'package:doctor_app/core/utils/app_colors.dart';
 import 'package:doctor_app/core/utils/app_styles.dart';
 import 'package:doctor_app/core/widgets/add_delete_button.dart';
+import 'package:doctor_app/core/widgets/toast.dart';
 import 'package:doctor_app/features/examination/data/models/examination_model.dart';
+import 'package:doctor_app/features/examination/presentation/view_models/examination_cubit/examination_cubit.dart';
 import 'package:doctor_app/features/examination/presentation/views/widgets/details_examination_header.dart';
 import 'package:doctor_app/features/examination/presentation/views/widgets/diagonsis_widget.dart';
 import 'package:doctor_app/features/examination/presentation/views/widgets/next_appointment_section.dart';
 import 'package:doctor_app/features/examination/presentation/views/widgets/prescription_list.dart';
 import 'package:doctor_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 
@@ -94,14 +98,43 @@ class DetailsExaminationViewBody extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(
-                height: 36.h,
-                width: 120.w,
-                child: AddDeleteButton(
-                  title: S.of(context).submit,
-                  color: AppColors.primaryColor,
-                  onpressed: () {},
-                ),
+              BlocConsumer<ExaminationCubit, ExaminationState>(
+                listener: (context, state) {
+                  if (state is ExaminationSucess) {
+                    successToast(
+                      message: state.successMessage,
+                    );
+                    Navigator.pushNamedAndRemoveUntil(
+                      context,
+                      Routing.home,
+                      (r) => false,
+                    );
+                  }
+                  if (state is ExaminationFailure) {
+                    errorToast(
+                      message: state.errorModel.message!,
+                    );
+                  }
+                },
+                builder: (context, state) {
+                  return state is ExaminationLoading
+                      ? CircularProgressIndicator(
+                          color: AppColors.primaryColor,
+                        )
+                      : SizedBox(
+                          height: 36.h,
+                          width: 120.w,
+                          child: AddDeleteButton(
+                            title: S.of(context).submit,
+                            color: AppColors.primaryColor,
+                            onpressed: () {
+                              final cubit = ExaminationCubit.get(context);
+                              cubit.updateModelData();
+                              cubit.sendPrescription();
+                            },
+                          ),
+                        );
+                },
               ),
             ],
           ),

@@ -26,4 +26,13 @@ class PrescriptionMedicineModel {
       instructions: instructions ?? this.instructions,
     );
   }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'name': name,
+      'dosage': dosage,
+      'instructions': instructions,
+    };
+  }
 }

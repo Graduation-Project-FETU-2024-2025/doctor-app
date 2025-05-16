@@ -1,3 +1,4 @@
+import 'package:doctor_app/core/routers/routing.dart';
 import 'package:doctor_app/features/appointment/data/models/patient_appointment_model.dart';
 import 'package:doctor_app/features/appointment/presentation/view/widgets/patient_date_container.dart';
 import 'package:flutter/material.dart';
@@ -12,8 +13,13 @@ class PatientDateContainerListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverList.builder(
       itemCount: patientList.length,
-      itemBuilder: (context, index) => PatientDateContainer(
-        patientAppointmentModel: patientList[index],
+      itemBuilder: (context, index) => GestureDetector(
+        onTap: () {
+          Navigator.pushNamed(context, Routing.examination);
+        },
+        child: PatientDateContainer(
+          patientAppointmentModel: patientList[index],
+        ),
       ),
     );
   }
