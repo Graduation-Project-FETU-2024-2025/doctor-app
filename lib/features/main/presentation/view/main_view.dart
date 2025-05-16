@@ -39,17 +39,14 @@ class _MainViewState extends State<MainView> {
           AppointmentCubit(getIt<AppointmentRepo>())..getAppointmentsStateEmitter(),
       child: AppointmentView(),
     ),
-    ClinicTimingView(),
-    BlocProvider(
-      create: (context) => ClinicCubit(clinicRepo: getIt<ClinicRepo>())..fetchClinicDetails(),
-      child: ClinicView(),
-    ),
-
     BlocProvider(
       create: (context) => AppointmentDateCubit(getIt<AppointmentDateRepo>())..fetchAllAppointmentDate(),
       child: ClinicTimingView(),
     ),
-    ClinicView(),
+    BlocProvider(
+      create: (context) => ClinicCubit(clinicRepo: getIt<ClinicRepo>())..fetchClinicDetails(),
+      child: ClinicView(),
+    ),
     BlocProvider(
       create: (context) =>
           ProfileCubit(getIt<ProfileRepo>())..getProfileEmitter(),
