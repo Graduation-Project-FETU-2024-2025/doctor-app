@@ -48,7 +48,10 @@ class _MainViewState extends State<MainView> {
           ClinicCubit(clinicRepo: getIt<ClinicRepo>())..fetchClinicDetails(),
       child: const ClinicView(),
     ),
-    const ClinicView(),
+    BlocProvider(
+      create: (context) => ClinicCubit(clinicRepo: getIt<ClinicRepo>())..fetchClinicDetails(),
+      child: const ClinicView(),
+    ),
     BlocProvider(
       create: (context) =>
           ProfileCubit(getIt<ProfileRepo>())..getProfileEmitter(),
