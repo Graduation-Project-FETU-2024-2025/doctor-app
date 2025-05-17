@@ -1,5 +1,5 @@
 import 'package:doctor_app/core/utils/app_colors.dart';
-import 'package:doctor_app/features/appointment/presentation/view/widgets/appointment_request_button.dart';
+import 'package:doctor_app/features/notifications/presentation/view/widgets/appointment_request_button.dart';
 import 'package:doctor_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';

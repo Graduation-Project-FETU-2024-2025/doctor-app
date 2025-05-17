@@ -1,0 +1,1 @@
+enum CurrentAppointment { past, upComing }

@@ -93,6 +93,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Next Appointment"),
         "nextWeek": MessageLookupByLibrary.simpleMessage("Next Week"),
         "no": MessageLookupByLibrary.simpleMessage("No"),
+        "noAppointments":
+            MessageLookupByLibrary.simpleMessage("No appointments "),
+        "noAppointmentsRequests":
+            MessageLookupByLibrary.simpleMessage("No appointments requests"),
         "noLastAdded":
             MessageLookupByLibrary.simpleMessage("No newly added medicines"),
         "nosearchResult":
@@ -106,6 +110,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "patientName": MessageLookupByLibrary.simpleMessage("Patient Name"),
         "pending": MessageLookupByLibrary.simpleMessage("Pending"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone"),
+        "pleaseCompleteAllFields":
+            MessageLookupByLibrary.simpleMessage("Please Complete All Fields"),
         "prescription": MessageLookupByLibrary.simpleMessage("Prescription"),
         "price": MessageLookupByLibrary.simpleMessage("Price"),
         "reVisits": MessageLookupByLibrary.simpleMessage("Re-Visits"),
@@ -121,6 +127,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Specialization Name"),
         "startTime": MessageLookupByLibrary.simpleMessage("Start time"),
         "submit": MessageLookupByLibrary.simpleMessage("Submit"),
+        "successUpdatedClinic":
+            MessageLookupByLibrary.simpleMessage("Clinic Updated Successfully"),
         "thisWeek": MessageLookupByLibrary.simpleMessage("This Week"),
         "today": MessageLookupByLibrary.simpleMessage("Today"),
         "totalIncome": MessageLookupByLibrary.simpleMessage("Total Income"),

@@ -1,6 +1,7 @@
+import 'package:doctor_app/core/enums/current_appointment_enum.dart';
 import 'package:doctor_app/core/utils/app_colors.dart';
 import 'package:doctor_app/core/utils/app_styles.dart';
-import 'package:doctor_app/features/appointment/presentation/view_model/appointment_cubit/appointment_cubit.dart';
+import 'package:doctor_app/features/appointment/presentation/view_model/accepted_appoinment_cubit/accepted_appointment_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -12,8 +13,8 @@ class AppointmentTypeSelectionContainer extends StatelessWidget {
   final String title;
   @override
   Widget build(BuildContext context) {
-    final isSelected =
-        context.read<AppointmentCubit>().appointment == currentAppointment;
+    final isSelected = context.read<AcceptedAppointmentCubit>().appointment ==
+        currentAppointment;
     final isDark = Theme.of(context).brightness == Brightness.dark;
 
     final backgroundColor =
@@ -25,7 +26,7 @@ class AppointmentTypeSelectionContainer extends StatelessWidget {
     return InkWell(
       onTap: () {
         context
-            .read<AppointmentCubit>()
+            .read<AcceptedAppointmentCubit>()
             .selectAppointmentTypes(currentAppointment);
       },
       child: AnimatedContainer(

@@ -82,6 +82,10 @@
         "submit": "ارسال",
         "camera": "الكاميرا",
         "gallery": "المعرض",
-        "sorry":"للأسف!",
-        "nosearchResult":"لا توجد نتائج بحث"
+        "sorry": "للأسف!",
+        "nosearchResult": "لا توجد نتائج بحث",
+        "noAppointmentsRequests": "لا يوجد طلبات كشف",
+        "noAppointments": "لا يوجد مواعيد",
+        "successUpdatedClinic":"تم تعديل العيادة بنجاح",
+        "pleaseCompleteAllFields":"يرجى ملئ جميع الحقول"
 }

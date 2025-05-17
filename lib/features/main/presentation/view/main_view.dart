@@ -1,13 +1,13 @@
 import 'package:doctor_app/core/services/get_it.dart';
 import 'package:doctor_app/core/utils/app_colors.dart';
 import 'package:doctor_app/core/utils/app_images.dart';
-import 'package:doctor_app/features/appointment/data/repository/appointment_repo.dart';
+import 'package:doctor_app/features/appointment/domain/usecases/get_accepted_appointments_usecase.dart';
 import 'package:doctor_app/features/appointment/presentation/view/appointment_view.dart';
-import 'package:doctor_app/features/appointment/presentation/view_model/appointment_cubit/appointment_cubit.dart';
+import 'package:doctor_app/features/appointment/presentation/view_model/accepted_appoinment_cubit/accepted_appointment_cubit.dart';
+import 'package:doctor_app/features/dashboard/domain/usecase/get_pending_appointment_usecase.dart';
+import 'package:doctor_app/features/dashboard/presentation/view_model/pending_appointment_cubit/pending_appointment_cubit.dart';
 import 'package:doctor_app/features/clinic/data/repo/clinic_repo.dart';
 import 'package:doctor_app/features/clinic/presentation/view_model/clinic_cubit/clinic_cubit.dart';
-import 'package:doctor_app/features/clinic_timing/data/repo/appointment_date_repo.dart';
-import 'package:doctor_app/features/clinic_timing/presentation/view_model/appointment_date/appointment_date_cubit.dart';
 import 'package:doctor_app/features/dashboard/presentation/view/dashboard_view.dart';
 import 'package:doctor_app/features/profile/data/repo/profile_repo.dart';
 import 'package:doctor_app/features/profile/presentation/model_view/profile_cubit/profile_cubit.dart';
@@ -17,7 +17,6 @@ import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_not
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../clinic/presentation/view/clinic_view.dart';
-import '../../../clinic_timing/presentation/view/clinic_timing_view.dart';
 
 class MainView extends StatefulWidget {
   const MainView({super.key});
@@ -33,20 +32,23 @@ class _MainViewState extends State<MainView> {
   double kIconSize = 24.0;
   double kBottomRadius = 20.0;
   List<Widget> screens = [
-    DashboardView(),
+    BlocProvider(
+        create: (context) =>
+            PendingAppointmentCubit(getIt<GetPendingAppointmentUseCase>())
+              ..getAppointmentsStateEmitter(),
+        child: DashboardView()),
     BlocProvider(
       create: (context) =>
-          AppointmentCubit(getIt<AppointmentRepo>())..getAppointmentsStateEmitter(),
+          AcceptedAppointmentCubit(getIt<GetAcceptedAppointmentsUseCase>())
+            ..acceptedAppointmentsStateEmitter(),
       child: AppointmentView(),
     ),
     BlocProvider(
-      create: (context) => AppointmentDateCubit(getIt<AppointmentDateRepo>())..fetchAllAppointmentDate(),
-      child: ClinicTimingView(),
-    ),
-    BlocProvider(
-      create: (context) => ClinicCubit(clinicRepo: getIt<ClinicRepo>())..fetchClinicDetails(),
+      create: (context) =>
+          ClinicCubit(clinicRepo: getIt<ClinicRepo>())..fetchClinicDetails(),
       child: ClinicView(),
     ),
+    ClinicView(),
     BlocProvider(
       create: (context) =>
           ProfileCubit(getIt<ProfileRepo>())..getProfileEmitter(),

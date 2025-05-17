@@ -1,5 +1,7 @@
 import 'dart:developer';
+import 'package:doctor_app/features/clinic_edit/presentation/view_model/edit_clinic/edit_clinic_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:geolocator/geolocator.dart';
@@ -54,10 +56,10 @@ class _GetLatAndLongState extends State<GetLatAndLong> {
 
     setState(() {
       log(position.longitude.toString());
-      // Cubit.get(context).latitudeController.text =
-      //     position.latitude.toString();
-      // Cubit.get(context).longitudeController.text =
-      //     position.longitude.toString();
+      context.read<EditClinicCubit>().latitudeController.text =
+          position.latitude.toString();
+      context.read<EditClinicCubit>().longitudeController.text =
+          position.longitude.toString();
     });
   }
 
@@ -82,8 +84,7 @@ class _GetLatAndLongState extends State<GetLatAndLong> {
                     ),
                     Gap(18.h),
                     CustomEditTextFormField(
-                      controller: TextEditingController(),
-                      // Cubit.get(context).latitudeController,
+                      controller: context.read<EditClinicCubit>().latitudeController,
                       hintTxt: widget.lat ?? "00.000",
                       keyboardType: TextInputType.number,
                       initialVal: widget.lat,
@@ -103,8 +104,7 @@ class _GetLatAndLongState extends State<GetLatAndLong> {
                     ),
                     Gap(18.h),
                     CustomEditTextFormField(
-                      controller: TextEditingController(),
-                      // Cubit.get(context).longitudeController,
+                      controller: context.read<EditClinicCubit>().longitudeController,
                       hintTxt: widget.long ?? "00.000",
                       keyboardType: TextInputType.number,
                       initialVal: widget.long,

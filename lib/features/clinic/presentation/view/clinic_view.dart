@@ -6,6 +6,7 @@ import 'package:doctor_app/features/clinic/presentation/view_model/clinic_cubit/
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../core/utils/app_styles.dart';
+import 'widget/clinic_shimmer.dart';
 import 'widget/custom_sliver_app_bar.dart';
 
 class ClinicView extends StatelessWidget {
@@ -13,10 +14,15 @@ class ClinicView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return 
+    RefreshIndicator(
+        onRefresh: () async {
+          context.read<ClinicCubit>().fetchClinicDetails();
+        },
+        child: Scaffold(
         body: BlocBuilder<ClinicCubit, ClinicState>(builder: (context, state) {
       if (state is ClinicLoading) {
-        return CircularProgressIndicator();
+        return ClinicShimmer();
       } else if (state is ClinicSuccess) {
         return CustomScrollView(
           slivers: [
@@ -47,6 +53,6 @@ class ClinicView extends StatelessWidget {
       } else {
         return SizedBox.shrink();
       }
-    }));
+    })));
   }
 }

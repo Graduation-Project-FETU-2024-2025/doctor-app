@@ -6,9 +6,11 @@ import '../../../../core/database/cache/cache_keys.dart';
 import '../../../../core/database/cache/cashe_helper.dart';
 import '../../../../core/services/get_it.dart';
 import '../../../../core/utils/app_icons.dart';
+import '../../../clinic/data/models/clinic_model.dart';
 
 class ClinicEditView extends StatelessWidget {
-  const ClinicEditView({super.key});
+  const ClinicEditView({super.key, required this.clinicModel});
+  final ClinicModel clinicModel;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +25,7 @@ class ClinicEditView extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.all(30.0),
-        child: SingleChildScrollView(child: ClinicEditViewBody()),
+        child: SingleChildScrollView(child: ClinicEditViewBody(clinicModel: clinicModel,)),
       ),
     );
   }

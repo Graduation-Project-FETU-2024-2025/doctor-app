@@ -107,4 +107,5 @@ class AppImages {
 
   static const String imgEditNameDark = 'assets/images/edit_dark.png';
   static String imgNoSearch = 'assets/images/noSearch.png';
+  static String imgNoAppointments = 'assets/images/no_appointments.png';
 }

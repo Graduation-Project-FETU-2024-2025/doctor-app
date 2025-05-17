@@ -95,6 +95,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("الموعد القادم"),
         "nextWeek": MessageLookupByLibrary.simpleMessage(" الاسبوع القادم"),
         "no": MessageLookupByLibrary.simpleMessage("لا"),
+        "noAppointments":
+            MessageLookupByLibrary.simpleMessage("لا يوجد مواعيد"),
+        "noAppointmentsRequests":
+            MessageLookupByLibrary.simpleMessage("لا يوجد طلبات كشف"),
         "noLastAdded":
             MessageLookupByLibrary.simpleMessage("لا توجد أدوية مضافه حديثا"),
         "nosearchResult":
@@ -108,6 +112,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "patientName": MessageLookupByLibrary.simpleMessage("اسم المريض"),
         "pending": MessageLookupByLibrary.simpleMessage("معلق"),
         "phone": MessageLookupByLibrary.simpleMessage("الهاتف"),
+        "pleaseCompleteAllFields":
+            MessageLookupByLibrary.simpleMessage("يرجى ملئ جميع الحقول"),
         "prescription": MessageLookupByLibrary.simpleMessage("الوصفة الطبية"),
         "price": MessageLookupByLibrary.simpleMessage("السعر"),
         "reVisits": MessageLookupByLibrary.simpleMessage("إعادة كشف"),
@@ -121,6 +127,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("اسم التخصص"),
         "startTime": MessageLookupByLibrary.simpleMessage("وقت البداية"),
         "submit": MessageLookupByLibrary.simpleMessage("ارسال"),
+        "successUpdatedClinic":
+            MessageLookupByLibrary.simpleMessage("تم تعديل العيادة بنجاح"),
         "thisWeek": MessageLookupByLibrary.simpleMessage(" الاسبوع الحالى"),
         "today": MessageLookupByLibrary.simpleMessage("اليوم"),
         "totalIncome": MessageLookupByLibrary.simpleMessage("قيمة الدخل"),

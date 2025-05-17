@@ -899,6 +899,46 @@ class S {
       args: [],
     );
   }
+
+  /// `No appointments requests`
+  String get noAppointmentsRequests {
+    return Intl.message(
+      'No appointments requests',
+      name: 'noAppointmentsRequests',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No appointments `
+  String get noAppointments {
+    return Intl.message(
+      'No appointments ',
+      name: 'noAppointments',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Clinic Updated Successfully`
+  String get successUpdatedClinic {
+    return Intl.message(
+      'Clinic Updated Successfully',
+      name: 'successUpdatedClinic',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please Complete All Fields`
+  String get pleaseCompleteAllFields {
+    return Intl.message(
+      'Please Complete All Fields',
+      name: 'pleaseCompleteAllFields',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
