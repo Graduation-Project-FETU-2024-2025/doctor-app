@@ -84,7 +84,7 @@ class AppRouter {
       case Routing.clinicEdit:
         final clinicModel = args as ClinicModel;
         return _buildRoute(BlocProvider(
-          create: (context) => EditClinicCubit(getIt<EditClinicRepo>())..editClinic(),
+          create: (context) => EditClinicCubit(getIt<EditClinicRepo>()),
           child: ClinicEditView(clinicModel: clinicModel),
         ));
 
