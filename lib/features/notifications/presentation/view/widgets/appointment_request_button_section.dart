@@ -17,14 +17,14 @@ class AppointmentRequestButtonsSection extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         AppointmentRequestButton(
-          buttonColor: Color(0xff4169E1),
+          buttonColor: const Color(0xff4169E1),
           textColor: AppColors.white,
           onPressed:onAccept,
           title: S.of(context).accept,
         ),
         Gap(10.w),
         AppointmentRequestButton(
-          buttonColor: Color(0xffFDB5B5),
+          buttonColor: const Color(0xffFDB5B5),
           textColor: AppColors.red,
           onPressed: onDecline,
           title: S.of(context).decline,

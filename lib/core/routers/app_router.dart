@@ -36,17 +36,17 @@ class AppRouter {
     final args = routeSettings.arguments;
     switch (routeSettings.name) {
       case Routing.splash:
-        return _buildRoute(SplashView());
+        return _buildRoute(const SplashView());
       case Routing.notification:
         return _buildRoute(NotificationView(
           patientAppointment: args as List<PatientAppointmentModel>,
         ));
       case Routing.onboarding:
-        return _buildRoute(OnboardingView());
+        return _buildRoute(const OnboardingView());
       case Routing.signIn:
         return _buildRoute(BlocProvider(
           create: (context) => SignInCubit(getIt<AuthRepo>()),
-          child: SignInView(),
+          child: const SignInView(),
         ));
       case Routing.otp:
         return _buildRoute(BlocProvider(
@@ -56,13 +56,13 @@ class AppRouter {
           ),
         ));
       case Routing.home:
-        return _buildRoute(MainView());
+        return _buildRoute(const MainView());
       case Routing.appointmentDetails:
         return _buildRoute(AppointmentDetails(
           patientAppointmentModel: args as PatientAppointmentModel,
         ));
       case Routing.examination:
-        return _buildRoute(ExaminationView());
+        return _buildRoute(const ExaminationView());
       case Routing.detailsExamination:
         final examinationModel = args as ExaminationModel;
         return _buildRoute(
@@ -71,9 +71,9 @@ class AppRouter {
           ),
         );
       case Routing.clinicDetail:
-        return _buildRoute(ClinicView());
+        return _buildRoute(const ClinicView());
       case Routing.medicines:
-        return _buildRoute(MedicinesView());
+        return _buildRoute(const MedicinesView());
       case Routing.editProfile:
         return _buildRoute(BlocProvider(
           create: (context) => EditProfileCubit(getIt<EditProfileRepo>()),

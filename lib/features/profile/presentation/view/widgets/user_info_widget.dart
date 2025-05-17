@@ -28,7 +28,7 @@ class UserInfoWidget extends StatelessWidget {
                 backgroundColor: AppColors.gray,
                 backgroundImage: isNetworkImage(state.userModel.userImage)
                     ? CachedNetworkImageProvider(state.userModel.userImage)
-                    : AssetImage(AppImages.personAvatar),
+                    : const AssetImage(AppImages.personAvatar),
               ),
               Gap(25.h),
               Row(
@@ -71,7 +71,7 @@ class UserInfoWidget extends StatelessWidget {
             child: Text(state.apiErrorModel.message ?? ""),
           );
         } else {
-          return Center(
+          return const Center(
             child: CircularProgressIndicator(),
           );
         }

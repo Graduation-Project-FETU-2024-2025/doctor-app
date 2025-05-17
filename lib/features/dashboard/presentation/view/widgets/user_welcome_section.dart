@@ -37,7 +37,7 @@ class UserWelcomeSection extends StatelessWidget {
                   ? CachedNetworkImageProvider(getIt<CacheHelper>().getString(
                       key: CacheKeys.profileImage,
                     )!)
-                  : AssetImage(
+                  : const AssetImage(
                       AppImages.personAvatar,
                     ),
             )

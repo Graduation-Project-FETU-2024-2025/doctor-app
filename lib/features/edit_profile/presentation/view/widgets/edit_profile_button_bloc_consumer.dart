@@ -26,7 +26,7 @@ class EditProfileButtonBlocConsumer extends StatelessWidget {
       },
       builder: (context, state) {
         return state is EditProfileLoading
-            ? Center(
+            ? const Center(
                 child: CircularProgressIndicator(),
               )
             : SizedBox(

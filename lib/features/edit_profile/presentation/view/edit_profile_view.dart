@@ -48,7 +48,7 @@ class EditProfileView extends StatelessWidget {
           child: Column(
             children: [
               Gap(20.h),
-              Row(),
+              const Row(),
               CustomProfileImage(
                 imagePath: userModel.userImage,
               ),
@@ -67,7 +67,7 @@ class EditProfileView extends StatelessWidget {
                 hintTxt: userModel.userName,
               ),
               Gap(50.h),
-              EditProfileButtonBlocConsumer(),
+              const EditProfileButtonBlocConsumer(),
             ],
           ),
         ),

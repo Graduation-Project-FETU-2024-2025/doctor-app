@@ -42,7 +42,7 @@ class _MedicineCardState extends State<MedicineCard> {
                 ? AppColors.white
                 : AppColors.darkWhite,
             border: Border.all(
-              color: Color(0xffB3B3B3),
+              color: const Color(0xffB3B3B3),
             ),
           ),
           child: Column(
@@ -52,7 +52,7 @@ class _MedicineCardState extends State<MedicineCard> {
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.only(
+                    borderRadius: const BorderRadius.only(
                       topLeft: Radius.circular(10),
                       topRight: Radius.circular(10),
                     ),
@@ -69,7 +69,7 @@ class _MedicineCardState extends State<MedicineCard> {
                 flex: 2,
                 child: Container(
                   width: double.infinity,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(10),
                       bottomRight: Radius.circular(10),
@@ -118,7 +118,7 @@ class _MedicineCardState extends State<MedicineCard> {
                         S.of(context).Dosage,
                         style: AppStyles.semiBold10(context),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       Skeleton.shade(
                         child: DosageWidget(
                           dosage: dosage,

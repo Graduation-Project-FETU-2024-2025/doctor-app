@@ -25,7 +25,7 @@ class NoSearchResult extends StatelessWidget {
                 S.of(context).sorry,
                 style: Theme.of(context).textTheme.headlineSmall,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
               Text(

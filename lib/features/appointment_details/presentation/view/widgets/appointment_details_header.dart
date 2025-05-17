@@ -48,18 +48,18 @@ class AppointmentDetailsHeader extends StatelessWidget {
               ),
             ],
           ),
-          Spacer(),
+          const Spacer(),
           Text(
             '${DateFormat('d MMMM yyyy').format(date)},\n '
             '${DateFormat('hh:mm a').format(date)} - '
-            '${DateFormat('hh:mm a').format(date.add(Duration(hours: 1)))}',
+            '${DateFormat('hh:mm a').format(date.add(const Duration(hours: 1)))}',
             style: AppStyles.semiBold30(context).copyWith(
               color: Theme.of(context).brightness == Brightness.light
                   ? AppColors.white
                   : AppColors.black,
             ),
           ),
-          Spacer(),
+          const Spacer(),
         ],
       ),
     );

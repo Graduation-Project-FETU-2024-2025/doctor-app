@@ -55,7 +55,7 @@ class AppointmentRequestCard extends StatelessWidget {
                   Text(
                     '${DateFormat('d MMMM yyyy').format(patientAppointmentModel.time)}, ${DateFormat('hh:mm a').format(patientAppointmentModel.time)}-${DateFormat('hh:mm a').format(
                       patientAppointmentModel.time.add(
-                        Duration(
+                        const Duration(
                           hours: 1,
                         ),
                       ),
@@ -85,7 +85,7 @@ class AppointmentRequestCard extends StatelessWidget {
                         radius: 30.r,
                         backgroundImage: isNetworkImage(patientAppointmentModel.patientImageUrl)? CachedNetworkImageProvider(
                          patientAppointmentModel.patientImageUrl,
-                        ):AssetImage(AppImages.personAvatar),
+                        ):const AssetImage(AppImages.personAvatar),
                       ),
                       Gap(10.w),
                       Text(

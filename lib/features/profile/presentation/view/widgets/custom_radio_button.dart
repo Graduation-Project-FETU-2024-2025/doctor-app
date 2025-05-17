@@ -7,11 +7,11 @@ class CustomRadioButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
-      duration: Duration(milliseconds: 300),
+      duration: const Duration(milliseconds: 300),
       width: 25,
       height: 25,
       decoration: isSelected
-          ? BoxDecoration(
+          ? const BoxDecoration(
               color: AppColors.primaryColor,
               shape: BoxShape.circle,
             )
@@ -24,13 +24,13 @@ class CustomRadioButton extends StatelessWidget {
             ),
       child: isSelected
           ? Container(
-              margin: EdgeInsets.all(5),
-              decoration: BoxDecoration(
+              margin: const EdgeInsets.all(5),
+              decoration: const BoxDecoration(
                 color: AppColors.white,
                 shape: BoxShape.circle,
               ),
             )
-          : SizedBox(),
+          : const SizedBox(),
     );
   }
 }

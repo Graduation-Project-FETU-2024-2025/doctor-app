@@ -38,7 +38,7 @@ class CustomProfileImage extends StatelessWidget {
               backgroundImage: pickedImage == null
                   ? isNetworkImage(imagePath)
                       ? CachedNetworkImageProvider(imagePath)
-                      : AssetImage(AppImages.personAvatar) as ImageProvider
+                      : const AssetImage(AppImages.personAvatar) as ImageProvider
                   : FileImage(File(pickedImage.path)),
             );
           },

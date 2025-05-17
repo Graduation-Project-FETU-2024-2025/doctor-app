@@ -30,9 +30,9 @@ class AppointmentTypeSelectionContainer extends StatelessWidget {
             .selectAppointmentTypes(currentAppointment);
       },
       child: AnimatedContainer(
-        constraints: BoxConstraints(minWidth: 81),
+        constraints: const BoxConstraints(minWidth: 81),
         padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 5.h),
-        duration: Duration(milliseconds: 300),
+        duration: const Duration(milliseconds: 300),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(4.r),
           border: Border.all(color: AppColors.gray),

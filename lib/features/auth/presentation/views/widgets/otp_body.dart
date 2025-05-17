@@ -40,7 +40,7 @@ class OTPBody extends StatelessWidget {
           ),
         ),
         Gap(30.h),
-        OTPDigitsSection(),
+        const OTPDigitsSection(),
         Gap(30.h),
         OtpSignInBlocConsumerButton(email: email),
         Gap(18.h),

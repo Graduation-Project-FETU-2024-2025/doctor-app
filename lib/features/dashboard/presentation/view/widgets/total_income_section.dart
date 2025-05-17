@@ -16,7 +16,7 @@ class TotalIncomeSection extends StatelessWidget {
       radius: 100.0,
       lineWidth: 20.0,
       percent: 0.75,
-      backgroundColor: Color(0xffD9E1F9),
+      backgroundColor: const Color(0xffD9E1F9),
       center: Column(
         mainAxisSize: MainAxisSize.min,
         children: [

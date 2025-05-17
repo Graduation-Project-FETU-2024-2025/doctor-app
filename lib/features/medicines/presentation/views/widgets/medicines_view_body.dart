@@ -83,7 +83,7 @@ class MedicinesViewBody extends StatelessWidget {
             SizedBox(
               height: 30.h,
             ),
-            MedicineGrid(),
+            const MedicineGrid(),
             SizedBox(
               height: 30.h,
             ),

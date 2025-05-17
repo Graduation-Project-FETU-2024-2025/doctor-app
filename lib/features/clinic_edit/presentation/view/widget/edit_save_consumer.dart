@@ -18,7 +18,7 @@ class EditSaveConsumer extends StatelessWidget {
           showDialog(
             context: context,
             barrierDismissible: false,
-            builder: (_) => Center(child: CircularProgressIndicator()),
+            builder: (_) => const Center(child: CircularProgressIndicator()),
           );
         } else if (state is EditClinicSuccess) {
           Navigator.pop(context);

@@ -37,7 +37,7 @@ class PatientDateContainer extends StatelessWidget {
                 ? CachedNetworkImageProvider(
                     patientAppointmentModel.patientImageUrl,
                   )
-                : AssetImage(AppImages.personAvatar),
+                : const AssetImage(AppImages.personAvatar),
           ),
           Gap(10.w),
           Column(
@@ -57,7 +57,7 @@ class PatientDateContainer extends StatelessWidget {
                   Text(
                     '${DateFormat('hh:mm a').format(patientAppointmentModel.time)}-${DateFormat('hh:mm a').format(
                       patientAppointmentModel.time.add(
-                        Duration(
+                        const Duration(
                           hours: 1,
                         ),
                       ),

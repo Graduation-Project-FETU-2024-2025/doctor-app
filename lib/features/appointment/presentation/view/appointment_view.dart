@@ -23,7 +23,7 @@ class AppointmentView extends StatelessWidget {
             ),
           ),
           SliverToBoxAdapter(child: Gap(30.h)),
-          SliverToBoxAdapter(child: CustomDateTimeline()),
+         const SliverToBoxAdapter(child: CustomDateTimeline()),
           SliverToBoxAdapter(child: Gap(30.h)),
           const DueToAppointmentSection(),
           SliverToBoxAdapter(

@@ -16,12 +16,12 @@ class DueToAppointmentSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var cubit = context.read<AcceptedAppointmentCubit>();
-    return BlocBuilder<AcceptedAppointmentCubit, AcceptedAppointmentState>(
-      buildWhen: (previous, current) => current is ChangeAppointmentOption,
-      builder: (context, state) {
-        return MultiSliver(
-          children: [
-            SliverToBoxAdapter(
+    return MultiSliver(
+      children: [
+        BlocBuilder<AcceptedAppointmentCubit, AcceptedAppointmentState>(
+          buildWhen: (previous, current) => current is ChangeAppointmentOption,
+          builder: (context, state) {
+            return SliverToBoxAdapter(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -36,16 +36,24 @@ class DueToAppointmentSection extends StatelessWidget {
                   ),
                 ],
               ),
-            ),
-            Gap(30.h),
-            PatientDateContainerListView(
+            );
+          },
+        ),
+        Gap(30.h),
+        BlocBuilder<AcceptedAppointmentCubit, AcceptedAppointmentState>(
+          buildWhen: (previous, current) =>
+              current is AcceptedAppointmentSuccess ||
+              current is AcceptedAppointmentFailure ||
+              current is AcceptedAppointmentLoading,
+          builder: (context, state) {
+            return PatientDateContainerListView(
               patientList: cubit.appointment == CurrentAppointment.upComing
                   ? cubit.upcomingAppointment
                   : cubit.pastAppointment,
-            ),
-          ],
-        );
-      },
+            );
+          },
+        ),
+      ],
     );
   }
 }

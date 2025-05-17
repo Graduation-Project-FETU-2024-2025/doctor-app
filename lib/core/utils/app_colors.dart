@@ -11,9 +11,9 @@ abstract class AppColors {
   static const Color darkWhite = Color(0xff7F7F7F);
   static const Color gradient1 = Color(0xffDFE9F3);
   static const Color red = Color(0xffFA0909);
-  static Color lightRed = Color(0xffFA0909).withOpacity(.3);
-  static Color green = Color(0xff24B58E);
-  static Color missedAppointment = Color(0xffF24822);
-  static Color completedAppointment = Color(0xff4169E1);
-  static Color pendingAppointment = Color(0xff24B58E);
+  static Color lightRed = const Color(0xffFA0909).withOpacity(.3);
+  static Color green = const Color(0xff24B58E);
+  static Color missedAppointment = const Color(0xffF24822);
+  static Color completedAppointment = const Color(0xff4169E1);
+  static Color pendingAppointment = const Color(0xff24B58E);
 }
