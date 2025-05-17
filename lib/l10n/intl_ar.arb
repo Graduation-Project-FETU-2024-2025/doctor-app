@@ -85,5 +85,7 @@
         "sorry": "للأسف!",
         "nosearchResult": "لا توجد نتائج بحث",
         "noAppointmentsRequests": "لا يوجد طلبات كشف",
-        "noAppointments": "لا يوجد مواعيد"
+        "noAppointments": "لا يوجد مواعيد",
+        "successUpdatedClinic":"تم تعديل العيادة بنجاح",
+        "pleaseCompleteAllFields":"يرجى ملئ جميع الحقول"
 }

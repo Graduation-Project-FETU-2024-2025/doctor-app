@@ -28,7 +28,7 @@ class ClinicViewBody extends StatelessWidget {
           Gap(11.h),
           BookingPriceCard(price: clinicModel.price.toString(),specialization: clinicModel.specialization,),
           Gap(50.h),
-          RowBtn()
+          RowBtn(clinicModel: clinicModel,)
         ],
       ),
     );

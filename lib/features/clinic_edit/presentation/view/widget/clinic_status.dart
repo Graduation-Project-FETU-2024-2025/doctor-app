@@ -11,7 +11,7 @@ class ClinicStatus extends StatefulWidget {
   final String? status;
 
   const ClinicStatus(
-      {super.key, required this.controller, this.onChanged, this.status});
+      {super.key, required this.controller, this.onChanged, this.status = "open"});
 
   @override
   State<ClinicStatus> createState() => _ClinicStatusState();

@@ -24,6 +24,7 @@ class EndPoints {
 
   static String getAllAppointment = "api/appointments/get-all-appointment-dates";
   static String getAppointments = "api/Appointments";
+  static String updateClinic = "api/clinic";
 }
 
 class ApiKeys {
