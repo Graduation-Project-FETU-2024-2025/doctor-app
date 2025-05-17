@@ -1,7 +1,7 @@
 import 'package:doctor_app/core/utils/app_colors.dart';
 import 'package:doctor_app/core/utils/app_styles.dart';
 import 'package:doctor_app/core/models/patient_appointment_model.dart';
-import 'package:doctor_app/features/notifications/presentation/view/widgets/appointment_request_button_section.dart';
+import 'package:doctor_app/core/widgets/appointment_request_button_section.dart';
 import 'package:doctor_app/features/appointment_details/presentation/view/widgets/appointment_details_header.dart';
 import 'package:doctor_app/features/appointment_details/presentation/view/widgets/patient_details_section.dart';
 import 'package:doctor_app/generated/l10n.dart';
@@ -49,8 +49,7 @@ class AppointmentDetails extends StatelessWidget {
                 ),
                 Gap(50.h),
                 AppointmentRequestButtonsSection(
-                  onAccept: () {},
-                  onDecline: () {},
+                  appointmentId: patientAppointmentModel.appointmentId,
                 ),
                 Gap(20.h),
               ],

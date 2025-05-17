@@ -1,5 +1,8 @@
 import 'dart:io';
 
+
+import 'package:doctor_app/core/global_cubits/appointment_action_cubit/appointment_action_cubit.dart';
+import 'package:doctor_app/core/repositories/appointment_repo.dart';
 import 'package:doctor_app/core/routers/routing.dart';
 import 'package:doctor_app/core/services/get_it.dart';
 import 'package:doctor_app/core/models/patient_appointment_model.dart';
@@ -38,8 +41,11 @@ class AppRouter {
       case Routing.splash:
         return _buildRoute(const SplashView());
       case Routing.notification:
-        return _buildRoute(NotificationView(
-          patientAppointment: args as List<PatientAppointmentModel>,
+        return _buildRoute(BlocProvider(
+          create: (context) => AppointmentActionCubit(getIt<AppointmentRepo>()),
+          child: NotificationView(
+            patientAppointment: args as List<PatientAppointmentModel>,
+          ),
         ));
       case Routing.onboarding:
         return _buildRoute(const OnboardingView());
@@ -58,9 +64,15 @@ class AppRouter {
       case Routing.home:
         return _buildRoute(const MainView());
       case Routing.appointmentDetails:
-        return _buildRoute(AppointmentDetails(
-          patientAppointmentModel: args as PatientAppointmentModel,
-        ));
+        return _buildRoute(
+          BlocProvider(
+            create: (context) =>
+                AppointmentActionCubit(getIt<AppointmentRepo>()),
+            child: AppointmentDetails(
+              patientAppointmentModel: args as PatientAppointmentModel,
+            ),
+          ),
+        );
       case Routing.examination:
         return _buildRoute(const ExaminationView());
       case Routing.detailsExamination:
@@ -84,7 +96,8 @@ class AppRouter {
       case Routing.clinicEdit:
         final clinicModel = args as ClinicModel;
         return _buildRoute(BlocProvider(
-          create: (context) => EditClinicCubit(getIt<EditClinicRepo>())..editClinic(),
+          create: (context) =>
+              EditClinicCubit(getIt<EditClinicRepo>())..editClinic(),
           child: ClinicEditView(clinicModel: clinicModel),
         ));
 

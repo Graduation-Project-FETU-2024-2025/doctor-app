@@ -86,6 +86,8 @@
         "nosearchResult": "لا توجد نتائج بحث",
         "noAppointmentsRequests": "لا يوجد طلبات كشف",
         "noAppointments": "لا يوجد مواعيد",
-        "successUpdatedClinic":"تم تعديل العيادة بنجاح",
-        "pleaseCompleteAllFields":"يرجى ملئ جميع الحقول"
+        "successUpdatedClinic": "تم تعديل العيادة بنجاح",
+        "pleaseCompleteAllFields": "يرجى ملئ جميع الحقول",
+        "appointmentAccepted": "تم حجز المعاد بنجاح",
+        "appointmentDeclined": "تم الغاء المعاد بنجاح"
 }

@@ -32,8 +32,24 @@ class DashboardView extends StatelessWidget {
                 child: IconButton(
                   onPressed: state is AppointmentSuccess
                       ? () {
-                          context.pushNamed(Routing.notification,
-                              argument: state.patientAppointment);
+                          context
+                              .pushNamed(Routing.notification,
+                                  argument: state.patientAppointment)
+                              .then(
+                            (value) {
+                              if (value) {
+                                if (context.mounted) {
+                                  if (value) {
+                                    context
+                                        .read<PendingAppointmentCubit>()
+                                        .getAppointmentsStateEmitter();
+                                  } else {
+                                    return;
+                                  }
+                                }
+                              }
+                            },
+                          );
                         }
                       : null,
                   icon: Badge.count(

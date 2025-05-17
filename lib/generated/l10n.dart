@@ -939,6 +939,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Appointment Accepted Successfully`
+  String get appointmentAccepted {
+    return Intl.message(
+      'Appointment Accepted Successfully',
+      name: 'appointmentAccepted',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Appointment declined Successfully`
+  String get appointmentDeclined {
+    return Intl.message(
+      'Appointment declined Successfully',
+      name: 'appointmentDeclined',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
