@@ -10,7 +10,7 @@ class OTPView extends StatelessWidget {
       child: Scaffold(
         body: CustomScrollView(
           slivers: [
-            CustomAuthSliverAppBar(
+            const CustomAuthSliverAppBar(
               canGoBack: true,
             ),
             SliverToBoxAdapter(

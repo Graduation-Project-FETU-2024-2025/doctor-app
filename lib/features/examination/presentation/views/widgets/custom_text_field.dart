@@ -44,8 +44,8 @@ class CustomTextField extends StatelessWidget {
           decoration: BoxDecoration(
             color: readOnly
                 ? Theme.of(context).brightness == Brightness.light
-                    ? Color(0xffE8E8E8)
-                    : Color(0xff939393)
+                    ? const Color(0xffE8E8E8)
+                    : const Color(0xff939393)
                 : Colors.transparent,
             borderRadius: readOnly
                 ? BorderRadius.circular(10.r)
@@ -69,7 +69,7 @@ class CustomTextField extends StatelessWidget {
             cursorColor: AppColors.primaryColor,
             style: Theme.of(context).textTheme.titleMedium,
             decoration: InputDecoration(
-              contentPadding: EdgeInsets.symmetric(
+              contentPadding: const EdgeInsets.symmetric(
                 horizontal: 16,
               ),
               hintText: hintText,
@@ -82,8 +82,8 @@ class CustomTextField extends StatelessWidget {
                     ),
               fillColor: readOnly
                   ? Theme.of(context).brightness == Brightness.light
-                      ? Color(0xffE8E8E8)
-                      : Color(0xff939393)
+                      ? const Color(0xffE8E8E8)
+                      : const Color(0xff939393)
                   : Colors.transparent,
               filled: true,
               enabledBorder: OutlineInputBorder(

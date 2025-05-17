@@ -7,7 +7,7 @@ import 'package:doctor_app/core/utils/app_icons.dart';
 import 'package:doctor_app/core/utils/app_images.dart';
 import 'package:doctor_app/core/utils/app_styles.dart';
 import 'package:doctor_app/core/models/patient_appointment_model.dart';
-import 'package:doctor_app/features/notifications/presentation/view/widgets/appointment_request_button_section.dart';
+import 'package:doctor_app/core/widgets/appointment_request_button_section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
@@ -55,7 +55,7 @@ class AppointmentRequestCard extends StatelessWidget {
                   Text(
                     '${DateFormat('d MMMM yyyy').format(patientAppointmentModel.time)}, ${DateFormat('hh:mm a').format(patientAppointmentModel.time)}-${DateFormat('hh:mm a').format(
                       patientAppointmentModel.time.add(
-                        Duration(
+                        const Duration(
                           hours: 1,
                         ),
                       ),
@@ -85,7 +85,7 @@ class AppointmentRequestCard extends StatelessWidget {
                         radius: 30.r,
                         backgroundImage: isNetworkImage(patientAppointmentModel.patientImageUrl)? CachedNetworkImageProvider(
                          patientAppointmentModel.patientImageUrl,
-                        ):AssetImage(AppImages.personAvatar),
+                        ):const AssetImage(AppImages.personAvatar),
                       ),
                       Gap(10.w),
                       Text(
@@ -96,8 +96,7 @@ class AppointmentRequestCard extends StatelessWidget {
                   ),
                   Gap(30.h),
                   AppointmentRequestButtonsSection(
-                    onAccept: () {},
-                    onDecline: () {},
+                    appointmentId: patientAppointmentModel.appointmentId,
                   ),
                   Gap(10.h)
                 ],

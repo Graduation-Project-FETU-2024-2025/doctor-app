@@ -38,10 +38,18 @@ class DueToAppointmentSection extends StatelessWidget {
               ),
             ),
             Gap(30.h),
-            PatientDateContainerListView(
-              patientList: cubit.appointment == CurrentAppointment.upComing
-                  ? cubit.upcomingAppointment
-                  : cubit.pastAppointment,
+            BlocBuilder<AcceptedAppointmentCubit, AcceptedAppointmentState>(
+              buildWhen: (previous, current) =>
+                  current is AcceptedAppointmentSuccess ||
+                  current is AcceptedAppointmentFailure ||
+                  current is AcceptedAppointmentLoading,
+              builder: (context, state) {
+                return PatientDateContainerListView(
+                  patientList: cubit.appointment == CurrentAppointment.upComing
+                      ? cubit.upcomingAppointment
+                      : cubit.pastAppointment,
+                );
+              },
             ),
           ],
         );

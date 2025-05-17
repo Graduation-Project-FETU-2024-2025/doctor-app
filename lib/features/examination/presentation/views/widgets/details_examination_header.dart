@@ -63,7 +63,7 @@ class DetailsExaminationHeader extends StatelessWidget {
           CircleAvatar(
             radius: 40.r,
             backgroundColor: Colors.red,
-            backgroundImage: AssetImage(AppImages.imagesAvatar),
+            backgroundImage: const AssetImage(AppImages.imagesAvatar),
           ),
           Gap(15.h),
           Text(

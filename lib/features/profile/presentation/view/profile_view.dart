@@ -16,10 +16,10 @@ class ProfileView extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Row(),
-              UserInfoWidget(),
+              const Row(),
+              const UserInfoWidget(),
               Gap(30.h),
-              ProfileOptionContainer(),
+              const ProfileOptionContainer(),
             ],
           ),
         ),

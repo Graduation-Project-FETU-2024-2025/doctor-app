@@ -86,7 +86,7 @@ class CalendarScreenState extends State<CalendarScreen> {
       return Center(
         child: Text(
           days[index],
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style: const TextStyle(fontWeight: FontWeight.bold),
         ),
       );
     },
@@ -96,7 +96,7 @@ class CalendarScreenState extends State<CalendarScreen> {
       return Center(
         child: Text(
           '${date.month} / ${date.year}', // يمكن تغيير التنسيق حسب الرغبة
-          style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
         ),
       );
     },
@@ -171,20 +171,20 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
               decoration: InputDecoration(
                 labelText: "Event Title",
                 suffixIcon: IconButton(
-                  icon: Icon(Icons.add),
+                  icon: const Icon(Icons.add),
                   onPressed: _addEvent,
                 ),
               ),
             ),
-            SizedBox(height: 24),
-            Text(
+            const SizedBox(height: 24),
+            const Text(
               "Previous Events",
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
-            Divider(),
+            const Divider(),
             Expanded(
               child: _eventsForDate.isEmpty
-                  ? Center(child: Text("No events yet"))
+                  ? const Center(child: Text("No events yet"))
                   : ListView.builder(
                       itemCount: _eventsForDate.length,
                       itemBuilder: (context, index) {

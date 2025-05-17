@@ -40,7 +40,7 @@ class DosageWidget extends StatelessWidget {
                     : AppColors.black.withOpacity(0.3),
               ),
             ),
-            SizedBox(width: 8),
+            const SizedBox(width: 8),
             Text(
               '$dosage',
               style: AppStyles.semiBold10(context).copyWith(
@@ -49,7 +49,7 @@ class DosageWidget extends StatelessWidget {
                     : AppColors.black.withOpacity(0.3),
               ),
             ),
-            SizedBox(width: 8),
+            const SizedBox(width: 8),
             GestureDetector(
               onTap:
                   isEnabled && dosage > 1 ? () => onChanged(dosage - 1) : null,

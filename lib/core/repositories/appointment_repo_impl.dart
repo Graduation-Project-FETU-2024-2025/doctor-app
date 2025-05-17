@@ -18,7 +18,7 @@ class AppointmentRepoImpl implements AppointmentRepo {
           {AppointmentParamsModel? appointmentParamsModel}) async {
     try {
       final Response response = await _apiConsumer.get(
-          EndPoints.getAppointments,
+          EndPoints.getPatientAppointments,
           queryParameter: appointmentParamsModel?.toJson());
       List<PatientAppointmentModel> patientAppointment = [];
       for (var appointment in response.data['data']) {
@@ -26,6 +26,30 @@ class AppointmentRepoImpl implements AppointmentRepo {
       }
       return right(patientAppointment);
     } catch (e) {
+      return left(ApiErrorHandler.handleError(e));
+    }
+  }
+
+  @override
+  Future<Either<ApiErrorModel, String>> acceptAppointment(
+      {required String appointmentId}) async {
+    try {
+      final response =
+          await _apiConsumer.put(EndPoints.acceptAppointment(appointmentId));
+      return right(response.data['message']);
+    } on Exception catch (e) {
+      return left(ApiErrorHandler.handleError(e));
+    }
+  }
+
+  @override
+  Future<Either<ApiErrorModel, String>> declineAppointment(
+      {required String appointmentId}) async {
+    try {
+      final response =
+          await _apiConsumer.put(EndPoints.declineAppointment(appointmentId));
+      return right(response.data['message']);
+    } on Exception catch (e) {
       return left(ApiErrorHandler.handleError(e));
     }
   }

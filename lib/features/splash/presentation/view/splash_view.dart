@@ -23,20 +23,21 @@ class _SplashViewState extends State<SplashView> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (ModalRoute.of(context)?.settings.name == Routing.splash) {
-        Future.delayed(
-          Duration(seconds: 5),
+     Future.delayed(
+          const Duration(seconds: 5),
           () => _getInitRoute(),
         );
-      }
-    });
+    // WidgetsBinding.instance.addPostFrameCallback((_) {
+    //   if (ModalRoute.of(context)?.settings.name == Routing.splash) {
+       
+    //   }
+    // });
   }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [
               AppColors.white,

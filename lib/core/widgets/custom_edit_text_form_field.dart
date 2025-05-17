@@ -42,7 +42,7 @@ class CustomEditTextFormField extends StatelessWidget {
       decoration: InputDecoration(
         suffixIcon: suffixIcon,
         fillColor: Colors.transparent,
-        contentPadding: EdgeInsets.symmetric(horizontal: 17, vertical: 5),
+        contentPadding: const EdgeInsets.symmetric(horizontal: 17, vertical: 5),
         hintText: hintTxt,
         hintStyle: AppStyles.semiBold14(context).copyWith(
           color: Theme.of(context).brightness == Brightness.light

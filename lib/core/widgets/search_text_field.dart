@@ -22,7 +22,7 @@ class SearchTextField extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(25),
         color: Theme.of(context).brightness == Brightness.light
-            ? Color(0xffE5E5E5)
+            ? const Color(0xffE5E5E5)
             : AppColors.darkWhite,
       ),
       child: Row(
@@ -40,7 +40,7 @@ class SearchTextField extends StatelessWidget {
               decoration: InputDecoration(
                 hintText: S.of(context).searchHint,
                 hintStyle: AppStyles.semiBold15(context).copyWith(
-                  color: Color(0xffBDBDBD),
+                  color: const Color(0xffBDBDBD),
                 ),
                 border: InputBorder.none,
                 enabledBorder: InputBorder.none,

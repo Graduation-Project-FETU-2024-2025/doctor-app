@@ -20,19 +20,19 @@ class RowBtn extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        DeleteButton(),
+        const DeleteButton(),
         Gap(35.w),
         SizedBox(
           width: 40.w,
           height: 40.h,
           child: ElevatedButton(
-              style: ButtonStyle(
+              style: const ButtonStyle(
                 backgroundColor:
-                    const WidgetStatePropertyAll(AppColors.primaryColor),
+                    WidgetStatePropertyAll(AppColors.primaryColor),
                 shape: WidgetStatePropertyAll(
-                  const CircleBorder(),
+                  CircleBorder(),
                 ),
-                padding: const WidgetStatePropertyAll(
+                padding: WidgetStatePropertyAll(
                   EdgeInsets.all(10),
                 ),
               ),
@@ -44,7 +44,7 @@ class RowBtn extends StatelessWidget {
               },
               child: SvgPicture.asset(
                 AppIcons.svgsEditIcon,
-                colorFilter: ColorFilter.mode(Colors.white, BlendMode.dst),
+                colorFilter: const ColorFilter.mode(Colors.white, BlendMode.dst),
               )),
         ),
       ],

@@ -27,6 +27,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "accept": MessageLookupByLibrary.simpleMessage("موافقة"),
         "addDiagnosis": MessageLookupByLibrary.simpleMessage("اضافة التشخيص"),
         "addanalysis": MessageLookupByLibrary.simpleMessage("إضافة تحليل"),
+        "appointmentAccepted":
+            MessageLookupByLibrary.simpleMessage("تم حجز المعاد بنجاح"),
+        "appointmentDeclined":
+            MessageLookupByLibrary.simpleMessage("تم الغاء المعاد بنجاح"),
         "appointmentRequest":
             MessageLookupByLibrary.simpleMessage("طلب المواعيد"),
         "arabic": MessageLookupByLibrary.simpleMessage("العربية"),

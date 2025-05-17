@@ -13,7 +13,7 @@ class AppointmentRequestButton extends StatelessWidget {
   final String title;
   final Color buttonColor;
   final Color textColor;
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(

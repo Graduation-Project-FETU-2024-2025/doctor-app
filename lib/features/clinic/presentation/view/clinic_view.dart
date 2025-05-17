@@ -22,7 +22,7 @@ class ClinicView extends StatelessWidget {
         child: Scaffold(
         body: BlocBuilder<ClinicCubit, ClinicState>(builder: (context, state) {
       if (state is ClinicLoading) {
-        return ClinicShimmer();
+        return const ClinicShimmer();
       } else if (state is ClinicSuccess) {
         return CustomScrollView(
           slivers: [
@@ -49,9 +49,9 @@ class ClinicView extends StatelessWidget {
         );
       } else if (state is ClinicFailure) {
         errorToast(message: state.message.message!);
-        return SizedBox.shrink();
+        return const SizedBox.shrink();
       } else {
-        return SizedBox.shrink();
+        return const SizedBox.shrink();
       }
     })));
   }

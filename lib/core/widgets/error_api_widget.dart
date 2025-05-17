@@ -18,7 +18,7 @@ class ErrorApiWidget extends StatelessWidget {
           style: Theme.of(context).textTheme.titleMedium,
         ),
         SizedBox(width: 10.w),
-        Icon(Icons.error),
+        const Icon(Icons.error),
       ],
     );
   }
