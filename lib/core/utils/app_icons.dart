@@ -34,6 +34,10 @@ class AppIcons {
   static const String svgsCorrectSuccessTickSvgrepoCom =
       "assets/svgs/correct-success-tick-svgrepo-com.svg";
 
+  /// Assets for svgsAppointmentCanceled
+  /// assets/svgs/canceled.svg
+  static const String svgsAppointmentCanceled = "assets/svgs/canceled.svg";
+
   /// Assets for svgsDateCancle
   /// assets/svgs/date_cancle.svg
   static const String svgsDateCancle = "assets/svgs/date_cancle.svg";
@@ -116,7 +120,4 @@ class AppIcons {
   static const String iconAppointmentClock =
       'assets/svgs/appointment_clock.svg';
   static const String svgArrowDown = 'assets/svgs/arrowDown.svg';
-
-
-
 }

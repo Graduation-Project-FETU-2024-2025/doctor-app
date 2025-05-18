@@ -90,6 +90,6 @@
     "noAppointments":"No appointments ",
     "successUpdatedClinic":"Clinic Updated Successfully",
     "pleaseCompleteAllFields":"Please Complete All Fields",
-    "appointmentAccepted":"Appointment Accepted Successfully",
-    "appointmentDeclined":"Appointment declined Successfully"
+    "appointmentAccepted":"Accepted",
+    "appointmentDeclined":"Declined"
 }

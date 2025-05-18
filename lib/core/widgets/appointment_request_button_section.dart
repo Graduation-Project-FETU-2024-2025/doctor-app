@@ -1,6 +1,8 @@
 import 'package:doctor_app/core/global_cubits/appointment_action_cubit/appointment_action_cubit.dart';
 import 'package:doctor_app/core/global_cubits/appointment_action_cubit/appointment_action_state.dart';
 import 'package:doctor_app/core/utils/app_colors.dart';
+import 'package:doctor_app/core/utils/app_icons.dart';
+import 'package:doctor_app/core/widgets/appointment_action_widget.dart';
 import 'package:doctor_app/core/widgets/appointment_request_button.dart';
 import 'package:doctor_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
@@ -19,13 +21,25 @@ class AppointmentRequestButtonsSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<AppointmentActionCubit, AppointmentActionState>(
       builder: (context, state) {
+        bool isLoading = (state is AcceptAppointmentLoading &&
+                state.appointmentId == appointmentId ||
+            state is DeclineAppointmentLoading);
+        bool isAccepted = state is AcceptAppointmentSuccess &&
+            state.appointmentId == appointmentId;
+        bool isCanceled = state is DeclineAppointmentSuccess &&
+            state.appointmentId == appointmentId;
         return Skeletonizer(
-          enabled: state is AcceptAppointmentLoading ||
-              state is DeclineAppointmentLoading,
-          child: state is AcceptAppointmentSuccess
-              ? Text(S.of(context).appointmentAccepted)
-              : state is DeclineAppointmentSuccess
-                  ? Text(S.of(context).appointmentDeclined)
+          enabled: isLoading,
+          child: isAccepted
+              ? AppointmentActionWidget(
+                  title: S.of(context).appointmentAccepted,
+                  iconPath: AppIcons.svgsCorrectSuccessTickSvgrepoCom,
+                )
+              : isCanceled
+                  ? AppointmentActionWidget(
+                      title: S.of(context).appointmentDeclined,
+                      iconPath: AppIcons.svgsAppointmentCanceled,
+                    )
                   : Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [

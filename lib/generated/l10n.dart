@@ -940,20 +940,20 @@ class S {
     );
   }
 
-  /// `Appointment Accepted Successfully`
+  /// `Accepted`
   String get appointmentAccepted {
     return Intl.message(
-      'Appointment Accepted Successfully',
+      'Accepted',
       name: 'appointmentAccepted',
       desc: '',
       args: [],
     );
   }
 
-  /// `Appointment declined Successfully`
+  /// `Declined`
   String get appointmentDeclined {
     return Intl.message(
-      'Appointment declined Successfully',
+      'Declined',
       name: 'appointmentDeclined',
       desc: '',
       args: [],
