@@ -16,7 +16,7 @@ class MedicinesView extends StatelessWidget {
           create: (context) =>
               SystemMedicineCubit(getIt<GetSystemMedicinesRepo>())
                 ..getSystemMedicines(),
-          child: MedicinesViewBody(),
+          child: const MedicinesViewBody(),
         ),
       ),
     );

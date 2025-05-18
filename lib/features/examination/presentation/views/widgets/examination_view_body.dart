@@ -79,7 +79,7 @@ class ExaminationViewBody extends StatelessWidget {
             SizedBox(
               height: 30.h,
             ),
-            AnalysisDropDownMenu(),
+            const AnalysisDropDownMenu(),
             SizedBox(
               height: 30.h,
             ),
@@ -106,7 +106,7 @@ class ExaminationViewBody extends StatelessWidget {
                       cubit.updateModelData();
                       Navigator.of(context).push(
                         MaterialPageRoute(builder: (context) {
-                          return MedicinesView();
+                          return const MedicinesView();
                         }),
                       );
                     },

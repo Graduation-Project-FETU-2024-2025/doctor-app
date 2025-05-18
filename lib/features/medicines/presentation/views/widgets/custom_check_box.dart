@@ -47,7 +47,7 @@ class _CustomCheckboxState extends State<CustomCheckbox> {
           borderRadius: BorderRadius.circular(5),
         ),
         child: isChecked
-            ? Icon(
+            ? const Icon(
                 Icons.check,
                 size: 16,
                 color: AppColors.primaryColor,

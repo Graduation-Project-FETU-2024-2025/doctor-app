@@ -24,10 +24,10 @@ class BuildImageOption extends StatelessWidget {
             child: Icon(icon, size: 30, color: Colors.blue),
           ),
         ),
-        SizedBox(height: 8),
+        const SizedBox(height: 8),
         Text(
           text,
-          style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+          style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
         ),
       ],
     );

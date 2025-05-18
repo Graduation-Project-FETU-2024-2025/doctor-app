@@ -37,7 +37,7 @@ class SignInBlocConsumerButton extends StatelessWidget {
           current is SignInLoading,
       builder: (context, state) {
         return state is SignInLoading
-            ? LoadingWidget()
+            ? const LoadingWidget()
             : CustomButton(
                 onPressed: () {
                   if (signInCubit.formKey.currentState!.validate()) {

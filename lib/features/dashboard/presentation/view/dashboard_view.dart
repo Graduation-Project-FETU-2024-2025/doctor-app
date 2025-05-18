@@ -28,12 +28,28 @@ class DashboardView extends StatelessWidget {
             return Align(
               alignment: AlignmentDirectional.topEnd,
               child: CircleAvatar(
-                backgroundColor: Color(0xffD9E1F9),
+                backgroundColor: const Color(0xffD9E1F9),
                 child: IconButton(
                   onPressed: state is AppointmentSuccess
                       ? () {
-                          context.pushNamed(Routing.notification,
-                              argument: state.patientAppointment);
+                          context
+                              .pushNamed(Routing.notification,
+                                  argument: state.patientAppointment)
+                              .then(
+                            (value) {
+                              if (value) {
+                                if (context.mounted) {
+                                  if (value) {
+                                    context
+                                        .read<PendingAppointmentCubit>()
+                                        .getAppointmentsStateEmitter();
+                                  } else {
+                                    return;
+                                  }
+                                }
+                              }
+                            },
+                          );
                         }
                       : null,
                   icon: Badge.count(
@@ -56,13 +72,13 @@ class DashboardView extends StatelessWidget {
             S.of(context).clinic,
             style: AppStyles.semiBold18(context),
           ),
-          WorkflowChartSection(),
+          const WorkflowChartSection(),
           Gap(35.h),
           Text(
             S.of(context).booking,
             style: AppStyles.semiBold18(context),
           ),
-          BookingSection(),
+          const BookingSection(),
           Gap(60.h),
           const TotalIncomeSection(),
         ],

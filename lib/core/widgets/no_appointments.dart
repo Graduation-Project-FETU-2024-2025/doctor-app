@@ -13,11 +13,11 @@ class NoAppointments extends StatelessWidget {
     return Column(
       children: [
         Image.asset(AppImages.imgNoAppointments),
-        Gap(50.h),
+        Gap(10.h),
         Text(
           title,
-          style: AppStyles.semiBold20(context).copyWith(
-            color: AppColors.primaryColor,
+          style: AppStyles.medium15(context).copyWith(
+            color: AppColors.black.withOpacity(.4),
           ),
         ),
       ],

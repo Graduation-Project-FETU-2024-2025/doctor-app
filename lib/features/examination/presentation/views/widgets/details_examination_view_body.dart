@@ -24,7 +24,7 @@ class DetailsExaminationViewBody extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          DetailsExaminationHeader(),
+          const DetailsExaminationHeader(),
           Gap(50.h),
           Padding(
             padding: EdgeInsets.symmetric(
@@ -65,7 +65,7 @@ class DetailsExaminationViewBody extends StatelessWidget {
                           Theme.of(context).brightness == Brightness.light
                               ? AppColors.black.withOpacity(0.2)
                               : AppColors.white.withOpacity(0.2),
-                      labelStyle: TextStyle(color: AppColors.primaryColor),
+                      labelStyle: const TextStyle(color: AppColors.primaryColor),
                     ),
                   ),
                   Divider(
@@ -118,7 +118,7 @@ class DetailsExaminationViewBody extends StatelessWidget {
                 },
                 builder: (context, state) {
                   return state is ExaminationLoading
-                      ? CircularProgressIndicator(
+                      ? const CircularProgressIndicator(
                           color: AppColors.primaryColor,
                         )
                       : SizedBox(

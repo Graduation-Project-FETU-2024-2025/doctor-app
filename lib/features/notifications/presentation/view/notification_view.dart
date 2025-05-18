@@ -13,29 +13,37 @@ class NotificationView extends StatelessWidget {
   final List<PatientAppointmentModel> patientAppointment;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: AppColors.white,
-        title: Text(
-          S.of(context).appointmentRequest,
-          style: AppStyles.semiBold20(context)
-              .copyWith(color: AppColors.primaryColor),
+    return PopScope(
+      canPop: false,
+      onPopInvokedWithResult: (didPop, result) async {
+        if (didPop) return;
+
+        Navigator.of(context).pop(true);
+      },
+      child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: AppColors.white,
+          title: Text(
+            S.of(context).appointmentRequest,
+            style: AppStyles.semiBold20(context)
+                .copyWith(color: AppColors.primaryColor),
+          ),
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context, true);
+            },
+            icon: SvgPicture.asset(AppIcons.svgsBack),
+          ),
         ),
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pop(context, true);
-          },
-          icon: SvgPicture.asset(AppIcons.svgsBack),
-        ),
-      ),
-      body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 32.0.w),
-        child: CustomScrollView(
-          slivers: [
-            AppointmentRequestsListView(
-              patientAppointment: patientAppointment,
-            ),
-          ],
+        body: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 32.0.w),
+          child: CustomScrollView(
+            slivers: [
+              AppointmentRequestsListView(
+                patientAppointment: patientAppointment,
+              ),
+            ],
+          ),
         ),
       ),
     );

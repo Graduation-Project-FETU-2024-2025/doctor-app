@@ -37,8 +37,8 @@ class CustomSliverAppBar extends StatelessWidget {
                 imageUrl: img,
                 fit: BoxFit.cover,
                 placeholder: (context, url) =>
-                    Center(child: CircularProgressIndicator()),
-                errorWidget: (context, url, error) => Icon(Icons.error),
+                    const Center(child: CircularProgressIndicator()),
+                errorWidget: (context, url, error) => const Icon(Icons.error),
               ),
         stretchModes: const [
           StretchMode.blurBackground,
@@ -55,7 +55,7 @@ class CustomSliverAppBar extends StatelessWidget {
                   color: Theme.of(context).brightness == Brightness.dark
                       ? AppColors.black
                       : AppColors.white,
-                  borderRadius: BorderRadius.only(
+                  borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(32.0),
                     topRight: Radius.circular(32.0),
                   ),

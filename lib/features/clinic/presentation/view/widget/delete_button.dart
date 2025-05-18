@@ -15,7 +15,7 @@ class DeleteButton extends StatelessWidget {
           height: 36.h,
           child: ElevatedButton(
             style: ButtonStyle(
-              backgroundColor: WidgetStatePropertyAll(AppColors.red),
+              backgroundColor: const WidgetStatePropertyAll(AppColors.red),
               shape: WidgetStatePropertyAll(
                 RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10.0),
@@ -43,7 +43,7 @@ class DeleteButton extends StatelessWidget {
                         ),
                         actions: [
                           TextButton(
-                            style: ButtonStyle(
+                            style: const ButtonStyle(
                               backgroundColor:
                                   WidgetStatePropertyAll(AppColors.red),
                             ),
@@ -52,17 +52,17 @@ class DeleteButton extends StatelessWidget {
                               Navigator.pop(context);
                             },
                             child: Text(S.of(context).yes,
-                                style: TextStyle(color: Colors.white)),
+                                style: const TextStyle(color: Colors.white)),
                           ),
                           SizedBox(width: 20.w),
                           TextButton(
-                            style: ButtonStyle(
+                            style: const ButtonStyle(
                               backgroundColor:
                                   WidgetStatePropertyAll(AppColors.gray),
                             ),
                             onPressed: () => Navigator.pop(context),
                             child: Text(S.of(context).no,
-                                style: TextStyle(color: Colors.black)),
+                                style: const TextStyle(color: Colors.black)),
                           ),
                         ],
                       ),

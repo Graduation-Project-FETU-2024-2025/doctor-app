@@ -26,7 +26,7 @@ class _ResendOtpBlocListenerState extends State<ResendOtpBlocListener> {
   void ticTack() {
     _timer?.cancel();
     Timer.periodic(
-      Duration(seconds: 1),
+      const Duration(seconds: 1),
       (timer) {
         if (counter > 0) {
           setState(() {

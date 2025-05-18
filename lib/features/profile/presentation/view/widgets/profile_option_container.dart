@@ -35,7 +35,7 @@ class ProfileOptionContainer extends StatelessWidget {
             onTap: () {
               showDialog(
                 context: context,
-                builder: (context) => Dialog(
+                builder: (context) => const Dialog(
                   child: ChangeLanguageDialog(),
                 ),
               );
@@ -45,9 +45,9 @@ class ProfileOptionContainer extends StatelessWidget {
               S.of(context).language,
               style: Theme.of(context).textTheme.titleMedium,
             ),
-            trailing: Icon(Icons.arrow_forward_ios),
+            trailing: const Icon(Icons.arrow_forward_ios),
           ),
-          Divider(),
+          const Divider(),
           ListTile(
             leading: SvgPicture.asset(AppIcons.svgsTheme),
             title: Text(
@@ -65,7 +65,7 @@ class ProfileOptionContainer extends StatelessWidget {
               },
             ),
           ),
-          Divider(),
+          const Divider(),
           ListTile(
             onTap: () async {
               await SecureStorage.instance.deleteData(key: CacheKeys.token);

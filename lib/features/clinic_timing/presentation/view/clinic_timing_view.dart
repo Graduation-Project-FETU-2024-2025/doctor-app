@@ -25,17 +25,17 @@ class ClinicTimingView extends StatelessWidget {
       body: BlocBuilder<AppointmentDateCubit, AppointmentDateState>(
         builder: (context, state) {
           if(state is AppointmentDateLoading){
-            return CircularProgressIndicator();
+            return const CircularProgressIndicator();
           }
           else if(state is AppointmentDateSuccess){
             return ClinicTimingBody(appointmentDate: state.appointmentDates);
           }
           else if (state is AppointmentDateFailure){
             errorToast(message: state.message.message!);
-            return SizedBox.shrink();
+            return const SizedBox.shrink();
           }
           else {
-            return SizedBox.shrink();
+            return const SizedBox.shrink();
           }
         },
       ),

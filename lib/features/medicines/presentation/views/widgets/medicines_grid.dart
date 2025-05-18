@@ -18,7 +18,7 @@ class MedicineGrid extends StatelessWidget {
       builder: (context, state) {
         if (state is SystemMedicinesSuccess) {
           if (state.systemMedicines.isEmpty) {
-            return NoSearchResult();
+            return const NoSearchResult();
           }
           return GridView.builder(
             itemCount: state.systemMedicines.length,

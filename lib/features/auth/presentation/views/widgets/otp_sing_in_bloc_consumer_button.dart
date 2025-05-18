@@ -34,7 +34,7 @@ class OtpSignInBlocConsumerButton extends StatelessWidget {
           current is OtpCheckLoading,
       builder: (context, state) {
         return state is OtpCheckLoading
-            ? LoadingWidget()
+            ? const LoadingWidget()
             : CustomButton(
                 onPressed: () {
                   OtpCubit.get(context).submitOtp(email);

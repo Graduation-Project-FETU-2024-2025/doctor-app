@@ -24,7 +24,7 @@ class ClinicEditViewBody extends StatelessWidget {
             specializationName: clinicModel.specialization,
           ),
           GetLatAndLong(lat: clinicModel.lat.toString(),long: clinicModel.long.toString(),),
-          EditSaveConsumer(),
+          const EditSaveConsumer(),
         ],
       ),
     );

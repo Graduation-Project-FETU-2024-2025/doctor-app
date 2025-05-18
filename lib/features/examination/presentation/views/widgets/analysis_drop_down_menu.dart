@@ -56,7 +56,7 @@ class AnalysisDropDownMenu extends StatelessWidget {
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(20.r),
-              borderSide: BorderSide(
+              borderSide: const BorderSide(
                 width: 1,
                 color: AppColors.primaryColor,
               ),
@@ -71,18 +71,18 @@ class AnalysisDropDownMenu extends StatelessWidget {
             return Chip(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20.r),
-                side: BorderSide(
+                side: const BorderSide(
                   width: 1,
                   color: AppColors.primaryColor,
                 ),
               ),
               label: Text(analysis),
-              deleteIcon: Icon(Icons.close, size: 18),
+              deleteIcon: const Icon(Icons.close, size: 18),
               onDeleted: () => cubit.removeAnalysis(analysis),
               backgroundColor: Theme.of(context).brightness == Brightness.light
                   ? AppColors.white
                   : AppColors.black,
-              labelStyle: TextStyle(color: AppColors.primaryColor),
+              labelStyle: const TextStyle(color: AppColors.primaryColor),
             );
           }).toList(),
         ),

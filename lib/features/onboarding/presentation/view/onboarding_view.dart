@@ -32,8 +32,8 @@ class OnboardingView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Row(),
-            Spacer(),
+            const Row(),
+            const Spacer(),
             AspectRatio(
               aspectRatio: 333 / 249,
               child: Image.asset(AppImages.imagesOnboarding),
@@ -45,7 +45,7 @@ class OnboardingView extends StatelessWidget {
                 color: AppColors.primaryColor,
               ),
             ),
-            Spacer(),
+            const Spacer(),
             CustomButton(
               onPressed: () {
                 ChangeLanguageCubit.get(context).changeLanguage(language: 'ar');
