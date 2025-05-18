@@ -10,25 +10,25 @@ class AppointmentActionCubit extends Cubit<AppointmentActionState> {
     final AppointmentRepo _appointmentRepo;
 
   void acceptAppointment({required String appointmentId}) async {
-    emit(AcceptAppointmentLoading());
+    emit(AcceptAppointmentLoading(appointmentId: appointmentId));
     final result =
         await _appointmentRepo.acceptAppointment(appointmentId: appointmentId);
 
     result.fold(
-      (apiErrorModel) => AcceptAppointmentFailure(apiErrorModel: apiErrorModel),
-      (message) => emit(AcceptAppointmentSuccess(message: message)),
+      (apiErrorModel) => AcceptAppointmentFailure(apiErrorModel: apiErrorModel,appointmentId: appointmentId),
+      (message) => emit(AcceptAppointmentSuccess(message: message,appointmentId: appointmentId)),
     );
   }
 
   void declineAppointment({required String appointmentId}) async {
-    emit(DeclineAppointmentLoading());
+    emit(DeclineAppointmentLoading(appointmentId: appointmentId));
     final result =
         await _appointmentRepo.declineAppointment(appointmentId: appointmentId);
 
     result.fold(
       (apiErrorModel) =>
-          emit(DeclineAppointmentFailure(apiErrorModel: apiErrorModel)),
-      (message) => emit(DeclineAppointmentSuccess(message: message)),
+          emit(DeclineAppointmentFailure(apiErrorModel: apiErrorModel,appointmentId: appointmentId)),
+      (message) => emit(DeclineAppointmentSuccess(message: message,appointmentId: appointmentId)),
     );
   }
   
