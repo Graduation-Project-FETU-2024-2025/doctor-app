@@ -1,6 +1,5 @@
 import 'dart:io';
 
-
 import 'package:doctor_app/core/global_cubits/appointment_action_cubit/appointment_action_cubit.dart';
 import 'package:doctor_app/core/repositories/appointment_repo.dart';
 import 'package:doctor_app/core/routers/routing.dart';
@@ -96,8 +95,7 @@ class AppRouter {
       case Routing.clinicEdit:
         final clinicModel = args as ClinicModel;
         return _buildRoute(BlocProvider(
-          create: (context) =>
-              EditClinicCubit(getIt<EditClinicRepo>())..editClinic(),
+          create: (context) => EditClinicCubit(getIt<EditClinicRepo>()),
           child: ClinicEditView(clinicModel: clinicModel),
         ));
 
