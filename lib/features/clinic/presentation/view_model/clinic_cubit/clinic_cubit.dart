@@ -10,6 +10,8 @@ part 'clinic_state.dart';
 class ClinicCubit extends Cubit<ClinicState> {
   ClinicCubit({required this.clinicRepo}) : super(ClinicInitial());
   final ClinicRepo clinicRepo;
+  ClinicModel? _clinicData;
+  ClinicModel? get clinicData => _clinicData;
 
   void fetchClinicDetails() async {
     emit(ClinicLoading());

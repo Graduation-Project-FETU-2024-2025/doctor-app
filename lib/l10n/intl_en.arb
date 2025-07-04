@@ -94,6 +94,7 @@
     "appointmentDeclined":"Declined",
     "setAnotherTime" : "Set Another Time",
     "add": "Add",
-    "updateAppointmentSuccessfully" : "Update Appointment Successfully"
+    "updateAppointmentSuccessfully" : "Update Appointment Successfully",
+    "workingPeriods" : "Working Periods"
     
 }

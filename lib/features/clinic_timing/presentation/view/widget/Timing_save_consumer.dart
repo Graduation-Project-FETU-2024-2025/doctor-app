@@ -7,6 +7,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../generated/l10n.dart';
+import '../../../../clinic/presentation/view_model/clinic_cubit/clinic_cubit.dart';
 
 class TimingSaveConsumer extends StatelessWidget {
   const TimingSaveConsumer({super.key});
@@ -34,6 +35,7 @@ class TimingSaveConsumer extends StatelessWidget {
                   ? () {}
                   : () {
                       context.read<PostAppointmentCubit>().postAppointment();
+                      BlocProvider.of<ClinicCubit>(context).fetchClinicDetails();
                     },
             ),
           ),

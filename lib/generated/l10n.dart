@@ -989,6 +989,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Working Periods`
+  String get workingPeriods {
+    return Intl.message(
+      'Working Periods',
+      name: 'workingPeriods',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
