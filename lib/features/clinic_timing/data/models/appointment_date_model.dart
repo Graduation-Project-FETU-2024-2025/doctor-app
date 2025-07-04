@@ -11,6 +11,15 @@ class AppointmentDateModel {
     required this.workingPeriods,
   });
 
+factory AppointmentDateModel.fromJson(Map<String, dynamic> json) {
+    return AppointmentDateModel(
+      date: DateTime.parse(json['date']),
+      appointmentMaxNumber: json['appointmentMaxNumber'],
+      workingPeriods: (json['workingPeriods'] as List)
+          .map((e) => WorkingPeriodModel.fromJson(e))
+          .toList(),
+    );
+  }
   Map<String, dynamic> toJson() {
     return {
       'date': date.toIso8601String(), 

@@ -143,6 +143,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "wantToDeleteClinic":
             MessageLookupByLibrary.simpleMessage("هل تريد حذف هذه العياده؟"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("!مرحبا بك مجددا"),
+        "workingPeriods": MessageLookupByLibrary.simpleMessage("فترات العمل"),
         "yes": MessageLookupByLibrary.simpleMessage("نعم")
       };
 }

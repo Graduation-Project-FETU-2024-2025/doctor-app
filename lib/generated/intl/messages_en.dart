@@ -143,6 +143,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "wantToDeleteClinic": MessageLookupByLibrary.simpleMessage(
             "You Want To Delete This Clinic?"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome back!"),
+        "workingPeriods":
+            MessageLookupByLibrary.simpleMessage("Working Periods"),
         "yes": MessageLookupByLibrary.simpleMessage("Yes")
       };
 }

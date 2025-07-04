@@ -92,5 +92,6 @@
         "appointmentDeclined": "تم الالغاء",
         "setAnotherTime" : "أضف توقيت آخر",
         "add": "إضافه",
-        "updateAppointmentSuccessfully" : "تم تحديث المواعيد بنجاح"
+        "updateAppointmentSuccessfully" : "تم تحديث المواعيد بنجاح",
+        "workingPeriods" : "فترات العمل"
 }
