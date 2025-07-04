@@ -1,19 +1,25 @@
 class ReviewModel {
-  final String reviewerName;
-  final double rating;
+  final String id;
+  final String clinicId;
+  final double rate;
   final String comment;
+  final String userName;
 
   ReviewModel({
-    required this.reviewerName,
-    required this.rating,
+    required this.id,
+    required this.clinicId,
+    required this.rate,
     required this.comment,
+    required this.userName,
   });
 
   factory ReviewModel.fromJson(Map<String, dynamic> json) {
     return ReviewModel(
-      reviewerName: json['reviewerName'],
-      rating: (json['rating'] as num).toDouble(),
+      id: json['id'],
+      clinicId: json['clinicId'],
+      rate: (json['rate'] as num).toDouble(),
       comment: json['comment'],
+      userName: json['userName'],
     );
   }
 }

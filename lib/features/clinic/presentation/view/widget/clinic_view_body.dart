@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import '../../../../../core/utils/app_styles.dart';
 import '../../../../../generated/l10n.dart';
+import 'about_the_doctor.dart';
 import 'booking_price_card.dart';
 import 'row_btn.dart';
 
@@ -19,16 +20,35 @@ class ClinicViewBody extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          ClinicInfo(clinicAddress: clinicModel.address,clinicPhone: clinicModel.clinicPhones.isNotEmpty ? clinicModel.clinicPhones[0] : ''),
+          ClinicInfo(
+            startTime:
+                clinicModel.appointmentDates[0].workingPeriods[0].startTime,
+            endTime: clinicModel.appointmentDates[0].workingPeriods[0].endTime,
+            clinicAddress: clinicModel.address,
+            clinicPhone: clinicModel.clinicPhones.isNotEmpty
+                ? "${clinicModel.clinicPhones[0]} - ${clinicModel.clinicPhones[1]}"
+                : '',
+            reviews: clinicModel.reviews,
+          ),
           Gap(50.h),
+          AboutTheDoctor(
+            about: clinicModel.about,
+          ),
+          Gap(30.h),
           Text(
-              S.of(context).bookingPrice,
-              style: AppStyles.semiBold15(context),
-            ),
-          Gap(11.h),
-          BookingPriceCard(price: clinicModel.price.toString(),specialization: clinicModel.specialization,),
+            S.of(context).bookingPrice,
+            style: AppStyles.semiBold15(context),
+          ),
+          Gap(13.h),
+          BookingPriceCard(
+            reviews: clinicModel.reviews,
+            price: clinicModel.price.toString(),
+            specialization: clinicModel.specialization,
+          ),
           Gap(50.h),
-          RowBtn(clinicModel: clinicModel,)
+          RowBtn(
+            clinicModel: clinicModel,
+          )
         ],
       ),
     );

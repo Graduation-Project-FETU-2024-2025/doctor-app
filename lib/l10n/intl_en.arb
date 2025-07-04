@@ -59,8 +59,8 @@
     "longitude":"Longitude",
     "getAddressInfo":"Get Address Info",
     "clinicStatus": "Clinic Status",
-    "open": "Open",
-    "close": "Close",
+    "open": "Opens",
+    "close": "Closed",
     "clinicName":"Clinic Name",
     "enterClinicName": "Enter Clinic Name",
     "enterClinicStatus": "Enter Clinic Status",
@@ -95,6 +95,8 @@
     "setAnotherTime" : "Set Another Time",
     "add": "Add",
     "updateAppointmentSuccessfully" : "Update Appointment Successfully",
-    "workingPeriods" : "Working Periods"
+    "workingPeriods" : "Working Periods",
+    "aboutTheDoctor":"About The Doctor",
+    "enterSummaryAboutDoctor": "Enter Summary About Doctor"
     
 }

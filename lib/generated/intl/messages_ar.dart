@@ -24,6 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Dosage": MessageLookupByLibrary.simpleMessage("الجرعة"),
         "Examination": MessageLookupByLibrary.simpleMessage("الفحص"),
+        "aboutTheDoctor": MessageLookupByLibrary.simpleMessage("عن الدكتور"),
         "accept": MessageLookupByLibrary.simpleMessage("موافقة"),
         "add": MessageLookupByLibrary.simpleMessage("إضافه"),
         "addDiagnosis": MessageLookupByLibrary.simpleMessage("اضافة التشخيص"),
@@ -69,6 +70,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterPrice": MessageLookupByLibrary.simpleMessage("ادخل السعر"),
         "enterSpecializationName":
             MessageLookupByLibrary.simpleMessage("ادخل اسم التخصص"),
+        "enterSummaryAboutDoctor":
+            MessageLookupByLibrary.simpleMessage("ادخل نبذه عن الدكتور"),
         "fieldRequired":
             MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب"),
         "gallery": MessageLookupByLibrary.simpleMessage("المعرض"),

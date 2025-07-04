@@ -93,5 +93,7 @@
         "setAnotherTime" : "أضف توقيت آخر",
         "add": "إضافه",
         "updateAppointmentSuccessfully" : "تم تحديث المواعيد بنجاح",
-        "workingPeriods" : "فترات العمل"
+        "workingPeriods" : "فترات العمل",
+        "aboutTheDoctor" : "عن الدكتور",
+        "enterSummaryAboutDoctor" : "ادخل نبذه عن الدكتور"
 }

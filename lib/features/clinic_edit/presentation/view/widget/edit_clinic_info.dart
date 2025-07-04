@@ -6,7 +6,6 @@ import 'package:gap/gap.dart';
 import '../../../../../core/widgets/custom_edit_text_form_field.dart';
 import '../../../../../generated/l10n.dart';
 import '../../view_model/edit_clinic/edit_clinic_cubit.dart';
-import 'clinic_status.dart';
 
 class EditClinicInfo extends StatelessWidget {
   const EditClinicInfo(
@@ -14,12 +13,10 @@ class EditClinicInfo extends StatelessWidget {
       required this.clinicName,
       required this.specializationName,
       required this.price,
-      // required this.status
       });
   final String clinicName;
   final String specializationName;
   final String price;
-  // final String status;
 
   @override
   Widget build(BuildContext context) {
@@ -39,13 +36,6 @@ class EditClinicInfo extends StatelessWidget {
               }
               return null;
             },
-          ),
-          Gap(18.h),
-          Text(S.of(context).clinicStatus,
-              style: AppStyles.semiBold14(context)),
-          Gap(18.h),
-          ClinicStatus(
-            controller: context.read<EditClinicCubit>().clinicStatusController,
           ),
           Gap(31.h),
           Text(S.of(context).specializationName,
@@ -77,6 +67,22 @@ class EditClinicInfo extends StatelessWidget {
               }
               return null;
             },
+          ),
+          Gap(18.h),
+          Text(S.of(context).aboutTheDoctor,
+              style: AppStyles.semiBold14(context)),
+          Gap(18.h),
+          CustomEditTextFormField(
+            controller: context.read<EditClinicCubit>().aboutDoctorController,
+            hintTxt: S.of(context).aboutTheDoctor,
+            // initialVal:, // about Doctor
+            validator: (value) {
+              if (value == null || value.trim().isEmpty) {
+                return S.of(context).enterSummaryAboutDoctor;
+              }
+              return null;
+            },
+            maxLines: 6,
           ),
           Gap(31.h),
         ],
