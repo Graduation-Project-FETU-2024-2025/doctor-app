@@ -89,5 +89,7 @@
         "successUpdatedClinic": "تم تعديل العيادة بنجاح",
         "pleaseCompleteAllFields": "يرجى ملئ جميع الحقول",
         "appointmentAccepted": "تم الحجز",
-        "appointmentDeclined": "تم الالغاء"
+        "appointmentDeclined": "تم الالغاء",
+        "setAnotherTime" : "أضف توقيت آخر",
+        "add": "إضافه"
 }

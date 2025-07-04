@@ -959,6 +959,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Set Another Time`
+  String get setAnotherTime {
+    return Intl.message(
+      'Set Another Time',
+      name: 'setAnotherTime',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add`
+  String get add {
+    return Intl.message(
+      'Add',
+      name: 'add',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

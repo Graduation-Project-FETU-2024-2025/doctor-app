@@ -4,8 +4,8 @@ import 'package:doctor_app/core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:date_picker_timeline/date_picker_timeline.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../../core/database/cache/cache_keys.dart';
-import '../../../../../core/utils/app_colors.dart';
+import '../database/cache/cache_keys.dart';
+import '../utils/app_colors.dart';
 
 class CustomDateTimeline extends StatefulWidget {
   const CustomDateTimeline({super.key});

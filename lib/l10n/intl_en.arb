@@ -91,5 +91,8 @@
     "successUpdatedClinic":"Clinic Updated Successfully",
     "pleaseCompleteAllFields":"Please Complete All Fields",
     "appointmentAccepted":"Accepted",
-    "appointmentDeclined":"Declined"
+    "appointmentDeclined":"Declined",
+    "setAnotherTime" : "Set Another Time",
+    "add": "Add"
+    
 }
