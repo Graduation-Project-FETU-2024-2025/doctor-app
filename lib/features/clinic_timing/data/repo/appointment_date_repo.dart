@@ -3,5 +3,5 @@ import 'package:doctor_app/features/clinic_timing/data/models/appointment_date_m
 import '../../../../core/database/api/api_error_model.dart';
 
 abstract class AppointmentDateRepo {
-  Future<Either<ApiErrorModel,List<AppointmentDateModel>>> fetchAppointments();
+  Future<Either<ApiErrorModel, Unit>> postAppointment(AppointmentDateModel model);
 }

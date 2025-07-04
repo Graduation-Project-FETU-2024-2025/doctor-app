@@ -20,8 +20,8 @@ class EndPoints {
   static String getClinic = "api/clinic/";
   static String addPrescription = 'api/Appointments/add-prescription';
 
-  static String getAllAppointment =
-      "api/appointments/get-all-appointment-dates";
+  static String addAppointment =
+      "api/appointments/add-dates";
   static String getPatientAppointments = "api/Appointments";
 
   static String updateClinic = "api/clinic";

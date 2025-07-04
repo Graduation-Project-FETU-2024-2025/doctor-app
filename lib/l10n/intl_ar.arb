@@ -91,5 +91,6 @@
         "appointmentAccepted": "تم الحجز",
         "appointmentDeclined": "تم الالغاء",
         "setAnotherTime" : "أضف توقيت آخر",
-        "add": "إضافه"
+        "add": "إضافه",
+        "updateAppointmentSuccessfully" : "تم تحديث المواعيد بنجاح"
 }

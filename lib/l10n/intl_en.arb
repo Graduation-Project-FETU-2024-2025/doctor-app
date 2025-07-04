@@ -93,6 +93,7 @@
     "appointmentAccepted":"Accepted",
     "appointmentDeclined":"Declined",
     "setAnotherTime" : "Set Another Time",
-    "add": "Add"
+    "add": "Add",
+    "updateAppointmentSuccessfully" : "Update Appointment Successfully"
     
 }

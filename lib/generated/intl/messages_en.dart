@@ -138,6 +138,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "today": MessageLookupByLibrary.simpleMessage("Today"),
         "totalIncome": MessageLookupByLibrary.simpleMessage("Total Income"),
         "upcoming": MessageLookupByLibrary.simpleMessage("Upcoming"),
+        "updateAppointmentSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "Update Appointment Successfully"),
         "wantToDeleteClinic": MessageLookupByLibrary.simpleMessage(
             "You Want To Delete This Clinic?"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome back!"),

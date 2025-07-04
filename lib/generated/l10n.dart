@@ -979,6 +979,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Update Appointment Successfully`
+  String get updateAppointmentSuccessfully {
+    return Intl.message(
+      'Update Appointment Successfully',
+      name: 'updateAppointmentSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

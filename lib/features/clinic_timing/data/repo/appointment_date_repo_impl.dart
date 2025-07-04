@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:dartz/dartz.dart';
 import 'package:doctor_app/core/database/api/api_consumer.dart';
 import 'package:doctor_app/core/database/api/api_error_model.dart';
@@ -14,18 +12,18 @@ class AppointmentDateRepoImpl implements AppointmentDateRepo {
   AppointmentDateRepoImpl({required this.apiConsumer});
 
   @override
-  Future<Either<ApiErrorModel, List<AppointmentDateModel>>>
-      fetchAppointments() async {
+  Future<Either<ApiErrorModel, Unit>> postAppointment(
+      AppointmentDateModel model) async {
     try {
-      final response = await apiConsumer.get(EndPoints.getAllAppointment);
-      if (response.statusCode == 200) {
-        final List<dynamic> data = response.data['data'];
-        log(data.toString());
-        final List<AppointmentDateModel> appointmentDates =
-            data.map((e) => AppointmentDateModel.fromJson(e)).toList();
-        return Right(appointmentDates);
+      final response = await apiConsumer.post(
+        EndPoints.addAppointment,
+        data: model.toJson(),
+      );
+
+      if (response.statusCode == 200 || response.statusCode == 201) {
+        return const Right(unit);
       } else {
-        return Left(ApiErrorHandler.handleError('Error Loading Appointment'));
+        return Left(ApiErrorHandler.handleError('Failed to post appointment'));
       }
     } on Exception catch (e) {
       return Left(ApiErrorHandler.handleError(e));
