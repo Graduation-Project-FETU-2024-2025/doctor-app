@@ -16,7 +16,6 @@ class DatePickerField extends StatefulWidget {
 }
 
 class _DatePickerFieldState extends State<DatePickerField> {
-  // final TextEditingController _controller = TextEditingController();
 
   Future<void> _selectDate(BuildContext context) async {
     final DateTime? pickedDate = await showDatePicker(
@@ -27,9 +26,7 @@ class _DatePickerFieldState extends State<DatePickerField> {
     );
 
     if (pickedDate != null) {
-      // String formatted = DateFormat('MMMM d, y').format(pickedDate);
       setState(() {
-        // _controller.text = formatted;
       context.read<PostAppointmentCubit>().setDate(pickedDate);
       });
     }

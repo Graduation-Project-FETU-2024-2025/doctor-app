@@ -123,6 +123,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "price": MessageLookupByLibrary.simpleMessage("Price"),
         "reVisits": MessageLookupByLibrary.simpleMessage("Re-Visits"),
         "resend": MessageLookupByLibrary.simpleMessage("Resend"),
+        "reviews": MessageLookupByLibrary.simpleMessage("Reviews"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
         "searchButtonTitle": MessageLookupByLibrary.simpleMessage("search"),
         "searchHint":

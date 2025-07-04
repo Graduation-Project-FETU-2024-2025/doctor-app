@@ -19,8 +19,8 @@ class _TimeSelectorState extends State<TimeSelector> {
   final List<String> timeSlots = [
     '08:00 AM',
     '09:00 AM',
-    '10:00 AM',
-    '11:00 AM',
+    '10:00 PM',
+    '11:00 PM',
   ];
 
   String? selectedTime;

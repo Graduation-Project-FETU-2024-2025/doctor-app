@@ -14,12 +14,9 @@ class ClinicView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return 
-    RefreshIndicator(
-        onRefresh: () async {
-          context.read<ClinicCubit>().fetchClinicDetails();
-        },
-        child: Scaffold(
+    return RefreshIndicator(onRefresh: () async {
+      context.read<ClinicCubit>().fetchClinicDetails();
+    }, child: Scaffold(
         body: BlocBuilder<ClinicCubit, ClinicState>(builder: (context, state) {
       if (state is ClinicLoading) {
         return const ClinicShimmer();

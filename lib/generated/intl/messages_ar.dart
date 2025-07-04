@@ -125,6 +125,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "price": MessageLookupByLibrary.simpleMessage("السعر"),
         "reVisits": MessageLookupByLibrary.simpleMessage("إعادة كشف"),
         "resend": MessageLookupByLibrary.simpleMessage("إعادة إرسال"),
+        "reviews": MessageLookupByLibrary.simpleMessage("زوار"),
         "save": MessageLookupByLibrary.simpleMessage("حفظ"),
         "searchButtonTitle": MessageLookupByLibrary.simpleMessage("ابحث"),
         "searchHint": MessageLookupByLibrary.simpleMessage("ابحث عن دواء"),

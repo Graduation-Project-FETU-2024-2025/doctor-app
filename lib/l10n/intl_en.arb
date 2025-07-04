@@ -97,6 +97,7 @@
     "updateAppointmentSuccessfully" : "Update Appointment Successfully",
     "workingPeriods" : "Working Periods",
     "aboutTheDoctor":"About The Doctor",
-    "enterSummaryAboutDoctor": "Enter Summary About Doctor"
+    "enterSummaryAboutDoctor": "Enter Summary About Doctor",
+    "reviews" : "Reviews"
     
 }

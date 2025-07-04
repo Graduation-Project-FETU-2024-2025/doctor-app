@@ -14,8 +14,7 @@ class CustomTimePick extends StatefulWidget {
   const CustomTimePick({
     super.key,
   });
-  // final String startTime;
-  // final String endTime;
+
   @override
   State<CustomTimePick> createState() => _CustomTimePickState();
 }
@@ -75,10 +74,7 @@ class _CustomTimePickState extends State<CustomTimePick> {
                       controller: context
                           .read<PostAppointmentCubit>()
                           .startTimeController,
-                      hintTxt: context
-                          .read<PostAppointmentCubit>()
-                          .startTimeController
-                          .text,
+                      hintTxt: startTime,
                       initialVal: context
                           .read<PostAppointmentCubit>()
                           .startTimeController
@@ -113,10 +109,7 @@ class _CustomTimePickState extends State<CustomTimePick> {
                       controller: context
                           .read<PostAppointmentCubit>()
                           .endTimeController,
-                      hintTxt: context
-                          .read<PostAppointmentCubit>()
-                          .endTimeController
-                          .text,
+                      hintTxt: endTime,
                       initialVal: context
                           .read<PostAppointmentCubit>()
                           .endTimeController

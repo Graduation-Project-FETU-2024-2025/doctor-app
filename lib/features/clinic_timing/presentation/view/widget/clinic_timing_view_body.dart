@@ -22,11 +22,7 @@ class ClinicTimingViewBody extends StatelessWidget {
       padding: const EdgeInsets.all(31.0),
       child: ListView(
         children: [
-          if (clinicData != null)
-            AppointmentContainer(
-              clinicData: clinicData,
-            ),
-          Gap(30.h),
+          
           const DateSelector(),
           Gap(30.h),
           const DatePickerField(),
@@ -42,6 +38,12 @@ class ClinicTimingViewBody extends StatelessWidget {
           const TimeSelector(isStartTime: false),
           Gap(30.h),
           const TimingSaveConsumer(),
+          Gap(67.h),
+          if (clinicData != null)
+            AppointmentContainer(
+              clinicData: clinicData,
+            ),
+            Gap(30.h),
         ],
       ),
     );

@@ -95,5 +95,6 @@
         "updateAppointmentSuccessfully" : "تم تحديث المواعيد بنجاح",
         "workingPeriods" : "فترات العمل",
         "aboutTheDoctor" : "عن الدكتور",
-        "enterSummaryAboutDoctor" : "ادخل نبذه عن الدكتور"
+        "enterSummaryAboutDoctor" : "ادخل نبذه عن الدكتور",
+        "reviews" : "زوار"
 }
