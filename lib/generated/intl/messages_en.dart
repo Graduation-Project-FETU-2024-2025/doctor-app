@@ -25,6 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Dosage": MessageLookupByLibrary.simpleMessage("Dosage"),
         "Examination": MessageLookupByLibrary.simpleMessage("Examination"),
         "accept": MessageLookupByLibrary.simpleMessage("Accept"),
+        "add": MessageLookupByLibrary.simpleMessage("Add"),
         "addDiagnosis": MessageLookupByLibrary.simpleMessage("Add Diagnosis"),
         "addanalysis": MessageLookupByLibrary.simpleMessage("Add Analysis"),
         "appointmentAccepted": MessageLookupByLibrary.simpleMessage("Accepted"),
@@ -124,6 +125,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Search for medicine"),
         "selectMedicines":
             MessageLookupByLibrary.simpleMessage("Select Medicines"),
+        "setAnotherTime":
+            MessageLookupByLibrary.simpleMessage("Set Another Time"),
         "sorry": MessageLookupByLibrary.simpleMessage("Sorry!"),
         "specializationName":
             MessageLookupByLibrary.simpleMessage("Specialization Name"),

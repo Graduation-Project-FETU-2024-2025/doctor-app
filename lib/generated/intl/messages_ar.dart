@@ -25,6 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Dosage": MessageLookupByLibrary.simpleMessage("الجرعة"),
         "Examination": MessageLookupByLibrary.simpleMessage("الفحص"),
         "accept": MessageLookupByLibrary.simpleMessage("موافقة"),
+        "add": MessageLookupByLibrary.simpleMessage("إضافه"),
         "addDiagnosis": MessageLookupByLibrary.simpleMessage("اضافة التشخيص"),
         "addanalysis": MessageLookupByLibrary.simpleMessage("إضافة تحليل"),
         "appointmentAccepted": MessageLookupByLibrary.simpleMessage("تم الحجز"),
@@ -125,6 +126,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "searchButtonTitle": MessageLookupByLibrary.simpleMessage("ابحث"),
         "searchHint": MessageLookupByLibrary.simpleMessage("ابحث عن دواء"),
         "selectMedicines": MessageLookupByLibrary.simpleMessage("اختر الأدوية"),
+        "setAnotherTime": MessageLookupByLibrary.simpleMessage("أضف توقيت آخر"),
         "sorry": MessageLookupByLibrary.simpleMessage("للأسف!"),
         "specializationName":
             MessageLookupByLibrary.simpleMessage("اسم التخصص"),
