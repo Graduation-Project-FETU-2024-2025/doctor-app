@@ -13,4 +13,11 @@ class WorkingPeriodModel {
       endTime: json['endTime'],
     );
   }
+
+Map<String, dynamic> toJson() {
+    return {
+      'startTime': startTime,
+      'endTime': endTime,
+    };
+  }
 }

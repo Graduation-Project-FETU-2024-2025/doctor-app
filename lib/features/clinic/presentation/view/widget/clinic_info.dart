@@ -3,16 +3,34 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
-import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_icons.dart';
+import '../../../../../generated/l10n.dart';
+import '../../../data/models/review_model.dart';
+import 'opening_status_row.dart';
 
 class ClinicInfo extends StatelessWidget {
-  const ClinicInfo({super.key, required this.clinicAddress, required this.clinicPhone});
+  const ClinicInfo(
+      {super.key,
+      required this.clinicAddress,
+      required this.clinicPhone,
+      required this.reviews,
+      required this.startTime,
+      required this.endTime});
   final String clinicAddress;
   final String clinicPhone;
+  final List<ReviewModel> reviews;
+  final String startTime;
+  final String endTime;
 
   @override
   Widget build(BuildContext context) {
+    double calculateAverageRating(List<ReviewModel> reviews) {
+      if (reviews.isEmpty) return 0.0;
+      final total = reviews.fold(0.0, (sum, review) => sum + review.rate);
+      return total / reviews.length;
+    }
+
+    final avgRating = calculateAverageRating(reviews);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -72,7 +90,7 @@ class ClinicInfo extends StatelessWidget {
             ),
             Gap(5.h),
             Text(
-              "4.5 (120 Reviews)",
+              "$avgRating (${reviews.length} ${S.of(context).reviews})",
               style: AppStyles.semiBold15(context).copyWith(
                   color: Theme.of(context).brightness == Brightness.dark
                       ? Colors.white60
@@ -82,31 +100,9 @@ class ClinicInfo extends StatelessWidget {
           ],
         ),
         Gap(10.h),
-        Row(
-          children: [
-            Text(
-              "Open ",
-              style: AppStyles.semiBold15(context)
-                  .copyWith(color: AppColors.green),
-              overflow: TextOverflow.ellipsis,
-            ),
-            Text(
-              ".Closes ",
-              style: AppStyles.semiBold15(context).copyWith(
-                  color: Theme.of(context).brightness == Brightness.dark
-                      ? Colors.white60
-                      : Colors.black38),
-              overflow: TextOverflow.ellipsis,
-            ),
-            Text(
-              "17:00",
-              style: AppStyles.semiBold15(context).copyWith(
-                  color: Theme.of(context).brightness == Brightness.dark
-                      ? Colors.white60
-                      : Colors.black38),
-              overflow: TextOverflow.ellipsis,
-            ),
-          ],
+        OpeningStatusRow(
+          startTimeStr: startTime,
+          endTimeStr: endTime,
         )
       ],
     );

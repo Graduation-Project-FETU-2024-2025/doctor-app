@@ -24,6 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Dosage": MessageLookupByLibrary.simpleMessage("الجرعة"),
         "Examination": MessageLookupByLibrary.simpleMessage("الفحص"),
+        "aboutTheDoctor": MessageLookupByLibrary.simpleMessage("عن الدكتور"),
         "accept": MessageLookupByLibrary.simpleMessage("موافقة"),
         "add": MessageLookupByLibrary.simpleMessage("إضافه"),
         "addDiagnosis": MessageLookupByLibrary.simpleMessage("اضافة التشخيص"),
@@ -69,6 +70,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterPrice": MessageLookupByLibrary.simpleMessage("ادخل السعر"),
         "enterSpecializationName":
             MessageLookupByLibrary.simpleMessage("ادخل اسم التخصص"),
+        "enterSummaryAboutDoctor":
+            MessageLookupByLibrary.simpleMessage("ادخل نبذه عن الدكتور"),
         "fieldRequired":
             MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب"),
         "gallery": MessageLookupByLibrary.simpleMessage("المعرض"),
@@ -122,6 +125,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "price": MessageLookupByLibrary.simpleMessage("السعر"),
         "reVisits": MessageLookupByLibrary.simpleMessage("إعادة كشف"),
         "resend": MessageLookupByLibrary.simpleMessage("إعادة إرسال"),
+        "reviews": MessageLookupByLibrary.simpleMessage("زوار"),
         "save": MessageLookupByLibrary.simpleMessage("حفظ"),
         "searchButtonTitle": MessageLookupByLibrary.simpleMessage("ابحث"),
         "searchHint": MessageLookupByLibrary.simpleMessage("ابحث عن دواء"),
@@ -138,9 +142,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "today": MessageLookupByLibrary.simpleMessage("اليوم"),
         "totalIncome": MessageLookupByLibrary.simpleMessage("قيمة الدخل"),
         "upcoming": MessageLookupByLibrary.simpleMessage("القادمة"),
+        "updateAppointmentSuccessfully":
+            MessageLookupByLibrary.simpleMessage("تم تحديث المواعيد بنجاح"),
         "wantToDeleteClinic":
             MessageLookupByLibrary.simpleMessage("هل تريد حذف هذه العياده؟"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("!مرحبا بك مجددا"),
+        "workingPeriods": MessageLookupByLibrary.simpleMessage("فترات العمل"),
         "yes": MessageLookupByLibrary.simpleMessage("نعم")
       };
 }

@@ -13,7 +13,6 @@ part 'edit_clinic_state.dart';
 class EditClinicCubit extends Cubit<EditClinicState> {
   EditClinicCubit(this.clinicEditRepo) : super(EditClinicInitial());
   final TextEditingController clinicNameController = TextEditingController();
-  final TextEditingController clinicStatusController = TextEditingController();
   final TextEditingController specializationNameController =
       TextEditingController();
   final TextEditingController priceController = TextEditingController();
@@ -46,7 +45,6 @@ class EditClinicCubit extends Cubit<EditClinicState> {
   @override
   Future<void> close() {
     clinicNameController;
-    clinicStatusController;
     specializationNameController.dispose();
     priceController.dispose();
     aboutDoctorController.dispose();

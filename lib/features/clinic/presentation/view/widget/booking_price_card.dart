@@ -6,14 +6,22 @@ import 'package:flutter_svg/svg.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_icons.dart';
 import '../../../../../core/utils/app_styles.dart';
+import '../../../data/models/review_model.dart';
 
 class BookingPriceCard extends StatelessWidget {
-  const BookingPriceCard({super.key, required this.specialization, required this.price});
+  const BookingPriceCard({super.key, required this.specialization, required this.price, required this.reviews});
   final String specialization;
   final String price;
+  final List<ReviewModel> reviews;
 
   @override
   Widget build(BuildContext context) {
+       double calculateAverageRating(List<ReviewModel> reviews) {
+  if (reviews.isEmpty) return 0.0;
+  final total = reviews.fold(0.0, (sum, review) => sum + review.rate);
+  return total / reviews.length;
+}
+final avgRating = calculateAverageRating(reviews);
     return Card(
       color: Theme.of(context).brightness == Brightness.dark
           ? AppColors.darkGray
@@ -44,7 +52,7 @@ class BookingPriceCard extends StatelessWidget {
                 Row(
                   children: [
                     Text(
-                      '4.5 ',
+                      '$avgRating ',
                       style: AppStyles.semiBold12(context),
                       overflow: TextOverflow.ellipsis,
                     ),
@@ -57,7 +65,7 @@ class BookingPriceCard extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      ' (120 Reviews)',
+                      ' (${reviews.length} Reviews)',
                       style: AppStyles.semiBold12(context),
                       overflow: TextOverflow.ellipsis,
                     ),

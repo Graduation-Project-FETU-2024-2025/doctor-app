@@ -4,14 +4,17 @@ import 'package:gap/gap.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_styles.dart';
 import '../../../../../generated/l10n.dart';
+import '../../../../clinic/data/models/clinic_model.dart';
 import 'Timing_save_consumer.dart';
+import 'appointment_container.dart';
 import 'date_picker_field.dart';
 import 'date_selector.dart';
 import 'set_user_time.dart';
 import 'time_selector.dart';
 
 class ClinicTimingViewBody extends StatelessWidget {
-  const ClinicTimingViewBody({super.key});
+  const ClinicTimingViewBody({super.key, this.clinicData});
+  final ClinicModel? clinicData;
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +22,7 @@ class ClinicTimingViewBody extends StatelessWidget {
       padding: const EdgeInsets.all(31.0),
       child: ListView(
         children: [
+          
           const DateSelector(),
           Gap(30.h),
           const DatePickerField(),
@@ -34,6 +38,12 @@ class ClinicTimingViewBody extends StatelessWidget {
           const TimeSelector(isStartTime: false),
           Gap(30.h),
           const TimingSaveConsumer(),
+          Gap(67.h),
+          if (clinicData != null)
+            AppointmentContainer(
+              clinicData: clinicData,
+            ),
+            Gap(30.h),
         ],
       ),
     );

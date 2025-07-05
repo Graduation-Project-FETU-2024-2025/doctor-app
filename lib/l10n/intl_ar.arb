@@ -91,5 +91,10 @@
         "appointmentAccepted": "تم الحجز",
         "appointmentDeclined": "تم الالغاء",
         "setAnotherTime" : "أضف توقيت آخر",
-        "add": "إضافه"
+        "add": "إضافه",
+        "updateAppointmentSuccessfully" : "تم تحديث المواعيد بنجاح",
+        "workingPeriods" : "فترات العمل",
+        "aboutTheDoctor" : "عن الدكتور",
+        "enterSummaryAboutDoctor" : "ادخل نبذه عن الدكتور",
+        "reviews" : "زوار"
 }

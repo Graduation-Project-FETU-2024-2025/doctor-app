@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:intl/intl.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_styles.dart';
+import '../../view_model/post_appointment/post_appointment_cubit.dart';
 
 class TimeSelector extends StatefulWidget {
   final bool isStartTime;
@@ -16,8 +19,8 @@ class _TimeSelectorState extends State<TimeSelector> {
   final List<String> timeSlots = [
     '08:00 AM',
     '09:00 AM',
-    '10:00 AM',
-    '11:00 AM',
+    '10:00 PM',
+    '11:00 PM',
   ];
 
   String? selectedTime;
@@ -25,7 +28,17 @@ class _TimeSelectorState extends State<TimeSelector> {
   void selectTime(String time) {
     setState(() {
       selectedTime = time;
+      final parsed = TimeOfDay.fromDateTime(
+      DateFormat.jm().parse(time), 
+    );
+
+    if (widget.isStartTime) {
+      context.read<PostAppointmentCubit>().setStartTime(context , parsed);
+    } else {
+      context.read<PostAppointmentCubit>().setEndTime(context,parsed);
+    }
     });
+    
   }
 
   @override

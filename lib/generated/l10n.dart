@@ -630,20 +630,20 @@ class S {
     );
   }
 
-  /// `Open`
+  /// `Opens`
   String get open {
     return Intl.message(
-      'Open',
+      'Opens',
       name: 'open',
       desc: '',
       args: [],
     );
   }
 
-  /// `Close`
+  /// `Closed`
   String get close {
     return Intl.message(
-      'Close',
+      'Closed',
       name: 'close',
       desc: '',
       args: [],
@@ -975,6 +975,56 @@ class S {
     return Intl.message(
       'Add',
       name: 'add',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Update Appointment Successfully`
+  String get updateAppointmentSuccessfully {
+    return Intl.message(
+      'Update Appointment Successfully',
+      name: 'updateAppointmentSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Working Periods`
+  String get workingPeriods {
+    return Intl.message(
+      'Working Periods',
+      name: 'workingPeriods',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `About The Doctor`
+  String get aboutTheDoctor {
+    return Intl.message(
+      'About The Doctor',
+      name: 'aboutTheDoctor',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Summary About Doctor`
+  String get enterSummaryAboutDoctor {
+    return Intl.message(
+      'Enter Summary About Doctor',
+      name: 'enterSummaryAboutDoctor',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reviews`
+  String get reviews {
+    return Intl.message(
+      'Reviews',
+      name: 'reviews',
       desc: '',
       args: [],
     );

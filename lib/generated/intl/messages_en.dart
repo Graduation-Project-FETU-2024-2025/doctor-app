@@ -24,6 +24,8 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Dosage": MessageLookupByLibrary.simpleMessage("Dosage"),
         "Examination": MessageLookupByLibrary.simpleMessage("Examination"),
+        "aboutTheDoctor":
+            MessageLookupByLibrary.simpleMessage("About The Doctor"),
         "accept": MessageLookupByLibrary.simpleMessage("Accept"),
         "add": MessageLookupByLibrary.simpleMessage("Add"),
         "addDiagnosis": MessageLookupByLibrary.simpleMessage("Add Diagnosis"),
@@ -41,7 +43,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "clinicName": MessageLookupByLibrary.simpleMessage("Clinic Name"),
         "clinicStatus": MessageLookupByLibrary.simpleMessage("Clinic Status"),
         "clinicTiming": MessageLookupByLibrary.simpleMessage("Clinic Timings"),
-        "close": MessageLookupByLibrary.simpleMessage("Close"),
+        "close": MessageLookupByLibrary.simpleMessage("Closed"),
         "completed": MessageLookupByLibrary.simpleMessage("Completed"),
         "continueOtp": MessageLookupByLibrary.simpleMessage("Continue"),
         "darkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
@@ -66,6 +68,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterPrice": MessageLookupByLibrary.simpleMessage("Enter Price"),
         "enterSpecializationName":
             MessageLookupByLibrary.simpleMessage("Enter Specialization Name"),
+        "enterSummaryAboutDoctor":
+            MessageLookupByLibrary.simpleMessage("Enter Summary About Doctor"),
         "fieldRequired": MessageLookupByLibrary.simpleMessage("field Required"),
         "gallery": MessageLookupByLibrary.simpleMessage("Gallery"),
         "getAddressInfo":
@@ -106,7 +110,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("No search result"),
         "onboarding": MessageLookupByLibrary.simpleMessage(
             "All Services for your health"),
-        "open": MessageLookupByLibrary.simpleMessage("Open"),
+        "open": MessageLookupByLibrary.simpleMessage("Opens"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "past": MessageLookupByLibrary.simpleMessage("Past"),
         "patientComment": MessageLookupByLibrary.simpleMessage("Comment"),
@@ -119,6 +123,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "price": MessageLookupByLibrary.simpleMessage("Price"),
         "reVisits": MessageLookupByLibrary.simpleMessage("Re-Visits"),
         "resend": MessageLookupByLibrary.simpleMessage("Resend"),
+        "reviews": MessageLookupByLibrary.simpleMessage("Reviews"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
         "searchButtonTitle": MessageLookupByLibrary.simpleMessage("search"),
         "searchHint":
@@ -138,9 +143,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "today": MessageLookupByLibrary.simpleMessage("Today"),
         "totalIncome": MessageLookupByLibrary.simpleMessage("Total Income"),
         "upcoming": MessageLookupByLibrary.simpleMessage("Upcoming"),
+        "updateAppointmentSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "Update Appointment Successfully"),
         "wantToDeleteClinic": MessageLookupByLibrary.simpleMessage(
             "You Want To Delete This Clinic?"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome back!"),
+        "workingPeriods":
+            MessageLookupByLibrary.simpleMessage("Working Periods"),
         "yes": MessageLookupByLibrary.simpleMessage("Yes")
       };
 }

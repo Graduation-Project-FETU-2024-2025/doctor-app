@@ -1,18 +1,20 @@
-import 'dart:developer';
 import 'package:doctor_app/core/utils/app_colors.dart';
 import 'package:doctor_app/core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import '../../../../../core/utils/app_icons.dart';
 import '../../../../../core/widgets/custom_edit_text_form_field.dart';
 import '../../../../../generated/l10n.dart';
+import '../../view_model/post_appointment/post_appointment_cubit.dart';
 
 class CustomTimePick extends StatefulWidget {
-  const CustomTimePick({super.key, required this.startTime, required this.endTime});
-  final String startTime;
-  final String endTime;
+  const CustomTimePick({
+    super.key,
+  });
+
   @override
   State<CustomTimePick> createState() => _CustomTimePickState();
 }
@@ -23,7 +25,7 @@ class _CustomTimePickState extends State<CustomTimePick> {
   @override
   Widget build(BuildContext context) {
     getTimeFromUser({required bool isStartTime}) async {
-      TimeOfDay? pickedDate = await showTimePicker(
+      TimeOfDay? pickedTime = await showTimePicker(
         context: context,
         initialTime: isStartTime
             ? TimeOfDay.fromDateTime(DateTime.now())
@@ -31,21 +33,22 @@ class _CustomTimePickState extends State<CustomTimePick> {
                 DateTime.now().add(const Duration(minutes: 15))),
       );
 
-      String formattedTime = pickedDate!.format(context);
-      if (isStartTime) {
+      if (pickedTime != null) {
         setState(() {
-          // Cubit.get(context).startTimeController.text =
-          //     formattedTime;
-          startTime = formattedTime;
+          String formatted = pickedTime.format(context);
+
+          if (isStartTime) {
+            startTime = formatted;
+            context
+                .read<PostAppointmentCubit>()
+                .setStartTime(context, pickedTime);
+          } else {
+            endTime = formatted;
+            context
+                .read<PostAppointmentCubit>()
+                .setEndTime(context, pickedTime);
+          }
         });
-      } else if (!isStartTime) {
-        setState(() {
-          // Cubit.get(context).endTimeController.text =
-          //   formattedTime;
-          endTime = formattedTime;
-        });
-      } else {
-        log('pick date error');
       }
     }
 
@@ -68,18 +71,22 @@ class _CustomTimePickState extends State<CustomTimePick> {
                     ),
                     Gap(18.h),
                     CustomEditTextFormField(
-                      controller: TextEditingController(),
-                      // Cubit.get(context).startTimeController,
-                      hintTxt: widget.startTime,
-                      initialVal: widget.startTime,
+                      controller: context
+                          .read<PostAppointmentCubit>()
+                          .startTimeController,
+                      hintTxt: startTime,
+                      initialVal: context
+                          .read<PostAppointmentCubit>()
+                          .startTimeController
+                          .text,
                       suffixIcon: IconButton(
                         onPressed: () => getTimeFromUser(isStartTime: true),
                         icon: SvgPicture.asset(
                           AppIcons.iconTime,
                           colorFilter: ColorFilter.mode(
                               Theme.of(context).brightness == Brightness.light
-                                  ? AppColors.black.withOpacity(0.7)
-                                  : AppColors.white.withOpacity(0.7),
+                                  ? AppColors.black.withValues(alpha: 0.7)
+                                  : AppColors.white.withValues(alpha: 0.7),
                               BlendMode.srcIn),
                         ),
                       ),
@@ -99,18 +106,22 @@ class _CustomTimePickState extends State<CustomTimePick> {
                     ),
                     Gap(18.h),
                     CustomEditTextFormField(
-                      controller: TextEditingController(),
-                      // Cubit.get(context).endTimeController,
-                      hintTxt: widget.endTime,
-                      initialVal: widget.endTime,
+                      controller: context
+                          .read<PostAppointmentCubit>()
+                          .endTimeController,
+                      hintTxt: endTime,
+                      initialVal: context
+                          .read<PostAppointmentCubit>()
+                          .endTimeController
+                          .text,
                       suffixIcon: IconButton(
                         onPressed: () => getTimeFromUser(isStartTime: false),
                         icon: SvgPicture.asset(
                           AppIcons.iconTime,
                           colorFilter: ColorFilter.mode(
                               Theme.of(context).brightness == Brightness.light
-                                  ? AppColors.black.withOpacity(0.7)
-                                  : AppColors.white.withOpacity(0.7),
+                                  ? AppColors.black.withValues(alpha: .7)
+                                  : AppColors.white.withValues(alpha: 0.7),
                               BlendMode.srcIn),
                         ),
                       ),

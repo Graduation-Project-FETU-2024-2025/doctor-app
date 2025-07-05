@@ -4,6 +4,8 @@ import 'package:doctor_app/core/utils/app_images.dart';
 import 'package:doctor_app/features/appointment/domain/usecases/get_accepted_appointments_usecase.dart';
 import 'package:doctor_app/features/appointment/presentation/view/appointment_view.dart';
 import 'package:doctor_app/features/appointment/presentation/view_model/accepted_appoinment_cubit/accepted_appointment_cubit.dart';
+import 'package:doctor_app/features/clinic_timing/data/repo/appointment_date_repo.dart';
+import 'package:doctor_app/features/clinic_timing/presentation/view_model/post_appointment/post_appointment_cubit.dart';
 import 'package:doctor_app/features/dashboard/domain/usecase/get_pending_appointment_usecase.dart';
 import 'package:doctor_app/features/dashboard/presentation/view_model/pending_appointment_cubit/pending_appointment_cubit.dart';
 import 'package:doctor_app/features/clinic/data/repo/clinic_repo.dart';
@@ -15,7 +17,6 @@ import 'package:doctor_app/features/profile/presentation/view/profile_view.dart'
 import 'package:flutter/material.dart';
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import '../../../clinic/presentation/view/clinic_view.dart';
 import '../../../clinic_timing/presentation/view/clinic_timing_view.dart';
 
@@ -44,13 +45,19 @@ class _MainViewState extends State<MainView> {
             ..acceptedAppointmentsStateEmitter(),
       child: const AppointmentView(),
     ),
+    MultiBlocProvider(providers: [
+      BlocProvider(
+        create: (context) =>
+            ClinicCubit(clinicRepo: getIt<ClinicRepo>())..fetchClinicDetails(),
+      ),
+      BlocProvider(
+        create: (context) => PostAppointmentCubit(getIt<AppointmentDateRepo>())
+          ..postAppointment(),
+      ),
+    ], child: const ClinicTimingView()),
     BlocProvider(
       create: (context) =>
           ClinicCubit(clinicRepo: getIt<ClinicRepo>())..fetchClinicDetails(),
-      child: const ClinicTimingView(),
-    ),
-    BlocProvider(
-      create: (context) => ClinicCubit(clinicRepo: getIt<ClinicRepo>())..fetchClinicDetails(),
       child: const ClinicView(),
     ),
     BlocProvider(

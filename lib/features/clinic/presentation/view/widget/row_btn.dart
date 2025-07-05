@@ -27,8 +27,7 @@ class RowBtn extends StatelessWidget {
           height: 40.h,
           child: ElevatedButton(
               style: const ButtonStyle(
-                backgroundColor:
-                    WidgetStatePropertyAll(AppColors.primaryColor),
+                backgroundColor: WidgetStatePropertyAll(AppColors.primaryColor),
                 shape: WidgetStatePropertyAll(
                   CircleBorder(),
                 ),
@@ -37,14 +36,16 @@ class RowBtn extends StatelessWidget {
                 ),
               ),
               onPressed: () async {
-                final result = await context.pushNamed(Routing.clinicEdit, argument: clinicModel);
-                if (result !=null) {
+                final result = await context.pushNamed(Routing.clinicEdit,
+                    argument: clinicModel);
+                if (result != null) {
                   context.read<ClinicCubit>().fetchClinicDetails();
                 }
               },
               child: SvgPicture.asset(
                 AppIcons.svgsEditIcon,
-                colorFilter: const ColorFilter.mode(Colors.white, BlendMode.dst),
+                colorFilter:
+                    const ColorFilter.mode(Colors.white, BlendMode.dst),
               )),
         ),
       ],
