@@ -20,7 +20,6 @@ class ClinicRepoImpl implements ClinicRepo {
     final clinicId = await SecureStorage.instance.getData(key: CacheKeys.id);
     try {
       final response = await apiConsumer.get('${EndPoints.getClinic}$clinicId');
-      // final response = await apiConsumer.get('${EndPoints.getClinic}9397cc11-3968-4b77-9817-a2391351939c');
       if (response.statusCode == 200) {
         final dataJson = response.data['data'];
         final clinicData = ClinicModel.fromJson(dataJson);
