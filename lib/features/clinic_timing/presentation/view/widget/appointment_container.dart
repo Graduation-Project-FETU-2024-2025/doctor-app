@@ -35,7 +35,7 @@ class AppointmentContainer extends StatelessWidget {
       height: 96.h,
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-          color: Color(0xff99AFF1),
+          color: const Color(0xff99AFF1),
           borderRadius: BorderRadius.circular(20),
           border:
               Border.all(color: AppColors.primaryColor.withValues(alpha: 0.2)),
@@ -51,7 +51,7 @@ class AppointmentContainer extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Text(
-            "$startTime ------------------------------------------------",
+            "$startTime --------------------------------------------",
             style:
                 AppStyles.semiBold12(context).copyWith(color: AppColors.white),
           ),
@@ -60,7 +60,7 @@ class AppointmentContainer extends StatelessWidget {
             style: AppStyles.medium12(context).copyWith(color: AppColors.black),
           ),
           Text(
-            "$endTime ------------------------------------------------",
+            "$endTime --------------------------------------------",
             style: AppStyles.semiBold12(context)
                 .copyWith(color: AppColors.white, fontWeight: FontWeight.w700),
           ),

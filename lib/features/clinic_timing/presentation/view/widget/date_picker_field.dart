@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-// import 'package:intl/intl.dart';
+import 'package:intl/intl.dart';
 import '../../../../../core/utils/app_icons.dart';
 import '../../../../../core/widgets/custom_edit_text_form_field.dart';
 import '../../../../../generated/l10n.dart';
@@ -26,9 +26,11 @@ class _DatePickerFieldState extends State<DatePickerField> {
     );
 
     if (pickedDate != null) {
-      setState(() {
+    final formattedDate = DateFormat('MMMM d, y').format(pickedDate);
+    setState(() {
       context.read<PostAppointmentCubit>().setDate(pickedDate);
-      });
+      context.read<PostAppointmentCubit>().dateController.text = formattedDate;
+    });
     }
   }
 
