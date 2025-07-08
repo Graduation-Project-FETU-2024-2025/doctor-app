@@ -14,7 +14,7 @@ class AppointmentNumbersContainer extends StatelessWidget {
   });
   final String iconPath;
   final String appointmentType;
-  final String appointmentsNumber;
+  final int appointmentsNumber;
   final Color color;
   @override
   Widget build(BuildContext context) {
@@ -48,7 +48,7 @@ class AppointmentNumbersContainer extends StatelessWidget {
             ),
             Gap(12.h),
             Text(
-              appointmentsNumber,
+              appointmentsNumber.toString(),
               style: AppStyles.regular20(context).copyWith(color: color),
             ),
             Gap(30.h),

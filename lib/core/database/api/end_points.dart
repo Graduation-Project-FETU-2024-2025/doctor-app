@@ -25,6 +25,7 @@ class EndPoints {
   static String getPatientAppointments = "api/Appointments";
 
   static String updateClinic = "api/clinic";
+  static String clinicStatistics = "api/ClinicStatistics";
 
   static String acceptAppointment(String id) => 'api/Appointments/accept/$id';
   static String declineAppointment(String id) => 'api/Appointments/decline/$id';

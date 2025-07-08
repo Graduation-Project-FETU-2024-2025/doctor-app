@@ -1,11 +1,10 @@
-import 'package:doctor_app/core/utils/app_colors.dart';
-import 'package:doctor_app/core/utils/app_images.dart';
-import 'package:doctor_app/features/dashboard/presentation/view/widgets/apointment_numbers_container.dart';
-import 'package:doctor_app/generated/l10n.dart';
+import 'package:doctor_app/features/dashboard/presentation/view/widgets/booking_success_body.dart';
+import 'package:doctor_app/features/dashboard/presentation/view_model/clinic_statistics_cubit/clinic_statistics_cubit.dart';
+import 'package:doctor_app/features/dashboard/presentation/view_model/clinic_statistics_cubit/clinic_statistics_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:gap/gap.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:skeletonizer/skeletonizer.dart';
 
 class BookingSection extends StatelessWidget {
   const BookingSection({super.key});
@@ -14,29 +13,25 @@ class BookingSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
-      child: Row(
-        children: [
-          AppointmentNumbersContainer(
-            iconPath: AppImages.imagesMissedAppointment,
-            appointmentType: S.of(context).missed,
-            appointmentsNumber: '13',
-            color: AppColors.missedAppointment,
-          ),
-          Gap(20.w),
-          AppointmentNumbersContainer(
-            iconPath: AppImages.imagesCompletedAppointment,
-            appointmentType: S.of(context).completed,
-            appointmentsNumber: '13',
-            color: AppColors.completedAppointment,
-          ),
-          Gap(20.w),
-          AppointmentNumbersContainer(
-            iconPath: AppImages.imagesPendingAppointment,
-            appointmentType: S.of(context).pending,
-            appointmentsNumber: '13',
-            color: AppColors.pendingAppointment,
-          ),
-        ],
+      child: BlocBuilder<ClinicStatisticsCubit, ClinicStatisticsState>(
+        buildWhen: (previous, current) =>
+            current is ClinicStatisticsLoaded ||
+            current is ClinicStatisticsLoading ||
+            current is ClinicStatisticsError,
+        builder: (context, state) {
+          if (state is ClinicStatisticsLoaded) {
+            return BookingSuccessBody(
+              missedAppointments: state.clinicStatistics.canceledAppointments,
+              completedAppointments:
+                  state.clinicStatistics.confirmedAppointments,
+              pendingAppointments: state.clinicStatistics.pendingAppointments,
+            );
+          }
+          return Skeletonizer(
+            enabled: state is ClinicStatisticsLoading,
+            child: const BookingSuccessBody(),
+          );
+        },
       ),
     );
   }
