@@ -10,6 +10,8 @@ import 'package:doctor_app/features/auth/data/repository/auth_repo_impl.dart';
 import 'package:doctor_app/features/clinic/data/repo/clinic_repo.dart';
 import 'package:doctor_app/features/clinic_edit/data/repo/edit_clinic_repo.dart';
 import 'package:doctor_app/features/clinic_timing/data/repo/appointment_date_repo.dart';
+import 'package:doctor_app/features/dashboard/data/repository/clinic_statistic_repo.dart';
+import 'package:doctor_app/features/dashboard/data/repository/clinic_statistic_repo_impl.dart';
 import 'package:doctor_app/features/dashboard/domain/usecase/get_pending_appointment_usecase.dart';
 import 'package:doctor_app/features/edit_profile/data/repo/edit_profile_repo.dart';
 import 'package:doctor_app/features/edit_profile/data/repo/edit_profile_repo_impl.dart';
@@ -81,5 +83,10 @@ void setup() {
   );
   getIt.registerLazySingleton<EditClinicRepo>(
     () => EditClinicRepoImpl(getIt<ApiConsumer>()),
+  );
+
+
+  getIt.registerLazySingleton<ClinicStatisticRepo>(
+    () => ClinicStatisticRepoImpl(getIt<ApiConsumer>()),
   );
 }

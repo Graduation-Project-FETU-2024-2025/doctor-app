@@ -6,7 +6,9 @@ import 'package:doctor_app/features/appointment/presentation/view/appointment_vi
 import 'package:doctor_app/features/appointment/presentation/view_model/accepted_appoinment_cubit/accepted_appointment_cubit.dart';
 import 'package:doctor_app/features/clinic_timing/data/repo/appointment_date_repo.dart';
 import 'package:doctor_app/features/clinic_timing/presentation/view_model/post_appointment/post_appointment_cubit.dart';
+import 'package:doctor_app/features/dashboard/data/repository/clinic_statistic_repo.dart';
 import 'package:doctor_app/features/dashboard/domain/usecase/get_pending_appointment_usecase.dart';
+import 'package:doctor_app/features/dashboard/presentation/view_model/clinic_statistics_cubit/clinic_statistics_cubit.dart';
 import 'package:doctor_app/features/dashboard/presentation/view_model/pending_appointment_cubit/pending_appointment_cubit.dart';
 import 'package:doctor_app/features/clinic/data/repo/clinic_repo.dart';
 import 'package:doctor_app/features/clinic/presentation/view_model/clinic_cubit/clinic_cubit.dart';
@@ -34,11 +36,21 @@ class _MainViewState extends State<MainView> {
   double kIconSize = 24.0;
   double kBottomRadius = 20.0;
   List<Widget> screens = [
-    BlocProvider(
-        create: (context) =>
-            PendingAppointmentCubit(getIt<GetPendingAppointmentUseCase>())
-              ..getAppointmentsStateEmitter(),
-        child: const DashboardView()),
+    MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) =>
+              PendingAppointmentCubit(getIt<GetPendingAppointmentUseCase>())
+                ..getAppointmentsStateEmitter(),
+        ),
+        BlocProvider(
+          create: (context) =>
+              ClinicStatisticsCubit(getIt<ClinicStatisticRepo>())
+                ..getClinicStatistics(),
+        )
+      ],
+      child: const DashboardView(),
+    ),
     BlocProvider(
       create: (context) =>
           AcceptedAppointmentCubit(getIt<GetAcceptedAppointmentsUseCase>())

@@ -48,7 +48,8 @@ class WorkflowChartSection extends StatelessWidget {
             : AppColors.darkWhite,
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
-          const BoxShadow(color: Colors.black12, blurRadius: 6, offset: Offset(0, 2)),
+          const BoxShadow(
+              color: Colors.black12, blurRadius: 6, offset: Offset(0, 2)),
         ],
       ),
       child: AspectRatio(
@@ -83,12 +84,12 @@ class WorkflowChartSection extends StatelessWidget {
                   gridData: const FlGridData(show: false),
                   barTouchData: BarTouchData(enabled: false),
                   titlesData: FlTitlesData(
-                    leftTitles:
-                        const AxisTitles(sideTitles: SideTitles(showTitles: false)),
-                    topTitles:
-                        const AxisTitles(sideTitles: SideTitles(showTitles: false)),
-                    rightTitles:
-                        const AxisTitles(sideTitles: SideTitles(showTitles: false)),
+                    leftTitles: const AxisTitles(
+                        sideTitles: SideTitles(showTitles: false)),
+                    topTitles: const AxisTitles(
+                        sideTitles: SideTitles(showTitles: false)),
+                    rightTitles: const AxisTitles(
+                        sideTitles: SideTitles(showTitles: false)),
                     bottomTitles: AxisTitles(
                       sideTitles: SideTitles(
                         showTitles: true,
