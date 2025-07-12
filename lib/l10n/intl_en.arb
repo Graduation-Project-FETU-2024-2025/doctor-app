@@ -98,6 +98,10 @@
     "workingPeriods" : "Working Periods",
     "aboutTheDoctor":"About The Doctor",
     "enterSummaryAboutDoctor": "Enter Summary About Doctor",
-    "reviews" : "Reviews"
-    
+    "reviews" : "Reviews",
+    "requiredAnalysis" : "Required Analysis",
+    "fileDownloadSuccessfully" : "File Downloaded Successfully",
+    "storagePermissionDenied": "Storage permission denied",
+    "noDownloadLink": "No download link available",
+    "downloadDirectoryNotFound": "Could not find the download directory"
 }

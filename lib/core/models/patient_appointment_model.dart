@@ -2,6 +2,7 @@
 
 class PatientAppointmentModel {
   final String patientImageUrl;
+  final String? fileUrl;
   final String patientName;
   final String appointmentId;
   final String? patientComment;
@@ -10,7 +11,7 @@ class PatientAppointmentModel {
   final String patientId;
   final num price;
 
-  PatientAppointmentModel(
+  PatientAppointmentModel( 
       {required this.patientImageUrl,
       required this.patientName,
       required this.appointmentId,
@@ -18,10 +19,12 @@ class PatientAppointmentModel {
       required this.status,
       required this.time,
       required this.patientId,
-      required this.price});
+      required this.price,
+      this.fileUrl});
 
   factory PatientAppointmentModel.fromJson(Map<String, dynamic> json) {
     return PatientAppointmentModel(
+      fileUrl: json['fileUrl'],
       appointmentId: json['id'],
       time: DateTime.parse(json['date']),
       status: json['status'],
@@ -29,7 +32,7 @@ class PatientAppointmentModel {
       patientId: json['userId'],
       patientName: json['userName'],
       price: json['price'],
-      patientComment: 'bla bla',
+      patientComment: json['complaint'],
     );
   }
 }

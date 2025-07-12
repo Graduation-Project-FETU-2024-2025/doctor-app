@@ -45,3 +45,18 @@ final class DeclineAppointmentFailure extends AppointmentActionState {
 
   DeclineAppointmentFailure({required super.appointmentId, required this.apiErrorModel});
 }
+
+
+final class FileDownloadLoading extends AppointmentActionState {
+  FileDownloadLoading({required super.appointmentId});
+
+}
+
+final class FileDownloadSuccess extends AppointmentActionState {
+  FileDownloadSuccess({required super.appointmentId});
+}
+
+final class FileDownloadError extends AppointmentActionState {
+  final String message;
+  FileDownloadError(this.message) : super(appointmentId: '');
+}

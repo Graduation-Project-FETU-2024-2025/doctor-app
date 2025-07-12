@@ -96,5 +96,10 @@
         "workingPeriods" : "فترات العمل",
         "aboutTheDoctor" : "عن الدكتور",
         "enterSummaryAboutDoctor" : "ادخل نبذه عن الدكتور",
-        "reviews" : "زوار"
+        "reviews" : "زوار",
+        "requiredAnalysis": "التحاليل المطلوبه",
+        "fileDownloadSuccessfully": "تم تحميل الملف بنجاح",
+        "storagePermissionDenied": "تم رفض إذن التخزين",
+        "downloadDirectoryNotFound": "تعذر العثور على مجلد التحميل",
+        "noDownloadLink": "لا يوجد رابط للتحميل"
 }

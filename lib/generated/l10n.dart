@@ -1029,6 +1029,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Required Analysis`
+  String get requiredAnalysis {
+    return Intl.message(
+      'Required Analysis',
+      name: 'requiredAnalysis',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `File Downloaded Successfully`
+  String get fileDownloadSuccessfully {
+    return Intl.message(
+      'File Downloaded Successfully',
+      name: 'fileDownloadSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Storage permission denied`
+  String get storagePermissionDenied {
+    return Intl.message(
+      'Storage permission denied',
+      name: 'storagePermissionDenied',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No download link available`
+  String get noDownloadLink {
+    return Intl.message(
+      'No download link available',
+      name: 'noDownloadLink',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Could not find the download directory`
+  String get downloadDirectoryNotFound {
+    return Intl.message(
+      'Could not find the download directory',
+      name: 'downloadDirectoryNotFound',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
