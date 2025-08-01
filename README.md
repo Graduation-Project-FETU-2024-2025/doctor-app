@@ -25,7 +25,11 @@ The Afiatuk Doctor App enables doctors to manage their appointments, patient dat
 
 ## 📷 Demos
 
-*Add UI images here if available*
+https://github.com/user-attachments/assets/c6859c6e-8310-4b9a-881e-b98fb6b6b512
+
+https://github.com/user-attachments/assets/3bc30a8f-2dd3-4265-9606-a266432b92a0
+
+https://github.com/user-attachments/assets/990d7e56-ac9c-4887-9cf8-c803329b075a
 
 ---
 
