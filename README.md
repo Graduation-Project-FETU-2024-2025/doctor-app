@@ -1,25 +1,35 @@
-# doctor_app
+# Afiatuk - Doctor App
 
-A new Flutter project.
+The Afiatuk Doctor App enables doctors to manage their appointments, patient data, and clinic schedules efficiently.
 
-## Getting Started
+## 🔑 Features
 
-This project is a starting point for a Flutter application.
+- OTP login & authentication
+- View and respond to appointment requests
+- Set availability and working hours
+- Add medical diagnosis, requested tests, and prescriptions
+- View patient visit history
+- Language and theme preferences
 
-A few resources to get you started if this is your first Flutter project:
+## 🛠️ Tech Stack
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-
-
-
-**For Code Generation**
-
-``dart run build_runner build --delete-conflicting-outputs``
+- **Flutter**
+- **Cubit (Bloc library)**
+- **MVVM**
+- **Dio + Repository Pattern**
+- **Figma Design Implementation**
+- **Secure Storage**
 
 
-**For active localization run**
-`` 
-    flutter pub global activate intl_utils
-``
+> Backend should be up and running before login/OTP flow can be tested.
+
+## 📷 Demos
+
+*Add UI images here if available*
+
+---
+
+## 👥 Team
+
+- Mobile Developers: [@Khaled Elalfy](https://github.com/...), [@Dina Ahmed](https://github.com/...)
+- Backend Team: [@Rana Ibrahim](https://github.com/...), [@Hamza Mosad](https://github.com/...), [@Khaled Atef](https://github.com/...)
