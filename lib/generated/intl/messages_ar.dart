@@ -50,6 +50,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "decline": MessageLookupByLibrary.simpleMessage("الغاء"),
         "delete": MessageLookupByLibrary.simpleMessage("حذف"),
         "diagnosis": MessageLookupByLibrary.simpleMessage("التشخيص"),
+        "downloadDirectoryNotFound": MessageLookupByLibrary.simpleMessage(
+            "تعذر العثور على مجلد التحميل"),
         "editProfile":
             MessageLookupByLibrary.simpleMessage("تعديل الملف الشخصى"),
         "emailAddress":
@@ -74,6 +76,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ادخل نبذه عن الدكتور"),
         "fieldRequired":
             MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب"),
+        "fileDownloadSuccessfully":
+            MessageLookupByLibrary.simpleMessage("تم تحميل الملف بنجاح"),
         "gallery": MessageLookupByLibrary.simpleMessage("المعرض"),
         "getAddressInfo":
             MessageLookupByLibrary.simpleMessage("الحصول على معلومات العنوان"),
@@ -106,6 +110,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("لا يوجد مواعيد"),
         "noAppointmentsRequests":
             MessageLookupByLibrary.simpleMessage("لا يوجد طلبات كشف"),
+        "noDownloadLink":
+            MessageLookupByLibrary.simpleMessage("لا يوجد رابط للتحميل"),
         "noLastAdded":
             MessageLookupByLibrary.simpleMessage("لا توجد أدوية مضافه حديثا"),
         "nosearchResult":
@@ -124,6 +130,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "prescription": MessageLookupByLibrary.simpleMessage("الوصفة الطبية"),
         "price": MessageLookupByLibrary.simpleMessage("السعر"),
         "reVisits": MessageLookupByLibrary.simpleMessage("إعادة كشف"),
+        "requiredAnalysis":
+            MessageLookupByLibrary.simpleMessage("التحاليل المطلوبه"),
         "resend": MessageLookupByLibrary.simpleMessage("إعادة إرسال"),
         "reviews": MessageLookupByLibrary.simpleMessage("زوار"),
         "save": MessageLookupByLibrary.simpleMessage("حفظ"),
@@ -135,6 +143,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "specializationName":
             MessageLookupByLibrary.simpleMessage("اسم التخصص"),
         "startTime": MessageLookupByLibrary.simpleMessage("وقت البداية"),
+        "storagePermissionDenied":
+            MessageLookupByLibrary.simpleMessage("تم رفض إذن التخزين"),
         "submit": MessageLookupByLibrary.simpleMessage("ارسال"),
         "successUpdatedClinic":
             MessageLookupByLibrary.simpleMessage("تم تعديل العيادة بنجاح"),

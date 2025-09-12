@@ -123,4 +123,5 @@ class AppIcons {
   static const String svgArrowBack = 'assets/svgs/arrow_back.svg';
   static const String svgArrowRight = 'assets/svgs/arrow_right.svg';
   static const String svgCalender = 'assets/svgs/calender_solid.svg';
+  static const String svgsIconAttachment = 'assets/svgs/attachment.svg';
 }

@@ -50,6 +50,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "decline": MessageLookupByLibrary.simpleMessage("Decline"),
         "delete": MessageLookupByLibrary.simpleMessage("Delete"),
         "diagnosis": MessageLookupByLibrary.simpleMessage("Diagnosis"),
+        "downloadDirectoryNotFound": MessageLookupByLibrary.simpleMessage(
+            "Could not find the download directory"),
         "editProfile": MessageLookupByLibrary.simpleMessage("Edit Profile"),
         "emailAddress": MessageLookupByLibrary.simpleMessage("Email address"),
         "emailResentedSuccessfully":
@@ -71,6 +73,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterSummaryAboutDoctor":
             MessageLookupByLibrary.simpleMessage("Enter Summary About Doctor"),
         "fieldRequired": MessageLookupByLibrary.simpleMessage("field Required"),
+        "fileDownloadSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "File Downloaded Successfully"),
         "gallery": MessageLookupByLibrary.simpleMessage("Gallery"),
         "getAddressInfo":
             MessageLookupByLibrary.simpleMessage("Get Address Info"),
@@ -104,6 +108,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("No appointments "),
         "noAppointmentsRequests":
             MessageLookupByLibrary.simpleMessage("No appointments requests"),
+        "noDownloadLink":
+            MessageLookupByLibrary.simpleMessage("No download link available"),
         "noLastAdded":
             MessageLookupByLibrary.simpleMessage("No newly added medicines"),
         "nosearchResult":
@@ -122,6 +128,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "prescription": MessageLookupByLibrary.simpleMessage("Prescription"),
         "price": MessageLookupByLibrary.simpleMessage("Price"),
         "reVisits": MessageLookupByLibrary.simpleMessage("Re-Visits"),
+        "requiredAnalysis":
+            MessageLookupByLibrary.simpleMessage("Required Analysis"),
         "resend": MessageLookupByLibrary.simpleMessage("Resend"),
         "reviews": MessageLookupByLibrary.simpleMessage("Reviews"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
@@ -136,6 +144,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "specializationName":
             MessageLookupByLibrary.simpleMessage("Specialization Name"),
         "startTime": MessageLookupByLibrary.simpleMessage("Start time"),
+        "storagePermissionDenied":
+            MessageLookupByLibrary.simpleMessage("Storage permission denied"),
         "submit": MessageLookupByLibrary.simpleMessage("Submit"),
         "successUpdatedClinic":
             MessageLookupByLibrary.simpleMessage("Clinic Updated Successfully"),

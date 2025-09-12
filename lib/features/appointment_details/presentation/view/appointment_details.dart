@@ -1,4 +1,3 @@
-import 'package:doctor_app/core/utils/app_colors.dart';
 import 'package:doctor_app/core/utils/app_styles.dart';
 import 'package:doctor_app/core/models/patient_appointment_model.dart';
 import 'package:doctor_app/core/widgets/appointment_request_button_section.dart';
@@ -8,6 +7,7 @@ import 'package:doctor_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'widgets/required_analysis_container.dart';
 
 class AppointmentDetails extends StatelessWidget {
   const AppointmentDetails({super.key, required this.patientAppointmentModel});
@@ -42,11 +42,7 @@ class AppointmentDetails extends StatelessWidget {
                   ),
                 ),
                 Gap(20.h),
-                Container(
-                  height: 60,
-                  width: 255,
-                  color: AppColors.primaryColor,
-                ),
+                RequiredAnalysisContainer(fileUrl: patientAppointmentModel.fileUrl,),
                 Gap(50.h),
                 AppointmentRequestButtonsSection(
                   appointmentId: patientAppointmentModel.appointmentId,
